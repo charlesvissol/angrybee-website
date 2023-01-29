@@ -1,0 +1,9 @@
+Community centric with logical segregation.
+Between nodes we can create subscribe/publish links in a global dashboard to agregate info.
+
+=> Backbone of exchanges with Apache Kafka (event streaming platform)
+
+=> End-user support with Apache Zeppelin and support from:
+- Apache Spark (engine for large-scale data analytics)
+- Apache Superset (data visualization platform)
+- Apache Airflow (Workflows)

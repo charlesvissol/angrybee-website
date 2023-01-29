@@ -1,0 +1,2480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Angrybee Framework is a full featured and Open Source JavaScript and CSS Web Framework to support Web application development.">
+	<meta name="keywords" content="Angrybee,Framework,css3,html5,animation,javascript animation,ui,ui design,web design,ux">
+	<meta name="author" content="vissol">
+	<link rel="shortcut icon" href="./pictures/angrybee-blue.svg">
+  
+
+	<title>AngryBee CSS and JS Framework ShowCase</title>
+
+	<!-- Responsive viewport meta tag -->
+	
+
+
+	<link rel="stylesheet" href="angrybee-dark.css">
+
+	
+<style>
+
+
+
+.ab-animate-right-slow-framework{
+	position:relative;
+	animation:animaterightslowframework 1.5s;
+	transition-timing-function: ease-out;
+}
+@keyframes animaterightslowframework{
+	from{right:-300px;} 
+	to{right:-110px;}
+}
+
+
+		.magictime {
+			-webkit-animation-duration: 2s;
+			animation-duration: 2s;
+		}
+
+
+		.ab-btn:hover > .bi {
+			color: var(--red-xxxxlight);
+			
+		}
+
+		@keyframes colortransition {
+			0% {color:tomato}
+			25% {color: darkgoldenrod}
+			50% {color:aqua}
+			75% {color:yellowgreen}
+			100% {color: violet}
+		}
+
+
+		@keyframes colortransition-inverse {
+			100% {color:tomato}
+			75% {color: darkgoldenrod}
+			50% {color:aqua}
+			25% {color:yellowgreen}
+			0% {color: violet}
+		}
+
+		@media (max-width: 992px){
+			.bg-angrybee-img {
+				display: none;
+			}
+		}
+		@media (min-width: 993px){
+			.bg-angrybee-img {
+				display: block;
+			}
+		}
+
+
+
+		/* Redefine the background of the code snippets */
+		.hljs {
+			color: #c9d1d9;
+			background: hsl(216, 50%, 08%);
+		}
+
+
+	</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js" integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.3.1/anchor.min.js" referrerpolicy="no-referrer"></script>
+	<!--Boostrap bundled with Popper-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js" integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/PreloadJS/1.0.1/preloadjs.min.js" integrity="sha512-fEAYokehnF/e5P+Whrp7YAWBQGqQtimX1DrFBu21J+4WI2wCM/z+kTHiRMCcfYUqHbCcCADC9QivGn7Q75IQig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.2.4/kute.min.js" integrity="sha512-ExzTv2b9+LEDBzzlAfT4rSa2C6ncivquUGYGWCPS4yIPjhg+eVi5cSi5NLGZZfK8p/xA4OqAohgfmJT8uWKgpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js" integrity="sha512-Gk+uNk8NWN235mIkS6B7/424TsDuPDaoAsUekJCKTWLKP6wlaPv+PBGfO7dbvZeibVPGW+mYidz0vL0XaWwz4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js" referrerpolicy="no-referrer"></script>
+
+
+	<script>
+		//Enable syntax highlight
+		hljs.highlightAll();
+
+
+        // Script to open and close sidebar
+        function side_open() {
+            document.getElementById("main_sidebar").classList.add("ab-show");
+            
+
+            document.getElementById("main_overlay").style.display = "block";
+
+
+
+            document.getElementById("menu_for_sidebar").classList.remove("ab-hide-large");
+            document.getElementById("menu_for_sidebar").classList.add("ab-hide");
+            //document.getElementById("menu_for_sidebar").style.display = "none"
+        }
+        
+        function side_close() {
+            document.getElementById("main_sidebar").classList.remove("ab-show");
+            document.getElementById("main_sidebar").classList.add("ab-hide");
+            //document.getElementById("main_overlay").classList.remove("ab-show");
+            //document.getElementById("main_overlay").classList.add("ab-hide");
+            //document.getElementById("main_sidebar").classList.add("ab-hide");
+            //document.getElementById("main_overlay").classList.add("ab-hide");
+
+            //document.getElementById("main_sidebar").style.display = "none";
+            document.getElementById("main_overlay").style.display = "none";
+
+
+
+            document.getElementById("menu_for_sidebar").classList.add("ab-hide-large");
+            document.getElementById("menu_for_sidebar").classList.remove("ab-hide");       
+            //document.getElementById("menu_for_sidebar").style.display = "none";
+        }
+
+
+
+
+
+
+
+
+	</script>
+
+
+</head>
+
+<body class="ab-dark-light">
+   
+    
+	<!-- fixed background  -->
+	<img src="pictures/bg-angrybee.svg" style="z-index: -2;position: fixed;top: 50%;right: -10%;"/>
+
+
+    <span id="menu_for_sidebar" onclick="side_open()" class=" ab-float-left ab-white-font ab-xxlarge" title="Open menu" style="position: fixed;top: 0px;left: 5px;cursor:pointer;z-index:999">
+        &#9776;
+    </span>
+<!--    <span id="menu_for_sidebar" onclick="side_open()" class="ab-hide-medium ab-float-left ab-blue-font ab-xxlarge" title="Open menu" style="position: fixed;top: 0px;left: 5px;cursor:pointer;z-index:999">
+        &#9776;
+    </span>
+-->
+
+    <nav class="ab-dark-light ab-sidebar ab-collapse ab-animate-left-slow" style="position:fixed;top:0px;z-index:3;width:210px;overflow:hidden;" id="main_sidebar">
+		<a href="#" onclick="side_close()" class="ab-hide-medium ab-float-right ab-white-font" title="Close menu">
+            &#10005;
+        </a>
+
+        <img src="pictures/website-angrybee-global-title.svg" onclick="location.href = './index.html';" class="magictime perspectiveUpReturn" style="cursor:pointer;width:190px;position:fixed;top:0px;z-index:997;"/>
+
+
+        <div class="ab-width-100per ab-height-90per ab-margin-left-10" style="overflow-x:hidden;scrollbar-color:hsl(207, 90%, 55%) hsl(216,50%,12%);top:50px;position:absolute;">
+
+            <span class=" ab-white-font ab-collapse-item-collapsed ab-margin-left-5" onclick="collapse(event,'id-getting-started-menu')">Getting started</span><br>
+            <div id="id-getting-started-menu" class="ab-collapse-content">
+                <a class="ab-bar-item " href="#" onclick="showArticle('getting-started');">Introduction</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('dark-mode');">Dark Mode</a>
+            </div>
+            <p></p>
+            
+    
+            <span class="ab-white-font ab-collapse-item-collapsed ab-margin-left-5" onclick="collapse(event,'id-layout-menu')">Layout</span><br>
+            <div id="id-layout-menu" class="ab-collapse-content">
+                <a class="ab-bar-item " href="#" onclick="showArticle('containers');">Containers</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('layouts');">Layouts</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('padding');">Padding</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('margin');">Margin</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('menu-section');">Menu</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('sidebar');">Sidebar</a>
+            </div>
+            <p></p>
+    
+            <span class="ab-white-font ab-collapse-item-collapsed ab-margin-left-5" onclick="collapse(event,'id-style-menu')">Style</span><br>
+            <div id="id-style-menu" class="ab-collapse-content">
+                <a class="ab-bar-item " href="#" onclick="showArticle('colors');">Colors</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('predefined-size');">Predefined size</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('font-family');">Font family</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('font-size');">Font size</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('borders');">Borders</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('text');">Text</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('code');">Code highlight</a>		
+                <a class="ab-bar-item " href="#" onclick="showArticle('links');">Links</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('lists');">Lists</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('tables');">Tables</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('images');">Images</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('icons');">Icons</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('symbols');">Symbols</a>
+            </div>
+            <p></p>
+            
+    
+            <span class="ab-white-font ab-collapse-item-collapsed ab-margin-left-5" onclick="collapse(event,'id-components-menu')">Components</span><br>
+            <div id="id-components-menu" class="ab-collapse-content">
+                <a class="ab-bar-item " href="#" onclick="showArticle('panels');">Panels</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('display');">Display</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('cards');">Cards</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('badges');">Badges</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('forms');">Forms</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('accordion');">Accordion</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('tabs');">Tabs</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('pagination');">Pagination</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('modal');">Modal</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('loaders');">Loaders</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('slideshow');">Slideshow</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('timeline');">Timeline</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('tags');">Tags</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('tooltips');">Tooltips</a>
+            </div>
+            <p></p>
+            
+    
+            <span class="ab-white-font ab-collapse-item-collapsed ab-margin-left-5" onclick="collapse(event,'id-effects-menu')">Effects</span><br>
+            <div id="id-effects-menu" class="ab-collapse-content">
+                <a class="ab-bar-item " href="#" onclick="showArticle('opacity');">Opacity</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('animations');">Animations</a>
+            </div>
+            <p></p>
+            
+            
+            <span class="ab-white-font ab-collapse-item-collapsed ab-margin-left-5" onclick="collapse(event,'id-multimedias-menu')">Multimedias</span><br>
+            <div id="id-multimedias-menu" class="ab-collapse-content">
+                <a class="ab-bar-item " href="#" onclick="showArticle('videos');">Videos</a>
+            </div>
+            <p></p>
+            
+    
+            <span class="ab-white-font ab-collapse-item-collapsed ab-margin-left-5" onclick="collapse(event,'id-utilities-menu')">Utilities</span><br>
+            <div id="id-utilities-menu" class="ab-collapse-content">
+                <a class="ab-bar-item " href="#" onclick="showArticle('filter');">Filter</a>
+                <a class="ab-bar-item " href="#" onclick="showArticle('sort');">Sort</a>
+            </div>
+    
+            <a class="ab-bar-item " href="#" onclick="showArticle('todo');">Todo List</a>
+
+
+
+        </div>
+
+        
+
+
+
+    </nav>
+
+
+    <aside>
+
+        <img title="Show Table of contents" id="id-kick-start-panel-toc-reduced" onclick="event.currentTarget.style.display='none';showHide('id-kick-start-panel-toc');" style="z-index:998;width:25px;cursor: pointer;display:none;" class="page-toc ab-margin-right-10 ab-margin-top-32 ab-pos-topright-fix ab-animate-fadIn" src="pictures/table-of-contents.svg">        
+        <div id="id-kick-start-panel-toc" class="page-toc ab-dark-x getting-started-details-panel ab-dark-- ab-round ab-padding-10 ab-margin-right-10 ab-margin-top-32 ab-pos-topright-fix magictime slideRightReturn" style="z-index:998;display:none;">
+            
+            <p class="ab-yellow-font" style="position: absolute;top:0px;right: 5px;cursor: pointer;" onclick="showHide('id-kick-start-panel-toc');showHide('id-kick-start-panel-toc-reduced');">&#215;</p>
+
+            <p class="ab-dark-xlight-border-bottom ab-white-font">On this page</p>
+            <a href="#css-declaration" class="ab-toc">CSS declaration</a>
+            <a href="#javascript-declaration" class="ab-toc">Javascript declaration</a>
+            
+        </div>
+
+        <img title="Show Table of contents" id="id-css-details-panel-toc-reduced" onclick="event.currentTarget.style.display='none';showHide('id-css-details-panel-toc');" style="z-index:998;width:25px;cursor: pointer;display:none;" class="page-toc ab-margin-right-10 ab-margin-top-32 ab-pos-topright-fix ab-animate-fadIn" src="pictures/table-of-contents.svg">        
+        <div id="id-css-details-panel-toc" class="page-toc ab-dark-x getting-started-details-panel ab-dark-- ab-round ab-padding-10 ab-margin-right-10 ab-margin-top-32 ab-pos-topright-fix magictime slideRightReturn" style="z-index:998;display:none;">
+
+            <p class="ab-yellow-font" style="position: absolute;top:0px;right: 5px;cursor: pointer;" onclick="showHide('id-css-details-panel-toc');showHide('id-css-details-panel-toc-reduced');">&#215;</p>
+
+            <p class="ab-dark-xlight-border-bottom ab-white-font">On this page</p>
+            <a href="#default-css" class="ab-toc">Default CSS</a>
+            <a href="#extra-css-libraries" class="ab-toc">Extra-CSS libraries</a>
+            <a href="#css-included-by-default" class="ab-toc">CSS included by default</a>
+            
+        </div>
+
+        <img title="Show Table of contents" id="id-js-details-panel-toc-reduced" onclick="event.currentTarget.style.display='none';showHide('id-js-details-panel-toc');" style="z-index:998;width:25px;cursor: pointer;display:none;" class="page-toc ab-margin-right-10 ab-margin-top-32 ab-pos-topright-fix ab-animate-fadIn" src="pictures/table-of-contents.svg">
+        <div id="id-js-details-panel-toc" class="page-toc ab-dark-x getting-started-details-panel ab-dark-- ab-round ab-padding-10 ab-margin-right-10 ab-margin-top-32 ab-pos-topright-fix magictime slideRightReturn" style="z-index:998;display:none;">
+
+            <p class="ab-yellow-font" style="position: absolute;top:0px;right: 5px;cursor: pointer;" onclick="showHide('id-js-details-panel-toc');showHide('id-js-details-panel-toc-reduced');">&#215;</p>
+
+            <p class="ab-dark-xlight-border-bottom ab-white-font">On this page</p>
+            <a href="#default-integrations" class="ab-toc">Default integrations</a>
+            <a href="#future-integrations" class="ab-toc">Future integrations</a>
+            <a href="#how-to-use" class="ab-toc">How to use</a>
+            
+        </div>
+
+
+        <img title="Show Table of contents" id="id-overflow-container-panel-toc-reduced" onclick="event.currentTarget.style.display='none';showHide('id-overflow-container-panel-toc');" style="z-index:998;width:25px;cursor: pointer;display:none;" class="page-toc ab-margin-right-10 ab-margin-top-32 ab-pos-topright-fix ab-animate-fadIn" src="pictures/table-of-contents.svg">
+        <div id="id-overflow-container-panel-toc" class="page-toc ab-dark-x getting-started-details-panel ab-dark-- ab-round ab-padding-10 ab-margin-right-10 ab-margin-top-32 ab-pos-topright-fix magictime slideRightReturn" style="z-index:998;display:none;">
+
+            <p class="ab-yellow-font" style="position: absolute;top:0px;right: 5px;cursor: pointer;" onclick="showHide('id-overflow-container-panel-toc');showHide('id-overflow-container-panel-toc-reduced');">&#215;</p>
+
+            <p class="ab-dark-xlight-border-bottom ab-white-font">On this page</p>
+            <a href="#2-scrollbars" class="ab-toc">2 Scrollbars</a>
+            <a href="#horizontal-scrollbar" class="ab-toc">Horizontal scrollbar</a>
+            <a href="#vertical-scrollbar" class="ab-toc">Vertical scrollbar</a>
+            
+        </div>
+
+        <img title="Show Table of contents" id="id-flex-layout-container-panel-toc-reduced" onclick="event.currentTarget.style.display='none';showHide('id-flex-layout-container-panel-toc');" style="z-index:998;width:25px;cursor: pointer;display:none;" class="page-toc ab-margin-right-10 ab-margin-top-32 ab-pos-topright-fix ab-animate-fadIn" src="pictures/table-of-contents.svg">
+        <div id="id-flex-layout-container-panel-toc" class="page-toc ab-dark-x getting-started-details-panel ab-dark-- ab-round ab-padding-10 ab-margin-right-10 ab-margin-top-32 ab-pos-topright-fix magictime slideRightReturn" style="z-index:998;display:none;">
+
+            <p class="ab-yellow-font" style="position: absolute;top:0px;right: 5px;cursor: pointer;" onclick="showHide('id-flex-layout-container-panel-toc');showHide('id-flex-layout-container-panel-toc-reduced');">&#215;</p>
+
+            <p class="ab-dark-xlight-border-bottom ab-white-font">On this page</p>
+            <a href="#default-flex-layout" class="ab-toc">Default flex layout</a>
+            <a href="#flex-layout-with-horizontal-alignment" class="ab-toc">Flex layout with horizontal alignment</a>
+            <a href="#flex-layout-with-vertical-alignment" class="ab-toc">Flex layout with vertical alignment</a>
+            <a href="#stretch-flex-layout" class="ab-toc">Stretch flex layout</a>
+            <a href="#grow-flex-items" class="ab-toc">Grow flex items</a>
+            <a href="#wrap-flex-layout" class="ab-toc">Wrap flex layout</a>
+        </div>
+
+ 
+        
+
+
+
+
+
+
+    </aside>
+
+
+
+
+
+
+
+
+
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="ab-overlay ab-animate-fadIn" onclick="side_close()" style="cursor:pointer;display: none;" title="close side menu" id="main_overlay"></div>
+
+    <div class="ab-main" style="margin-left:230px;margin-top: 5px;margin-right: 200px;">
+        
+        <a id="top-page"></a>
+
+
+        <!-- Introduction -->
+        <article id="getting-started" class="ab-animate-fadIn-4 ab-animate-right-slow" style="display:block;">
+            <br>
+
+
+            <h1>Introduction</h1>
+            <br>
+            <p class="ab-xlarge">Framework developments are in progress... stay tuned!</p>
+            <br>
+            <p>Angrybee Showcase is both, a tutorial and a showcase with a lot of examples to show how to use Angrybee web framework.</p>
+            
+
+            <!--Kick Start panel -->
+            <section class="ab-container ab-dark-xlight-border ab-round-large ab-height-200 ab-width-250 magictime spaceInRight ab-margin-5 ab-padding-5 ab-inline-grid">
+                
+                <h2 class="ab-dark-xlight-border-bottom ab-margin-16">Kick start</h2>
+                
+                <p>Start using Angrybee Framework in few minutes</p>
+                
+                <div class="ab-margin-16 ab-pos-bottomright">
+                    <a class="ab-green-font-hover" href="#" onclick="showContainer('getting-started-details-panel','id-kick-start-panel')">More infos <i class="sy-bracket-right"></i></a>
+                </div>
+            </section>
+
+
+            <!-- CSS Details panel -->
+            <section class="ab-container ab-dark-xlight-border ab-round-large magictime spaceInRight ab-height-200 ab-width-250 ab-padding-5 ab-margin-5 ab-inline-grid">
+                
+                    <h2 class="ab-dark-xlight-border-bottom ab-margin-16">CSS Details</h2>
+               
+
+                <p>Get more information about how we built CSS library.</p>
+                
+                <div class="ab-margin-16 ab-pos-bottomright">
+                    <a class="ab-green-font-hover" href="#" onclick="showContainer('getting-started-details-panel','id-css-details-panel')">More infos <i class="sy-bracket-right"></i></a>
+                </div>
+            </section>
+            
+
+            <!-- Javascript details panel -->
+            <section class="ab-container ab-dark-xlight-border ab-round-large magictime spaceInRight ab-height-200 ab-width-250 ab-padding-5 ab-margin-5 ab-inline-grid">
+                
+                <h2 class="ab-dark-xlight-border-bottom ab-margin-16">Js Details</h2>
+
+                <p>Get more information about how to use Javascript libraries.</p>
+                
+                <div class="ab-margin-16 ab-pos-bottomright">
+                    <a class="ab-green-font-hover" href="#" onclick="showContainer('getting-started-details-panel','id-js-details-panel')">More infos <i class="sy-bracket-right"></i></a>
+                </div>
+            </section>
+
+
+        
+
+
+
+            <!--Kick Start content -->
+            <section id="id-kick-start-panel"
+                class="getting-started-details-panel ab-container ab-margin-16 magictime slideDownReturn ab-width-95per"
+                style="display:none;animation-duration: 1s;">
+
+                <header class="ab-dark-xlight-border-bottom ab-margin-16">
+                    <h1>Kick start</h1>
+                </header>
+
+                <h1>CSS declaration</h1>
+               
+                <p>The Angrybee Web framework is mainly based upon classes starting always by <code>ab-...</code>.</p>
+
+                <p>The Angrybee Web framework is responsive and dark mode.</p> 
+
+                <p>We propose 1 CSS adapted to all screen sizes with adaptative CSS classes for:</p>
+
+<ul>
+    <li>screen &#60; 576px</li>
+    <li>577px &#60; screen &#60; 768px</li>
+    <li>769px &#60; screen &#60; 992px</li>
+    <li>993px &#60; screen &#60; 1200px</li>
+    <li>1201px &#60; screen &#60; 1400px</li>
+    <li>1401px &#62; screen</li>
+</ul>
+
+               <p>You don't need to deal with screen sizes, classes are applied depending on the screen sizes.</p>
+
+                <br>
+
+                <div class="code-block">
+                    
+                    <h2>Angrybee CSS declaration in HTML</h2>
+
+                    <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'angrybee-css-kick-start')"></i><code id="angrybee-css-kick-start" class="language-html">
+&lt;link rel="stylesheet" href="$url/angrybee-dark-pc.css"&gt;
+                    </code>
+                </pre>
+                </div>
+
+                <h1>Javascript declaration</h1>
+                <p>We propose also a set of Javascript libraries, designed by Angrybee but also by other Open Source projects to enhance the power of our framework and 
+                    avoid reinventing the wheel.
+                </p>
+
+                <p>You just have to adapt the <code>$url</code> path to adapt the code sample you can copy/paste.</p>
+
+                <div class="code-block">
+                    
+                    <h2>Javascript files declaration</h2>
+
+
+                    <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'header-angrybee-js-kick-start')"></i>
+                        <code id="header-angrybee-js-kick-start" class="language-html">
+&lt;header&gt;
+    ...
+    &lt;script src="$url/highlight.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/anchor.min.js"&gt;&lt;/script&gt;
+    &lt;!--Boostrap bundled with Popper--&gt;
+    &lt;script src="$url/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/preloadjs.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/aos.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/kute.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/vivus.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/snap.svg-min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/angrybee.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    //Enable syntax highlight
+    hljs.highlightAll();
+
+&lt;/script&gt;		
+&lt;/header&gt;
+&lt;body&gt;
+...
+&lt;script&gt;
+
+    //AnchorJS initialisation for h1, h2 and h3
+    anchors.add('h1, h2, h3');
+
+
+    AOS.init();	
+&lt;/script&gt;
+&lt;/body&gt;
+                        
+                        </code>
+                    </pre>
+                </div>
+
+                <p>You just have to adapt the <code>$url</code> path to adapt the code sample you can copy/paste.</p>
+
+                <br>
+
+            </section>
+
+
+            <!-- CSS Details content -->
+            <section id="id-css-details-panel"
+                class="getting-started-details-panel ab-container ab-margin-16 magictime slideDownReturn ab-width-95per"
+                style="display:none;animation-duration: 1s;">
+
+                <header class="ab-dark-xlight-border-bottom ab-margin-16">
+                    <h1>CSS Details</h1>
+                </header>
+
+                <h1>Default CSS</h1>
+
+
+                <p>Angrybee has built its own CSS classes to propose a consistent library for its Dark Mode.</p>
+
+
+                <div class="ab-flex-wrap">
+                    <div class="ab-container ab-dark-xlight-border ab-round-large ab-height-180 magictime swap ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom ab-margin-left-5">
+                            <p class="ab-large">Angrybee</p>
+                            <p class="ab-dark-xxxxlight-font">Apache 2 License</p>
+                        </header>
+
+                        <p>Angrybee CSS Framework.</p>
+                        <p><code>angrybee-dark-pc.css</code><br> <code>angrybee-dark-mobile.css</code></p>
+                                                
+                    </div>
+
+                    <div class="ab-container ab-dark-xlight-border ab-round-large ab-height-180 magictime swap ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom  ab-margin-left-5">
+                            <p class="ab-large">Angrybee Symbol</p>
+                            <p class="ab-dark-xxxxlight-font">Apache 2 License</p>
+                        </header>
+
+                        <p>Angrybee CSS dedicated to symbols.</p>
+                        <p><code>angrybee-symbols.css</code></p>
+                                                
+                    </div>
+                </div>
+
+
+                <h1>Extra-CSS libraries</h1>
+
+                <p>To extend the Angrybee framework capabilities and avoid reinventing the wheel, we have integrated other interesting CSS libraries .</p>
+
+                <p>Angrybee integrates the following CSS files:</p>
+
+
+                <div class="ab-flex-wrap">
+
+                    <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-width-300 ab-height-230  ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                            <p class="ab-large">Github syntax highlight</p>
+                            <p class="ab-dark-xxxxlight-font">BSD-3-Clause License</p>
+                        </header>
+
+                        <p>CSS for syntax highlights. See <a class="ab-link" target="_blank"
+                                href="https://highlightjs.org">highlightjs</a>. CSS associated to <code>highlight.min.js</code></p>
+                        <p><code>github-dark.min.css</code></p>
+                                                
+                    </div>
+
+                
+                    <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-230 ab-width-300 ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                            <p class="ab-large">Magic</p>
+                            <p class="ab-dark-xxxxlight-font">MIT License</p>
+                        </header>
+
+                        <p>A CSS for animations with special effects. We choose this CSS because of its specificity regarding the special effects 
+                            (see <a class="ab-link" target="_blank" href="https://www.minimamente.com/project/magic/?ref=blogduwebdesign.com">Magic</a>
+                            website and its <a class="ab-link" target="_blank" href="https://github.com/miniMAC/magic">documentation</a>).</p>
+                        <p><code>magic.min.css</code></p>
+                                                
+                    </div>
+
+
+                    <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-230 ab-width-300 ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                            <p class="ab-large">Bootstrap</p>
+                            <p class="ab-dark-xxxxlight-font">MIT License</p>
+                        </header>
+
+                        <p>Bootstrap framework bundled with Popper. See <a class="ab-link" target="_blank"
+                            href="https://getbootstrap.com/">Bootstrap</a>.</p>
+                        <p><code>bootstrap.min.css</code></p>
+                                                
+                    </div>
+
+
+
+                    <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-230 ab-width-300 ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                            <p class="ab-large">Bootstrap Icons</p>
+                            <p class="ab-dark-xxxxlight-font">MIT License</p>
+                        </header>
+
+                        <p>Predefined Bootstrap icons. See <a class="ab-link"
+                            target="_blank" href="https://icons.getbootstrap.com/">Bootstrap icons</a>.</p>
+                        <p><code>bootstrap-icons.css</code></p>
+                                                
+                    </div>
+
+
+                    <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-230 ab-width-300 ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                            <p class="ab-large">Hover.css</p>
+                            <p class="ab-dark-xxxxlight-font">MIT License</p>
+                        </header>
+
+                        <p>CSS for animations dedicated to the "hover" event. See <a class="ab-link" target="_blank" href="http://ianlunn.github.io/Hover/">Hover.css</a>.</p>
+                        
+                        <p><code>hover-min.css</code></p>
+                                                
+                    </div>
+
+                    <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-230 ab-width-300 ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                            <p class="ab-large">WickedCSS</p>
+                            <p class="ab-dark-xxxxlight-font">No License</p>
+                        </header>
+
+                        <p>Simple effect CSS animation library, easy to use. See <a class="ab-link" target="_blank" href="http://kristofferandreasen.github.io/wickedCSS/">WickedCSS</a>.</p>
+                        
+                        <p><code>wickedcss.min.css</code></p>
+                                                
+                    </div>
+
+
+
+                </div>    
+
+
+
+                <h1>CSS included by default</h1>
+
+                <p>You don't need to include these CSS files in your code, they are already included in the Angrybee CSS files.</p>
+
+                    <div class="code-block">
+                        
+                        <h2>CSS included by default</h2>
+                        <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'angrybee-css-import')"></i>
+                        <code id="angrybee-css-import" class="language-css">
+@import url("$url/github-dark.min.css");
+@import url("$url/bootstrap-icons.css");
+@import url("$url/bootstrap.min.css");
+@import url("$url/angrybee-symbols.css");
+@import url("$url/magic.min.css");
+@import url("$url/aos.css");
+@import url("$url/hover-min.css");
+@import url("./wickedcss/wickedcss.min.css");
+                        </code>
+                    </pre>
+                    </div>
+    
+
+                <br>
+
+
+            </section>
+
+
+            <!--Javascript details content -->
+            <section id="id-js-details-panel"
+                class="getting-started-details-panel ab-container ab-round-large ab-margin-16 magictime slideDownReturn ab-width-95per"
+                style="display:none;animation-duration: 1s;">
+
+
+                <header class="ab-dark-xlight-border-bottom ab-margin-16">
+                    <h1>Javascript Details</h1>
+                </header>
+
+
+                <p>Some extra-CSS are delivered with Javascript so it is mandatory to get them. The Angrybee Framework is bundled with all the necessary to run these extra-libraries..</p>
+
+                <p>But you need to call them in your HTML page.</p>
+
+                <p>By default, we don't modify the source code of the CSS and JS projects we include. In some cases we add classes or we override styles.</p>
+
+
+                <h1>Default integrations</h1>
+
+
+                <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-300 ab-width-300 ab-padding-5 ab-margin-5 ab-inline-grid">
+                    <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                        <p class="ab-large">AnchorJS</p>
+                        <p class="ab-dark-xxxlight-font">MIT License</p>
+                    </header>
+
+                    <p>Add automatically anchors to the HTML titles. See <a class="ab-link" target="_blank" href="https://www.bryanbraun.com/anchorjs/">AnchorJS</a>.</p>
+                    <p><code>anchor.min.js</code></p>
+                                            
+                </div>
+
+
+                <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-300 ab-width-300 ab-padding-5 ab-margin-5 ab-inline-grid">
+                    <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                        <p class="ab-large">Bootstrap <span class="ab-round ab-blue ab-padding-5">with CSS</span></p>
+                        <p class="ab-dark-xxxxlight-font">MIT License</p>
+                    </header>
+
+                    <p>World’s most popular front-end open source toolkit designed for responsive mobile-first sites. See <a class="ab-link" target="_blank"
+                        href="https://getbootstrap.com/">Bootstrap</a> and <a class="ab-link"
+                        target="_blank" href="https://icons.getbootstrap.com/">Bootstrap icons</a>.
+                    </p>
+                    <p><code>bootstrap.bundle.min.js</code></p>
+                    
+                </div>
+
+
+                <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-300 ab-width-300 ab-padding-5 ab-margin-5 ab-inline-grid">
+                    <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                        <p class="ab-large"><strong>PRELOAD</strong>JS</p>
+                        <p class="ab-dark-xxxxlight-font">MIT License</p>
+                    </header>
+
+                    <p>A JavaScript library that lets you manage and co-ordinate the loading of assets and data. 
+                        See <a class="ab-link" target="_blank" href="https://www.createjs.com/preloadjs">PRELOADJS</a>.
+                    </p>
+                    <p><code>preloadjs.min.js</code></p>
+                    
+                </div>
+
+
+                <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-300 ab-width-300 ab-padding-5 ab-margin-5 ab-inline-grid">
+                    <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                        <p class="ab-large">AOS <span class="ab-round ab-blue ab-padding-5">with CSS</span></p>
+                        <p class="ab-dark-xxxxlight-font">MIT License</p>
+                    </header>
+
+                    <p>Animate On Scroll library is a simple but powerfull animation library to manage appearence of elements during scrolling. 
+                        See <a class="ab-link" target="_blank" href="https://michalsnik.github.io/aos/">AOS</a>.
+                    </p>
+                    <p><code>aos.js</code></p>
+                    
+                </div>
+
+
+                <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-300 ab-width-300 ab-padding-5 ab-margin-5 ab-inline-grid">
+                    <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                        <p class="ab-large">KUTE.<span class="ab-yellow-font">js</span></p>
+                        <p class="ab-dark-xxxxlight-font">MIT License</p>
+                    </header>
+
+                    <p>Advanced animation library providing a huge number of animations such as SVG transformation, text properties, transformation matrix, etc. 
+                        See <a class="ab-link" target="_blank" href="http://thednp.github.io/kute.js/">KUTE.js</a>.
+                    </p>
+                    <p><code>kute.min.js</code></p>
+                    
+                </div>
+
+                
+                <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-300 ab-width-300 ab-padding-5 ab-margin-5 ab-inline-grid">
+                    <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                        <p class="ab-large">Vivus</p>
+                        <p class="ab-dark-xxxxlight-font">MIT License</p>
+                    </header>
+
+                    <p>Lightweight JavaScript class (with no dependencies) that allows you to animate SVGs, giving them the appearence of being drawn.
+                        See <a class="ab-link" target="_blank" href="https://maxwellito.github.io/vivus/">Vivus</a>.
+                    </p>
+                    <p><code>vivus.min.js</code></p>
+                    
+                </div>
+
+            
+                <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-300 ab-width-300 ab-padding-5 ab-margin-5 ab-inline-grid">
+                    <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                        <p class="ab-large">Snap.svg</p>
+                        <p class="ab-dark-xxxxlight-font">MIT License</p>
+                    </header>
+
+                    <p>Advanced JavaScript to bring life to SVGs.
+                        See <a class="ab-link" target="_blank" href="http://snapsvg.io/">Snap.svg</a>.
+                    </p>
+                    <p><code>snap.svg-min.js</code></p>
+                    
+                </div>
+
+                 
+
+                <h1>Future integrations</h1>
+
+                <p>Future Javascript library integration:</p>
+                    <ul>
+                        <li>Tagify <a class="ab-link" target="_blank"href="https://yaireo.github.io/tagify/">tagify</a></li>
+                        <li>Slick <a class="ab-link" target="_blank" href="https://kenwheeler.github.io/slick/?ref=blogduwebdesign.com">Slick</a></li>
+                        <li>CodeMirror <a class="ab-link" target="_blank" href="https://codemirror.net/index.html">CodeMirror</a></li>
+                        <li>VueJS <a class="ab-link" target="_blank" href="https://vuejs.org/">Vue.js</a></li>
+                        <li>Video player: <a class="ab-link" target="_blank" href="https://videojs.com/">Video.js</a></li>
+                        <li>Graph:<a class="ab-link" target="_blank" href="https://d3js.org/">D3.js</a></li>
+                        <li>WYSIWYG Editor: <a class="ab-link" target="_blank" href="https://quilljs.com/">Quilljs</a></li>
+                        <li>Animation Library: <a class="ab-link" target="_blank" href="https://createjs.com/">TweenJS</a></li>
+                    </ul>
+
+                    <h1>How to use</h1>
+
+
+                <div class="code-block">
+                    
+                    <h2>Full Javascript declaration</h2>
+
+                    <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos"
+                        onclick="copyCode(event,'header-angrybee-css')"></i>
+                    <code id="header-angrybee-css" class="language-html">
+&lt;header&gt;
+    ...
+    &lt;script src="$url/highlight.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/anchor.min.js"&gt;&lt;/script&gt;
+    &lt;!--Boostrap bundled with Popper--&gt;
+    &lt;script src="$url/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/preloadjs.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/aos.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/kute.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/vivus.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/snap.svg-min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/angrybee.js"&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+    //Enable syntax highlight
+    hljs.highlightAll();
+
+    &lt;/script&gt;		
+&lt;/header&gt;
+&lt;body&gt;
+...
+    &lt;script&gt;
+
+        //AnchorJS initialisation for h1, h2 and h3
+        anchors.add('h1, h2, h3');
+
+
+        AOS.init();	
+    &lt;/script&gt;
+&lt;/body&gt;
+                    </code>
+                </pre>
+                </div>
+
+
+            </section>
+
+
+
+        </article>  
+        
+
+
+
+
+
+
+        
+        <!-- Dark Mode -->
+        <article id="dark-mode" class="ab-animate-fadIn-4 ab-animate-right-slow" style="display:none;">
+
+            <br>
+            
+            <h1>Dark Mode</h1>
+            
+            <p>Angrybee CSS is made for specific Dark Mode.</p>
+            
+            <p>Simply add <code>ab-dark--</code> to the <code>class</code> attribute of your <code>body</code> page to enable this mode.</p>
+
+
+            <div class="code-block">
+                
+                <h2>Enable Dark mode</h2>
+                <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'add-dark-mode')"></i>
+                <code id="add-dark-mode">
+&lt;body class="ab-dark--"&gt;
+&lt;!-- content of the page --&gt;
+&lt;body&gt;
+                </code>
+            </pre>
+            </div>
+
+            <p>See <a class="ab-link" href="#" onclick="showArticle('colors');">Color</a> section for additional
+                information.</p>
+
+
+
+        </article>
+
+
+
+
+
+
+
+        <!-- Containers -->
+        <article id="containers" class="ab-animate-fadIn-4 ab-animate-left-slow" style="display:none;">
+
+            <h1>Containers</h1>
+
+            <p>Angrybee has designed its own containers. However, it is possible to use the Bootstrap containers: see <a target="_blank" class="ab-link"  href="https://getbootstrap.com/docs/5.1/layout/containers/">here</a></p>
+
+            <p>Any container could be assigned by a max size to design your own breakpoints. See <a class="ab-link" href="#" onclick="showArticle('predefined-size');">Predefined size</a> section for additional
+                information.</p>
+
+            <!-- Block containers panel -->
+            <section class="ab-container ab-dark-xlight-border ab-round-large ab-height-200 ab-width-300 magictime spaceInRight ab-margin-5 ab-padding-5 ab-inline-grid">
+                
+                <h2 class="ab-dark-xlight-border-bottom ab-margin-16">Block containers</h2>
+
+                <p>Display default containers.</p>
+                
+                <div class="ab-margin-16 ab-pos-bottomright">
+                    <a class="ab-green-font-hover" href="#" onclick="showContainer('containers-details-panel','id-block-container-panel')">More infos <i class="sy-bracket-right"></i></a>
+                </div>
+
+            </section>
+            
+
+            <!-- Inline containers panel -->
+            <section class="ab-container ab-dark-xlight-border ab-round-large ab-height-200 ab-width-300 magictime spaceInRight ab-margin-5 ab-padding-5 ab-inline-grid">
+                
+                <h2 class="ab-dark-xlight-border-bottom ab-margin-16">Inline containers</h2>
+
+                <p>Display containers inline.</p>
+                
+                <div class="ab-margin-16 ab-pos-bottomright">
+                    <a class="ab-green-font-hover" href="#" onclick="showContainer('containers-details-panel','id-inline-container-panel')">More infos <i class="sy-bracket-right"></i></a>
+                </div>
+            </section>
+
+
+            <!-- Overflow with containers panel -->
+            <section class="ab-container ab-dark-xlight-border ab-round-large ab-height-200 ab-width-280 magictime spaceInRight ab-margin-5 ab-padding-5 ab-inline-grid">
+                
+                <h2 class="ab-dark-xlight-border-bottom ab-margin-16">Overflow</h2>
+
+                <p>Add overflow capabilities to containers.</p>
+                
+                <div class="ab-margin-16 ab-pos-bottomright">
+                    <a class="ab-green-font-hover" href="#" onclick="showContainer('containers-details-panel','id-overflow-container-panel')">More infos <i class="sy-bracket-right"></i></a>
+                </div>
+            </section>
+
+
+
+
+            <!-- Block containers content -->
+            <section id="id-block-container-panel"
+                class="containers-details-panel ab-container ab-margin-16 magictime slideDownReturn ab-width-95per"
+                style="display:none;animation-duration: 1s;">
+
+
+                <header class="ab-dark-xlight-border-bottom ab-margin-16">
+
+                    <h1>Block containers</h1>
+
+                </header>
+
+                <p>Containers are the basic UI elements to provide common padding (5px) and alignments. It does not provide margin to allow you to adapt easily the margin depending on the UI context.</p>
+
+                <p>A container is declared with <code>ab-container</code> class.</p>
+
+                <p>By default containers are basically displayed in row layout (like <code>display:block</code> style) taking 100% width of the viewport, but you can enforce its dimension with predefined classes.</p>
+
+                <p>See <a class="ab-link" href="#" onclick="showArticle('predefined-size');">Predefined size</a> section for additional information.</p>
+    
+
+
+                <div class="code-block">
+                    
+                    <h2>Example: 3 block containers</h2>
+
+                    <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'id-code-loader-semi-circle-dark-light')"></i>
+                        <code id="id-code-loader-semi-circle-dark-light" class="language-html">
+&lt;div class="ab-container ab-green"&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="ab-container ab-yellow"&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="ab-container ab-orange"&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre> 												
+                    
+                    <h2>Result</h2>
+                    <div class="ab-container ab-green">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    
+                    <div class="ab-container ab-yellow">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+
+                    <div class="ab-container ab-orange">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    
+
+                </div>					
+
+                <br>
+                
+
+            </section>
+
+
+
+            <!-- Inline containers content -->
+            <section id="id-inline-container-panel"
+                class="containers-details-panel ab-container ab-margin-16 magictime slideDownReturn ab-width-95per"
+                style="display:none;animation-duration: 1s;">
+
+
+                <header class="ab-dark-xlight-border-bottom ab-margin-16">
+                   
+                    <h1>Inline containers</h1>
+                </header>
+
+                <p>If you add <code>ab-inline-grid</code> class to <code>ab-container</code> class, you can display them inline (i.e. in a single row).</p>
+                <p><code>ab-inline-grid</code> is the equivalent of <code>display:inline-block</code>: it allows you to align containers in the same row but 
+                with respect of width, height, padding and margin. Means that you need sufficient space for all your containers to display them in one row.</p>
+                <p>If not, the containers which is over the viewport width jump to the next row.</p>
+
+                <div class="code-block">
+
+                        <h2>Example: inline containers with sufficient space</h2>
+                        
+                        <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos"
+                            onclick="copyCode(event,'ab-inline-grid1-example-code')"></i>
+                        <code id="ab-inline-grid1-example-code" class="language-html">
+&lt;div style="width: 400px;" class="ab-dark-light ab-padding-24"&gt;
+    &lt;div class="ab-container ab-inline-grid ab-width-100 ab-height-200 ab-green"&gt;&lt;/div&gt;
+    &lt;div class="ab-container ab-inline-grid ab-width-100 ab-height-200 ab-yellow"&gt;&lt;/div&gt;
+    &lt;div class="ab-container ab-inline-grid ab-width-100 ab-height-200 ab-orange"&gt;&lt;/div&gt;
+&lt;/div&gt;	
+                    </code>
+                    </pre>
+                    <p>In this case, the viewport has the sufficient width to display all the <strong>containers inline</strong>.</p>
+
+
+                    <h2>Result</h2>
+
+                    <div style="width: 400px;" class="ab-dark-light ab-padding-24">
+                        
+                        <div class="ab-container ab-inline-grid ab-width-100 ab-height-200 ab-green"></div>
+                        <div class="ab-container ab-inline-grid ab-width-100 ab-height-200 ab-yellow"></div>
+                        <div class="ab-container ab-inline-grid ab-width-100 ab-height-200 ab-orange"></div>
+                        
+                    </div>
+
+                </div>
+
+                <br>
+                
+                <p>In the second case, the viewport has not the sufficient width to display all the <strong>containers inline</strong>. 
+                    The last container take the next row.</p>
+                
+                <br>
+
+                <div class="code-block">
+
+                    
+                        <h2>Example: inline containers without sufficient space</h2>
+                        
+                        <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos"
+                            onclick="copyCode(event,'ab-inline-grid1-example-code')"></i>
+                        <code id="ab-inline-grid1-example-code" class="language-html">
+&lt;div style="width: 400px;" class="ab-dark-light ab-padding-24"&gt;
+    &lt;div class="ab-container ab-margin-5 ab-inline-grid ab-width-100 ab-height-200 ab-green"&gt;&lt;/div&gt;
+    &lt;div class="ab-container ab-margin-5 ab-inline-grid ab-width-100 ab-height-200 ab-yellow"&gt;&lt;/div&gt;
+    &lt;div class="ab-container ab-margin-5 ab-inline-grid ab-width-100 ab-height-200 ab-orange"&gt;&lt;/div&gt;
+    &lt;div class="ab-container ab-margin-5 ab-inline-grid ab-width-100 ab-height-200 ab-blue"&gt;&lt;/div&gt;
+&lt;/div&gt;	
+                    </code>
+                    </pre>
+
+
+
+                    <h2>Result</h2>
+
+                    <div style="width: 400px;" class="ab-dark-light ab-padding-24">
+                        <div class="ab-container ab-margin-5 ab-inline-grid ab-width-100 ab-height-200 ab-green"></div>
+                        <div class="ab-container ab-margin-5 ab-inline-grid ab-width-100 ab-height-200 ab-yellow"></div>
+                        <div class="ab-container ab-margin-5 ab-inline-grid ab-width-100 ab-height-200 ab-orange"></div>
+                        <div class="ab-container ab-margin-5 ab-inline-grid ab-width-100 ab-height-200 ab-blue"></div>
+                    </div>
+
+                </div>
+
+
+
+                <br>
+
+            </section>				
+
+
+
+            <!-- Overflow content -->
+            <section id="id-overflow-container-panel"
+                class="containers-details-panel ab-container ab-margin-16 magictime slideDownReturn ab-width-95per"
+                style="display:none;animation-duration: 1s;">
+
+                <header class="ab-dark-xlight-border-bottom ab-margin-16">
+                   
+                    <h1>Overflow with containers</h1>
+                </header>
+                
+                <p>When the container content does not fit to it, you can add:</p>
+                <ul>
+                    <li><code>ab-overflow</code> class to add horizontal and vertical scrollbar</li>
+                    <li><code>ab-overflow-x</code> class to add horizontal only scrollbar</li>
+                    <li><code>ab-overflow-y</code> class to add vertical only scrollbar</li>
+                
+
+                <h1>2 Scrollbars</h1>
+                <div class="code-block">
+
+                    <h2>Example: horizontal and vertical scrollbars</h2>
+
+                        <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos"
+                            onclick="copyCode(event,'ab-overflow-example-code')"></i>
+                        <code id="ab-overflow-example-code" class="language-html">
+&lt;div class="ab-overflow ab-height-100 ab-width-100 
+        ab-dark-xlight-border ab-round-large ab-margin-16"&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit.&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+&lt;/div&gt;
+                    </code>
+                    </pre>
+ 
+                    <h2>Result</h2>
+
+                    
+                    <div class="ab-overflow ab-height-100 ab-width-100 ab-dark-xlight-border ab-round-large ab-margin-16">
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                    </div>
+
+                </div>	
+                
+                <br>
+
+                <h1>Horizontal scrollbar</h1>
+
+                <div class="code-block">
+
+                    <h2>Example: horizontal scrollbar</h2>
+
+                        <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos"
+                            onclick="copyCode(event,'ab-overflow-example-code')"></i>
+                        <code id="ab-overflow-example-code" class="language-html">
+&lt;div class="ab-overflow-x ab-height-100 ab-width-100 
+        ab-dark-xlight-border ab-round-large ab-margin-16"&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit.&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+&lt;/div&gt;
+                    </code>
+                    </pre>
+ 
+                    <h2>Result</h2>
+
+                    
+                    <div class="ab-overflow-x ab-height-100 ab-width-100 ab-dark-xlight-border ab-round-large ab-margin-16">
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                    </div>
+
+                </div>	
+                
+                <br>
+
+                <h1>Vertical scrollbar</h1>
+
+                <div class="code-block">
+
+                    <h2>Example: vertical scrollbar</h2>
+
+                        <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos"
+                            onclick="copyCode(event,'ab-overflow-example-code')"></i>
+                        <code id="ab-overflow-example-code" class="language-html">
+&lt;div class="ab-overflow-y ab-height-100 ab-width-100 
+        ab-dark-xlight-border ab-round-large ab-margin-16"&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit.&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+    &lt;p&gt;LoremIpsumdolorsitamet,consecteturadipiscingelit&lt;/p&gt;
+&lt;/div&gt;
+                    </code>
+                    </pre>
+ 
+                    <h2>Result</h2>
+
+                    
+                    <div class="ab-overflow-y ab-height-100 ab-width-100 ab-dark-xlight-border ab-round-large ab-margin-16">
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                        <p>LoremIpsumdolorsitamet,consecteturadipiscingelit</p>
+                    </div>
+
+                </div>	
+                
+                <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </section>
+
+        </article>
+
+
+
+        <article id="layouts" class="ab-animate-fadIn-4 ab-animate-left-slow" style="display:none;">
+            <h1>Layouts</h1>
+
+
+				<!--Flex layout panel -->
+				<section class="ab-container ab-dark-xlight-border ab-round-large ab-height-200 ab-width-280 magictime spaceInRight ab-margin-5 ab-padding-5 ab-inline-grid">
+					
+					<h2 class="ab-dark-xlight-border-bottom ab-margin-16">Flex layout</h2>
+
+					<p>Display flexible inline components that stay in the same row.</p>
+					
+					<div class="ab-margin-16 ab-pos-bottomright">
+						<a class="ab-green-font-hover" href="#" onclick="showContainer('layout-details-panel','id-flex-layout-container-panel')">More infos <i class="sy-bracket-right"></i></a>
+					</div>
+				</section>
+
+
+				<!-- Flex layout with Wrap panel 
+				<section class="ab-container ab-dark-x ab-dark-xlight-border ab-round-large ab-height-200 ab-width-300 magictime spaceInRight ab-margin-5 ab-padding-5 ab-inline-grid">
+					
+					<h2 class="ab-dark-xlight-border-bottom ab-margin-16">Wrap Flex layout</h2>
+
+					<p>Display flexible inline components not constraints in a single row.</p>
+					
+					<div class="ab-margin-16 ab-pos-bottomright">
+						<a class="ab-green-font-hover" href="#" onclick="showContainer('layout-details-panel','id-flex-wrap-layout-container-panel')">More infos <i class="sy-bracket-right"></i></a>
+					</div>
+				</section>-->
+
+
+				<!-- Grid layout with Wrap panel -->
+				<section class="ab-container ab-dark-xlight-border ab-round-large ab-height-200 ab-width-280 magictime spaceInRight ab-margin-5 ab-padding-5 ab-inline-grid">
+					
+					<h2 class="ab-dark-xlight-border-bottom ab-margin-16">Grid layout</h2>
+
+					<p>Display a grid-based layout system, with rows and columns.</p>
+					
+					<div class="ab-margin-16 ab-pos-bottomright">
+						<a class="ab-green-font-hover" href="#" onclick="showContainer('layout-details-panel','id-grid-layout-container-panel')">More infos <i class="sy-bracket-right"></i></a>
+					</div>
+				</section>
+
+
+
+
+
+                <!--Flex layout content -->
+				<section id="id-flex-layout-container-panel"
+                    class="layout-details-panel ab-container ab-margin-16 magictime slideDownReturn ab-width-95per"
+                    style="display:none;animation-duration: 1s;">
+
+
+					<header class="ab-dark-xlight-border-bottom ab-margin-16">
+
+						<h1>Flex layout</h1>
+
+					</header>
+
+					<h1>Default flex layout</h1>
+
+					<p><code>ab-flex</code> allows you to display items inline like a row of table.</p>
+
+					<p>By default, the row take 100% of screen or viewport width and each row item has the same size.</p>
+
+
+					<div class="code-block">
+							
+							<h2>Example with 3 containers</h2>
+							<pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'ab-flex-example1')"></i>
+							<code id="ab-flex-example1" class="language-html">
+&lt;div class="ab-flex ab-dark-xlight-border"&gt;
+	&lt;div class="ab-container ab-blue"&gt;BLUE&lt;/div&gt;
+	&lt;div class="ab-container ab-red"&gt;RED&lt;/div&gt;
+	&lt;div class="ab-container ab-orange"&gt;ORANGE&lt;/div&gt;
+&lt;/div&gt;
+							</code>
+						</pre>
+						<h2>Result</h2>
+
+							<div class="ab-flex ab-dark-xlight-border">
+								<div class="ab-container ab-blue">BLUE</div>
+								<div class="ab-container ab-red">RED</div>
+								<div class="ab-container ab-orange">ORANGE</div>
+							</div>
+
+					</div>
+							<br>
+
+					<div class="code-block">
+								
+								<h2>Example with 5 containers</h2>
+								<pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'ab-flex-example2')"></i>
+								<code id="ab-flex-example2" class="language-html">
+&lt;div class="ab-flex ab-dark-xlight-border"&gt;
+	&lt;div class="ab-container ab-blue"&gt;BLUE&lt;/div&gt;
+	&lt;div class="ab-container ab-red"&gt;RED&lt;/div&gt;
+	&lt;div class="ab-container ab-orange"&gt;ORANGE&lt;/div&gt;
+	&lt;div class="ab-container ab-yellow"&gt;YELLOW&lt;/div&gt;
+	&lt;div class="ab-container ab-green"&gt;GREEN&lt;/div&gt;
+&lt;/div&gt;
+								</code>
+							</pre>
+							<h2>Result</h2>
+	
+	
+							<div class="ab-flex ab-dark-xlight-border">
+								<div class="ab-container ab-blue">BLUE</div>
+								<div class="ab-container ab-red">RED</div>
+								<div class="ab-container ab-orange">ORANGE</div>
+								<div class="ab-container ab-yellow">YELLOW</div>
+								<div class="ab-container ab-green">GREEN</div>
+							</div>
+		
+
+
+					</div>
+
+					<br>
+
+
+					<p>In this category of layout, you can change the global width of the row, but not width of specific cells.</p>
+
+					<div class="code-block ab-width-75per">
+						
+						<h2>Example with 600px width row</h2>
+						
+						<pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'ab-flex-example3')"></i>
+							<code id="ab-flex-example3" class="language-html">
+&lt;div class="ab-flex ab-width-600 ab-dark-xlight-border"&gt;
+	&lt;div class="ab-container ab-blue"&gt;BLUE&lt;/div&gt;
+	&lt;div class="ab-container ab-red"&gt;RED&lt;/div&gt;
+	&lt;div class="ab-container ab-orange"&gt;ORANGE&lt;/div&gt;
+	&lt;div class="ab-container ab-yellow"&gt;YELLOW&lt;/div&gt;
+	&lt;div class="ab-container ab-green"&gt;GREEN&lt;/div&gt;
+&lt;/div&gt;
+							</code>
+						</pre>
+						
+						<p>Here we add <code>ab-width-600</code> class.</p>
+						
+						<h2>Result</h2>
+
+
+						<div class="ab-flex ab-width-600 ab-dark-xlight-border">
+							<div class="ab-container ab-blue">BLUE</div>
+							<div class="ab-container ab-red">RED</div>
+							<div class="ab-container ab-orange">ORANGE</div>
+							<div class="ab-container ab-yellow">YELLOW</div>
+							<div class="ab-container ab-green">GREEN</div>
+						</div>
+
+
+
+					</div>
+
+
+						<br>
+
+						<h1>Flex layout with horizontal alignment</h1>
+
+						<p class="i ab-gray-medium-font ab-small">Click on buttons to display description.</p>
+
+
+						<button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('flex-justify-panel','id-flex-start-panel')">
+							Class: <code>ab-flex-start</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+						</button>
+
+
+						<button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('flex-justify-panel','id-flex-end-panel')">
+							Class: <code>ab-flex-end</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+						</button>
+
+
+						<button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('flex-justify-panel','id-flex-justify-panel')">
+							Class: <code>ab-flex-justify</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+						</button>
+
+						<br>
+					
+                        page-toc
+
+							<div id="id-flex-start-panel" class="flex-justify-panel ab-container" style="display: none;">
+								<p>In this layout with the class <code>ab-flex-start</code>, all items are aligned to the left.</p>
+								<p>This layout keeps the size of their items.</p>
+
+								<br>
+
+
+									<div class="code-block">
+										
+										<h2>Example</h2>
+										
+										<pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'ab-flex-start-example')"></i>
+											<code id="ab-flex-start-example" class="language-html">
+&lt;div class="ab-flex-start ab-dark-xlight-border"&gt;
+	&lt;div class="ab-container ab-blue"&gt;BLUE&lt;/div&gt;
+	&lt;div class="ab-container ab-red"&gt;RED&lt;/div&gt;
+	&lt;div class="ab-container ab-orange"&gt;ORANGE&lt;/div&gt;
+	&lt;div class="ab-container ab-yellow"&gt;YELLOW&lt;/div&gt;
+	&lt;div class="ab-container ab-green"&gt;GREEN&lt;/div&gt;
+&lt;/div&gt;</code>
+										</pre>
+										
+										
+										<h2>Result</h2>
+				
+				
+										<div class="ab-flex-start ab-dark-xlight-border">
+											<div class="ab-container ab-blue">BLUE</div>
+											<div class="ab-container ab-red">RED</div>
+											<div class="ab-container ab-orange">ORANGE</div>
+											<div class="ab-container ab-yellow">YELLOW</div>
+											<div class="ab-container ab-green">GREEN</div>
+										</div>
+				
+									</div>
+
+							</div>
+
+
+							<div id="id-flex-end-panel" class="flex-justify-panel ab-container" style="display: none;">
+
+								<p>In this layout with the class <code>ab-flex-end</code>, all items are aligned to the right.</p>
+								<p>This layout keeps the size of their items.</p>
+
+								<br>
+
+									<div class="code-block">
+										
+										<h2>Example</h2>
+										
+										<pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'ab-flex-end-example')"></i>
+											<code id="ab-flex-end-example" class="language-html">
+&lt;div class="ab-flex-end ab-dark-xlight-border"&gt;
+	&lt;div class="ab-container ab-blue"&gt;BLUE&lt;/div&gt;
+	&lt;div class="ab-container ab-red"&gt;RED&lt;/div&gt;
+	&lt;div class="ab-container ab-orange"&gt;ORANGE&lt;/div&gt;
+	&lt;div class="ab-container ab-yellow"&gt;YELLOW&lt;/div&gt;
+	&lt;div class="ab-container ab-green"&gt;GREEN&lt;/div&gt;
+&lt;/div&gt;</code>
+										</pre>
+										
+										
+										<h2>Result</h2>
+				
+				
+										<div class="ab-flex-end ab-dark-xlight-border">
+											<div class="ab-container ab-blue">BLUE</div>
+											<div class="ab-container ab-red">RED</div>
+											<div class="ab-container ab-orange">ORANGE</div>
+											<div class="ab-container ab-yellow">YELLOW</div>
+											<div class="ab-container ab-green">GREEN</div>
+										</div>
+				
+									</div>
+
+			
+
+							</div>
+
+
+							<div id="id-flex-justify-panel" class="flex-justify-panel ab-container" style="display: none;">
+								
+								<p>In this layout with the class <code>ab-flex-justify</code>, all items are aligned to the center.</p>
+								<p>This layout keeps the size of their items.</p>
+
+								<br>
+
+									<div class="code-block">
+										
+										<h2>Example</h2>
+										
+										<pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'ab-flex-justify-example')"></i>
+											<code id="ab-flex-justify-example" class="language-html">
+&lt;div class="ab-flex-justify ab-dark-xlight-border"&gt;
+	&lt;div class="ab-container ab-blue"&gt;BLUE&lt;/div&gt;
+	&lt;div class="ab-container ab-red"&gt;RED&lt;/div&gt;
+	&lt;div class="ab-container ab-orange"&gt;ORANGE&lt;/div&gt;
+	&lt;div class="ab-container ab-yellow"&gt;YELLOW&lt;/div&gt;
+	&lt;div class="ab-container ab-green"&gt;GREEN&lt;/div&gt;
+&lt;/div&gt;</code>
+										</pre>
+										
+										
+										<h2>Result</h2>
+				
+				
+										<div class="ab-flex-justify ab-dark-xlight-border">
+											<div class="ab-container ab-blue">BLUE</div>
+											<div class="ab-container ab-red">RED</div>
+											<div class="ab-container ab-orange">ORANGE</div>
+											<div class="ab-container ab-yellow">YELLOW</div>
+											<div class="ab-container ab-green">GREEN</div>
+										</div>
+				
+									</div>
+				
+
+							</div>
+
+						<br>
+
+						<h1>Flex layout with vertical alignment</h1>
+
+						<p class="i ab-gray-medium-font ab-small">Click on buttons to display description.</p>
+
+
+						<button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('flex-align-items-panel','id-flex-align-items-top-panel')">
+							Class: <code>ab-flex-top</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+						</button>
+
+
+						<button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('flex-align-items-panel','id-flex-align-items-center-panel')">
+							Class: <code>ab-flex-center</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+						</button>
+
+
+						<button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('flex-align-items-panel','id-flex-align-items-bottom-panel')">
+							Class: <code>ab-flex-bottom</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+						</button>
+
+
+						<br>
+
+						<div id="id-flex-align-items-top-panel" class="flex-align-items-panel ab-container" style="display: none;">
+							<p>In this layout with the class <code>ab-flex-top</code>, all items are aligned to the top.</p>
+							<p>This layout keeps the size of their items.</p>
+							<br>
+
+							<div class="code-block">
+								
+								<h2>Example</h2>
+								
+								<pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'ab-flex-top-example')"></i>
+									<code id="ab-flex-top-example" class="language-html">
+&lt;div class="ab-flex-top ab-dark-xlight-border ab-height-200"&gt;
+    &lt;div class="ab-container ab-blue"&gt;BLUE&lt;/div&gt;
+    &lt;div class="ab-container ab-red"&gt;RED&lt;/div&gt;
+    &lt;div class="ab-container ab-orange"&gt;ORANGE&lt;/div&gt;
+    &lt;div class="ab-container ab-yellow"&gt;YELLOW&lt;/div&gt;
+    &lt;div class="ab-container ab-green"&gt;GREEN&lt;/div&gt;
+&lt;/div&gt;</code>
+								</pre>
+								
+								
+								<h2>Result</h2>
+		
+								<!--@Todo result example-->
+								<div class="ab-flex-top ab-dark-xlight-border ab-height-200">
+									<div class="ab-container ab-blue">BLUE</div>
+									<div class="ab-container ab-red">RED</div>
+									<div class="ab-container ab-orange">ORANGE</div>
+									<div class="ab-container ab-yellow">YELLOW</div>
+									<div class="ab-container ab-green">GREEN</div>
+								</div>
+
+							</div>							
+
+						</div>
+
+						<div id="id-flex-align-items-center-panel" class="flex-align-items-panel ab-container" style="display: none;">
+							<p>In this layout with the class <code>ab-flex-center</code>, all items are aligned to the center in the vertical axe.</p>
+							<p>This layout keeps the size of their items.</p>
+							<br>
+
+							<div class="code-block">
+								
+								<h2>Example</h2>
+								
+								<pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'ab-flex-center-example')"></i>
+									<code id="ab-flex-center-example" class="language-html">
+&lt;div class="ab-flex-center ab-dark-xlight-border ab-height-200"&gt;
+    &lt;div class="ab-container ab-blue"&gt;BLUE&lt;/div&gt;
+    &lt;div class="ab-container ab-red"&gt;RED&lt;/div&gt;
+    &lt;div class="ab-container ab-orange"&gt;ORANGE&lt;/div&gt;
+    &lt;div class="ab-container ab-yellow"&gt;YELLOW&lt;/div&gt;
+    &lt;div class="ab-container ab-green"&gt;GREEN&lt;/div&gt;
+&lt;/div&gt;</code>
+								</pre>
+								
+								
+								<h2>Result</h2>
+		
+								<!--@Todo result example-->
+								<div class="ab-flex-center ab-dark-xlight-border ab-height-200">
+									<div class="ab-container ab-blue">BLUE</div>
+									<div class="ab-container ab-red">RED</div>
+									<div class="ab-container ab-orange">ORANGE</div>
+									<div class="ab-container ab-yellow">YELLOW</div>
+									<div class="ab-container ab-green">GREEN</div>
+								</div>
+		
+							</div>							
+
+                        </div>
+
+						<div id="id-flex-align-items-bottom-panel" class="flex-align-items-panel ab-container" style="display: none;">
+							<p>In this layout with the class <code>ab-flex-bottom</code>, all items are aligned to the bottom.</p>
+							<p>This layout keeps the size of their items.</p>
+							<br>
+
+							<div class="code-block">
+								
+								<h2>Example</h2>
+								
+								<pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'ab-flex-bottom-example')"></i>
+									<code id="ab-flex-bottom-example" class="language-html">
+&lt;div class="ab-flex-bottom ab-dark-xlight-border ab-height-200"&gt;
+    &lt;div class="ab-container ab-blue"&gt;BLUE&lt;/div&gt;
+    &lt;div class="ab-container ab-red"&gt;RED&lt;/div&gt;
+    &lt;div class="ab-container ab-orange"&gt;ORANGE&lt;/div&gt;
+    &lt;div class="ab-container ab-yellow"&gt;YELLOW&lt;/div&gt;
+    &lt;div class="ab-container ab-green"&gt;GREEN&lt;/div&gt;
+&lt;/div&gt;</code>
+								</pre>
+								
+								
+								<h2>Result</h2>
+		
+								
+								<div class="ab-flex-bottom ab-dark-xlight-border ab-height-200">
+									<div class="ab-container ab-blue">BLUE</div>
+									<div class="ab-container ab-red">RED</div>
+									<div class="ab-container ab-orange">ORANGE</div>
+									<div class="ab-container ab-yellow">YELLOW</div>
+									<div class="ab-container ab-green">GREEN</div>
+								</div>
+		
+							</div>							
+
+						</div>
+
+						<br>
+
+						<h1>Stretch Flex layout</h1>
+                        <p>In this layout with the class <code>ab-flex-stretch</code>, the items take all the space available.</p>
+                         
+                        
+                        <div class="code-block">
+								
+                            <h2>Example</h2>
+                            
+                            <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'ab-flex-stretch-example')"></i>
+                                <code id="ab-flex-stretch-example" class="language-html">
+&lt;div class="ab-flex-stretch ab-dark-xlight-border ab-height-200"&gt;
+    &lt;div class="ab-container ab-blue"&gt;BLUE&lt;/div&gt;
+    &lt;div class="ab-container ab-red"&gt;RED&lt;/div&gt;
+    &lt;div class="ab-container ab-orange"&gt;ORANGE&lt;/div&gt;
+    &lt;div class="ab-container ab-yellow"&gt;YELLOW&lt;/div&gt;
+    &lt;div class="ab-container ab-green"&gt;GREEN&lt;/div&gt;
+&lt;/div&gt;</code>
+                            </pre>
+                            
+                            
+                            <h2>Result</h2>
+    
+                            
+                            <div class="ab-flex-stretch ab-dark-xlight-border ab-height-200">
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red">RED</div>
+                                <div class="ab-container ab-orange">ORANGE</div>
+                                <div class="ab-container ab-yellow">YELLOW</div>
+                                <div class="ab-container ab-green">GREEN</div>
+                            </div>
+    
+                        </div>							
+                   
+                        
+                        <h1>Grow flex items</h1>
+                        
+                        <p>If you want a specific item growing 2x, 3x, 4x, etc. larger than the others, you can add <code>ab-flex-$number</code> to an item 
+                        where <code>$number</code>> is an integer from <code>2</code> to <code>12</code>.</p>
+                        
+                        <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-flex-col-panel','id-ab-flex-2-panel')">
+                            Class: <code>ab-flex-2</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                        </button>
+    
+                        <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-flex-col-panel','id-ab-flex-3-panel')">
+                            Class: <code>ab-flex-3</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                        </button>
+
+                        <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-flex-col-panel','id-ab-flex-4-panel')">
+                            Class: <code>ab-flex-4</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                        </button>
+
+                        <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-flex-col-panel','id-ab-flex-5-panel')">
+                            Class: <code>ab-flex-5</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                        </button>
+
+                        <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-flex-col-panel','id-ab-flex-6-panel')">
+                            Class: <code>ab-flex-6</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                        </button>
+
+                        <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-flex-col-panel','id-ab-flex-7-panel')">
+                            Class: <code>ab-flex-7</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                        </button>
+
+                        <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-flex-col-panel','id-ab-flex-8-panel')">
+                            Class: <code>ab-flex-8</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                        </button>
+
+                        <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-flex-col-panel','id-ab-flex-9-panel')">
+                            Class: <code>ab-flex-9</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                        </button>
+
+                        <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-flex-col-panel','id-ab-flex-10-panel')">
+                            Class: <code>ab-flex-10</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                        </button>
+
+                        <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-flex-col-panel','id-ab-flex-11-panel')">
+                            Class: <code>ab-flex-11</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                        </button>
+
+                        <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-flex-col-panel','id-ab-flex-12-panel')">
+                            Class: <code>ab-flex-12</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                        </button>
+
+
+                        <div id="id-ab-flex-2-panel" class="ab-flex-col-panel ab-container" style="display: none;">
+
+                            <p><code>ab-flex-2</code> sample (2nd column 2x larger than the others):</p>
+    
+                            <div class="ab-flex ab-dark-xlight-border ab-width-100per">
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red ab-flex-2">RED</div>
+                                <div class="ab-container ab-orange">ORANGE</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                            </div>
+        
+                        </div>
+
+                        
+                        <div id="id-ab-flex-3-panel" class="ab-flex-col-panel ab-container" style="display: none;">
+
+                            <p><code>ab-flex-3</code> sample (2nd column 3x larger than the others):</p>
+    
+                            <div class="ab-flex ab-dark-xlight-border ab-width-100per">
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red ab-flex-3">RED</div>
+                                <div class="ab-container ab-orange">ORANGE</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                            </div>
+        
+                        </div>
+
+
+                        <div id="id-ab-flex-4-panel" class="ab-flex-col-panel ab-container" style="display: none;">
+
+                            <p><code>ab-flex-4</code> sample (2nd column 4x larger than the others):</p>
+    
+                            <div class="ab-flex ab-dark-xlight-border ab-width-100per">
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red ab-flex-4">RED</div>
+                                <div class="ab-container ab-orange">ORANGE</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                            </div>
+        
+                        </div>
+
+
+                        <div id="id-ab-flex-5-panel" class="ab-flex-col-panel ab-container" style="display: none;">
+
+                            <p><code>ab-flex-5</code> sample (2nd column 5x larger than the others):</p>
+    
+                            <div class="ab-flex ab-dark-xlight-border ab-width-100per">
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red ab-flex-5">RED</div>
+                                <div class="ab-container ab-orange">ORANGE</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                            </div>
+        
+                        </div>
+
+
+                        <div id="id-ab-flex-6-panel" class="ab-flex-col-panel ab-container" style="display: none;">
+
+                            <p><code>ab-flex-6</code> sample (2nd column 6x larger than the others):</p>
+    
+                            <div class="ab-flex ab-dark-xlight-border ab-width-100per">
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red ab-flex-6">RED</div>
+                                <div class="ab-container ab-orange">ORANGE</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                            </div>
+        
+                        </div>
+
+                        <div id="id-ab-flex-7-panel" class="ab-flex-col-panel ab-container" style="display: none;">
+
+                            <p><code>ab-flex-7</code> sample (2nd column 7x larger than the others):</p>
+    
+                            <div class="ab-flex ab-dark-xlight-border ab-width-100per">
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red ab-flex-7">RED</div>
+                                <div class="ab-container ab-orange">ORANGE</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                            </div>
+        
+                        </div>
+
+                        <div id="id-ab-flex-8-panel" class="ab-flex-col-panel ab-container" style="display: none;">
+
+                            <p><code>ab-flex-8</code> sample (2nd column 8x larger than the others):</p>
+    
+                            <div class="ab-flex ab-dark-xlight-border ab-width-100per">
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red ab-flex-8">RED</div>
+                                <div class="ab-container ab-orange">ORANGE</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                            </div>
+        
+                        </div>
+
+                        <div id="id-ab-flex-9-panel" class="ab-flex-col-panel ab-container" style="display: none;">
+
+                            <p><code>ab-flex-9</code> sample (2nd column 9x larger than the others):</p>
+    
+                            <div class="ab-flex ab-dark-xlight-border ab-width-100per">
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red ab-flex-9">RED</div>
+                                <div class="ab-container ab-orange">ORANGE</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                            </div>
+        
+                        </div>
+
+                        <div id="id-ab-flex-10-panel" class="ab-flex-col-panel ab-container" style="display: none;">
+
+                            <p><code>ab-flex-10</code> sample (2nd column 10x larger than the others):</p>
+    
+                            <div class="ab-flex ab-dark-xlight-border ab-width-100per">
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red ab-flex-10">RED</div>
+                                <div class="ab-container ab-orange">ORANGE</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                            </div>
+        
+                        </div>
+
+                        <div id="id-ab-flex-11-panel" class="ab-flex-col-panel ab-container" style="display: none;">
+
+                            <p><code>ab-flex-11</code> sample (2nd column 11x larger than the others):</p>
+    
+                            <div class="ab-flex ab-dark-xlight-border ab-width-100per">
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red ab-flex-11">RED</div>
+                                <div class="ab-container ab-orange">ORANGE</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                            </div>
+        
+                        </div>
+
+                        <div id="id-ab-flex-12-panel" class="ab-flex-col-panel ab-container" style="display: none;">
+
+                            <p><code>ab-flex-12</code> sample (2nd column 12x larger than the others):</p>
+    
+                            <div class="ab-flex ab-dark-xlight-border ab-width-100per">
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red ab-flex-12">RED</div>
+                                <div class="ab-container ab-orange">ORANGE</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                            </div>
+        
+                        </div>
+					
+                       
+                        <h1>Wrap flex layout</h1>
+                        
+                        <p>This Flex layout allows the items to jump to the next line if necessary. The container wraps the items.</p>
+
+                        <p>Use <code>ab-flex-wrap</code> class to wrap you items</p>
+                        
+                        <div class="code-block">
+								
+                            <h2>Example</h2>
+                            
+                            <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'ab-flex-wrap-item-example')"></i>
+                                <code id="ab-flex-wrap-item-example" class="language-html">
+&lt;div class="ab-flex-wrap ab-dark-xlight-border"&gt;
+    &lt;div class="ab-container ab-blue"&gt;BLUE&lt;/div&gt;
+    &lt;div class="ab-container ab-flex-6 ab-red"&gt;RED&lt;/div&gt;
+    &lt;div class="ab-container ab-orange"&gt;ORANGE&lt;/div&gt;
+    &lt;div class="ab-container ab-yellow"&gt;YELLOW&lt;/div&gt;
+    &lt;div class="ab-container ab-green"&gt;GREEN&lt;/div&gt;
+    &lt;div class="ab-container ab-blue"&gt;BLUE&lt;/div&gt;
+    &lt;div class="ab-container ab-flex-6 ab-red"&gt;RED&lt;/div&gt;
+    &lt;div class="ab-container ab-orange"&gt;ORANGE&lt;/div&gt;
+    &lt;div class="ab-container ab-yellow"&gt;YELLOW&lt;/div&gt;
+    &lt;div class="ab-container ab-green"&gt;GREEN&lt;/div&gt;
+    &lt;div class="ab-container ab-blue"&gt;BLUE&lt;/div&gt;
+    &lt;div class="ab-container ab-flex-6 ab-red"&gt;RED&lt;/div&gt;
+    &lt;div class="ab-container ab-orange"&gt;ORANGE&lt;/div&gt;
+    &lt;div class="ab-container ab-yellow"&gt;YELLOW&lt;/div&gt;
+    &lt;div class="ab-container ab-green"&gt;GREEN&lt;/div&gt;
+    &lt;div class="ab-container ab-blue"&gt;BLUE&lt;/div&gt;
+&lt;/div&gt;</code>
+                            </pre>
+                            <p>In this example the class <code>ab-flex-wrap</code> create a new line to display properly items (and their content).</p>
+                            
+                            <h2>Result</h2>
+    
+                            
+                            <div class="ab-flex-wrap ab-dark-xlight-border ab-height-200">
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red">RED</div>
+                                <div class="ab-container ab-flex-6 ab-orange">ORANGE</div>
+                                <div class="ab-container ab-yellow">YELLOW</div>
+                                <div class="ab-container ab-green">GREEN</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red">RED</div>
+                                <div class="ab-container ab-flex-6 ab-orange">ORANGE</div>
+                                <div class="ab-container ab-yellow">YELLOW</div>
+                                <div class="ab-container ab-green">GREEN</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red">RED</div>
+                                <div class="ab-container ab-flex-6 ab-orange">ORANGE</div>
+                                <div class="ab-container ab-yellow">YELLOW</div>
+                                <div class="ab-container ab-green">GREEN</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                            </div>
+    
+                            <br>
+
+                            <p>You can set a predefined size to items, for example with the class <code>ab-width-500</code> to the first item. In this case, the flex wrap container adapts the flow of items.</p>
+
+                            <h2>Result</h2>
+    
+                            
+                            <div class="ab-flex-wrap ab-dark-xlight-border ab-height-200">
+                                <div class="ab-container ab-blue ab-width-500">BLUE</div>
+                                <div class="ab-container ab-red">RED</div>
+                                <div class="ab-container ab-flex-6 ab-orange">ORANGE</div>
+                                <div class="ab-container ab-yellow">YELLOW</div>
+                                <div class="ab-container ab-green">GREEN</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red">RED</div>
+                                <div class="ab-container ab-flex-6 ab-orange">ORANGE</div>
+                                <div class="ab-container ab-yellow">YELLOW</div>
+                                <div class="ab-container ab-green">GREEN</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                                <div class="ab-container ab-red">RED</div>
+                                <div class="ab-container ab-flex-6 ab-orange">ORANGE</div>
+                                <div class="ab-container ab-yellow">YELLOW</div>
+                                <div class="ab-container ab-green">GREEN</div>
+                                <div class="ab-container ab-blue">BLUE</div>
+                            </div>
+
+
+                        </div>							
+                        
+                </section>
+
+
+                <!-- Grid layout content -->
+                <section id="id-grid-layout-container-panel"
+                    class="layout-details-panel ab-container ab-margin-16 magictime slideDownReturn ab-width-95per"
+                    style="display:none;animation-duration: 1s;">
+
+                    <header class="ab-dark-xlight-border-bottom ab-margin-16">
+
+                        <h1>Grid layout</h1>
+
+                    </header>
+
+                    <p>The Grid layout model offers a grid-based layout system, with rows and columns.</p>
+
+                    <p>We propose a set of predefined:</p>
+                    <ul>
+                        <li>rows with iso-sized columns, from 2 to 12 columns per row, using classes from <code>ab-grid-2</code> to <code>ab-grid-12</code></li>
+                        <li>rows starting with fixed size columns, from 50px to 250px, growing by 50px steps, using classes from <code>ab-grid-50-rest</code> to <code>ab-grid-250-rest</code></li>
+                        <li>rows ending with fixed size columns, from 50px to 250px, growing by 50px steps, using classes from <code>ab-grid-rest-50</code> to <code>ab-grid-rest-250</code></li>
+                        <li>rows starting and ending with fixed size columns, from 50px to 250px, growing by 50px steps, using classes from <code>ab-grid-50-rest-50</code> to <code>ab-grid-250-rest-250</code></li>
+                    </ul>
+
+                    <p>Illustrations:</p>
+
+                    <img src="pictures/framework/grid-layout.svg" width="100%"/>
+               
+                    <h1>Iso-sized columns rows </h1>
+
+                    <li>The rows contain from 2 to 12 iso-sized columns using classes from <code>ab-grid-2</code> to <code>ab-grid-12</code></li>
+
+                    <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-grid-col-panel','id-ab-grid-2-panel')">
+                        Class: <code>ab-grid-2</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                    </button>
+
+                    <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-grid-col-panel','id-ab-grid-3-panel')">
+                        Class: <code>ab-grid-3</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                    </button>
+
+                    <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-grid-col-panel','id-ab-grid-4-panel')">
+                        Class: <code>ab-grid-4</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                    </button>
+
+                    <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-grid-col-panel','id-ab-grid-5-panel')">
+                        Class: <code>ab-grid-5</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                    </button>
+
+                    <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-grid-col-panel','id-ab-grid-6-panel')">
+                        Class: <code>ab-grid-6</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                    </button>
+
+                    <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-grid-col-panel','id-ab-grid-7-panel')">
+                        Class: <code>ab-grid-7</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                    </button>
+
+                    <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-grid-col-panel','id-ab-grid-8-panel')">
+                        Class: <code>ab-grid-8</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                    </button>
+
+                    <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-grid-col-panel','id-ab-grid-9-panel')">
+                        Class: <code>ab-grid-9</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                    </button>
+
+                    <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-grid-col-panel','id-ab-grid-10-panel')">
+                        Class: <code>ab-grid-10</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                    </button>
+
+                    <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-grid-col-panel','id-ab-grid-11-panel')">
+                        Class: <code>ab-grid-11</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                    </button>
+
+                    <button class="ab-btn ab-round ab-padding-16 ab-margin-16 ab-dark-xlight-border ab-dark-- hvr-underline-from-center magictime swap" onclick="showContainer('ab-grid-col-panel','id-ab-grid-12-panel')">
+                        Class: <code>ab-grid-12</code> &nbsp; <i class="bi bi-arrow-right hvr-icon"></i>
+                    </button>
+
+
+
+                    <div id="id-ab-grid-2-panel" class="ab-grid-col-panel ab-container" style="display: none;">
+
+                        <p><code>ab-grid-2</code> sample:</p>
+
+                        <div class="ab-grid-2 ab-dark-xlight-border ab-width-100per">
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                        </div>
+    
+                    </div>
+
+                    <div id="id-ab-grid-3-panel" class="ab-grid-col-panel ab-container" style="display: none;">
+
+                        <p><code>ab-grid-3</code> sample:</p>
+
+                        <div class="ab-grid-3 ab-dark-xlight-border ab-width-100per">
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                        </div>
+    
+                    </div>
+
+                    <div id="id-ab-grid-4-panel" class="ab-grid-col-panel ab-container" style="display: none;">
+
+                        <p><code>ab-grid-4</code> sample:</p>
+
+                        <div class="ab-grid-4 ab-dark-xlight-border ab-width-100per">
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                        </div>
+    
+                    </div>
+
+                    <div id="id-ab-grid-5-panel" class="ab-grid-col-panel ab-container" style="display: none;">
+
+                        <p><code>ab-grid-5</code> sample:</p>
+
+                        <div class="ab-grid-5 ab-dark-xlight-border ab-width-100per">
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                        </div>
+    
+                    </div>
+
+                    <div id="id-ab-grid-6-panel" class="ab-grid-col-panel ab-container" style="display: none;">
+
+                        <p><code>ab-grid-6</code> sample:</p>
+
+                        <div class="ab-grid-6 ab-dark-xlight-border ab-width-100per">
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                        </div>
+    
+                    </div>
+
+                    <div id="id-ab-grid-7-panel" class="ab-grid-col-panel ab-container" style="display: none;">
+
+                        <p><code>ab-grid-7</code> sample:</p>
+
+                        <div class="ab-grid-7 ab-dark-xlight-border ab-width-100per">
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                        </div>
+    
+                    </div>
+
+                    <div id="id-ab-grid-8-panel" class="ab-grid-col-panel ab-container" style="display: none;">
+
+                        <p><code>ab-grid-8</code> sample:</p>
+
+                        <div class="ab-grid-8 ab-dark-xlight-border ab-width-100per">
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                        </div>
+    
+                    </div>
+
+                    <div id="id-ab-grid-9-panel" class="ab-grid-col-panel ab-container" style="display: none;">
+
+                        <p><code>ab-grid-9</code> sample:</p>
+
+                        <div class="ab-grid-9 ab-dark-xlight-border ab-width-100per">
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                        </div>
+    
+                    </div>
+
+                    <div id="id-ab-grid-10-panel" class="ab-grid-col-panel ab-container" style="display: none;">
+
+                        <p><code>ab-grid-10</code> sample:</p>
+
+                        <div class="ab-grid-10 ab-dark-xlight-border ab-width-100per">
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                        </div>
+    
+                    </div>
+
+
+                    <div id="id-ab-grid-11-panel" class="ab-grid-col-panel ab-container" style="display: none;">
+
+                        <p><code>ab-grid-11</code> sample:</p>
+
+                        <div class="ab-grid-11 ab-dark-xlight-border ab-width-100per">
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                        </div>
+    
+                    </div>
+
+                    <div id="id-ab-grid-12-panel" class="ab-grid-col-panel ab-container" style="display: none;">
+
+                        <p><code>ab-grid-12</code> sample:</p>
+
+                        <div class="ab-grid-12 ab-dark-xlight-border ab-width-100per">
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-blue">BLUE</div>
+                            <div class="ab-container ab-red">RED</div>
+                            <div class="ab-container ab-orange">ORANGE</div>
+                            <div class="ab-container ab-yellow">YELLOW</div>
+                            <div class="ab-container ab-green">GREEN</div>                        
+                        </div>
+    
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <p>@Todo 2021-11-07</p>
+
+
+
+
+                </section>
+
+        </article>
+
+
+
+
+
+
+        <article id="todo" class="ab-animate-fadIn-4 ab-animate-left-slow" style="display:none;">
+            
+            <!--
+            <ul class="ab-red-ul">
+                <li class="ab-red-li">Add icon in containers to transform container in full size container</li>
+                <li class="ab-red-li">Code Mirror</li>
+                <li class="ab-red-li">Animation: <a class="ab-link" target="_blank"
+                        href="https://www.invisionapp.com/design-defined/design-animation/">https://www.invisionapp.com/design-defined/design-animation/</a>
+                </li>
+                <li class="ab-red-li">Text (alignment, opacity, shadow, effects...)</li>
+                <li class="ab-red-li"> Drag and Drop</li>
+                <li class="ab-red-li">Ajax</li>
+                <li class="ab-red-li">WebSocket</li>
+
+                <li class="ab-red-li">Loadingbar: <a class="ab-link" target="_blank" href="https://loading.io/progress">Loading.io/progress</a></li>
+
+                <li class="ab-red-li">slideshow</li>
+
+                <li class="ab-red-li">images with round borders</li>
+                <li class="ab-red-li">Vertical timeline</li>
+
+            </ul>
+            -->
+
+
+
+        </article>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <!--<img class="ab-opacity-40 bg-angrybee-img magictime slideDownReturn" src="pictures/bg-angrybee.svg" style="position: fixed;right:-5%;top:20%;z-index: -1;width: 15%;">-->
+    <p class="ab-opacity-30 ab-animate-right-slow-framework" style="position:fixed;right:-110px;top:50%;transform: rotate(-90deg);"><span class="ab-wide ab-xlarge ab-blue-font">Angrybee</span> Web Framework</p>
+    <br>
+
+
+    <button class="ab-btn-dark-xlight ab-pos-bottomright-fix ab-margin-bottom-64" onclick="location.href = '#top-page';"
+        style="z-index: 999;margin-right:5px!important" aria-label="To Top"><i class="bi bi-arrow-up ab-large ab-white-font"></i></button>
+
+    <button class="ab-btn-dark-xlight ab-pos-bottomright-fix ab-margin-16" onclick="location.href = '#bottom-page';"
+    style="z-index: 999;margin-right:5px!important" aria-label="To Bottom"><i class="bi bi-arrow-down ab-large ab-white-font"></i></button>
+
+
+    <a id="bottom-page"></a>
+
+	<script>
+
+
+		//AnchorJS initialisation
+		anchors.add('h1, h2, h3');
+
+
+		//Tooltip initialisation everywhere with bootstrap
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+
+
+
+		AOS.init();		
+
+
+	</script>
+</body>
+
+</html>    

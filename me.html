@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Angrybee website articles">
+	<meta name="keywords" content="Angrybee website articles ">
+	<meta name="author" content="vissol">
+	<link rel="shortcut icon" href="pictures/angrybee-blue.svg">
+  
+
+	<title>About me</title>
+	
+	
+	<link rel="stylesheet" href="angrybee-dark.css">
+	
+	
+	<style>
+
+
+		@media (max-width:992px){html,body{font-size:14px!important}}
+		@media (max-width:768px){html,body{font-size:12px!important}}
+
+
+		.selected {
+			background-color: var(--blue)!important;
+			cursor:pointer!important;
+		}
+
+		.article{
+			border-left: solid 3px var(--dark-light);
+			cursor: pointer;
+		}
+
+		.article:hover{
+			border-left: solid 3px var(--blue);
+		}
+
+        .htag {
+            background-color: var(--dark-xlight);
+        }
+
+		/* Bottom right text */
+		.text-block {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		background-color: black;
+		color: white;
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 235px;
+		}	
+	</style>
+
+<script>
+function filter(){
+	var tag;
+	const filterArray = [];
+	window.event.srcElement.classList.toggle("selected");
+	
+	tag = document.getElementById("htagfilter");
+	var list = tag.getElementsByClassName("htag");
+	for (i = 0; i < list.length; i++) {
+		
+		
+		if(list[i].classList.contains("selected")){
+			filterArray.push(list[i].getAttribute("data-filter"));
+			//alert(list[i].getAttribute("data-filter"));
+		}
+		
+	}
+	
+	//alert(filterArray.length);
+	
+	
+	var articles;
+	articles = document.getElementById("htagfilterresult");
+	var listArticles = articles.getElementsByClassName("article");
+	
+	for(j = 0;j < listArticles.length;j++){
+		var status = true;
+		
+		//alert(listArticles[j].getAttribute("class"));
+		
+		for (k = 0; k < filterArray.length; k++) {
+			//alert(filterArray[k]);
+			if(listArticles[j].classList.contains(filterArray[k])===false)
+			{
+				status = false;
+				break;
+			}
+			//alert(status);
+		}
+		if(status===true){
+			listArticles[j].style.display = "block";
+		} else {
+			listArticles[j].style.display = "none";
+		}
+				
+	}
+
+	
+}
+
+function openarticle(articleUrl){
+	location.href = articleUrl;
+}
+
+
+
+</script>
+
+
+</head>
+<body class="ab-dark-light" style="overflow-y:hidden;scrollbar-color:hsl(207, 90%, 55%) hsl(216,50%,12%);">
+
+	<!-- Back home -->
+	<a id="home-link" href="./index.html"><img src="pictures/back-home.svg" style="z-index: 2;position: fixed;top: 4px;left: 4px;" alt="Back home"/></a>
+	<!-- Title -->
+
+
+	<a id="top-page"></a>
+
+	<div class="ab-dark-light-bg ab-width-100per" >
+
+		<div class="ab-margin-left-80 ab-margin-right-80">
+			
+			<h1>About me</h1>
+
+			
+			<div class="magictime swap ">
+				<img src="pictures/me.jpg" style="border-radius: 10px;"/>
+			</div>
+					
+		
+			<br>
+			<br>
+
+			<div class="magictime swap "><!-- class="ab-container ab-round-large magictime swap ab-height-600 ab-width-500 ab-margin-5 ">-->
+				<p>I discovered IT 20 years ago and that was for me like a revelation. That became a passion!</p>
+				<p>I finished my Hydrogeology studies in 1999 and started directly my carrier in IT in 2000, first in Mainframes.</p>
+
+				<p>Quickly I turned to Oriented object technologies ( <button class="htag">UML</button>,  <button class="htag">Java</button>) and completed this knowledge with database administration ( <button class="htag">Oracle</button>,  <button class="htag">SQL Server</button> and  <button class="htag">MySQL</button>).</p>
+
+				<p>Due to the fact that I didn't studied IT at university, until 2000, I continuously train myself (every day :-)) with books, internet, mockups...and a lot of practical exercices that helps me building solutions in my professional 
+					environment. My home is full of PCs and servers :-) :-)
+				</p>
+	
+				<p>During 10 years, I worked in a company owned by AIRBUS. I was project leader, working with PLMs and I leaded a development team using  <button class="htag">Agile</button> methods and  <button class="htag">CMMI</button>.</p>
+				<p>It was a very interesting but very busy time. I learned a lot and acquired an interesting, I think, knowledge about Java, Database and Web technologies ( <button class="htag">MySQL</button>/ <button class="htag">MariaDB</button>,  <button class="htag">PostgreSQL</button> and  <button class="htag">Oracle</button>).</p>
+
+				<p>Then I integrated the European leader of space launchers until now where I try to ease the digital transformation of the company. Not so easy :-)</p>
+
+				<p>I am very interested in all aspect of IT (too much sometimes regarding the free time I have !!). So I try to explore and test lots of technologies and tools... practical first.</p>
+
+				<p>Today, I work particularly on  <button class="htag">Debian</button> (my lovely and daily Desktop env.), I code with  <button class="htag">VS Code</button> (I stopped using <button class="htag">Eclipse</button>...) and I write my articles in  <button class="htag">Markdown</button>, my favorite syntax.</p>
+
+				<p>I am also fan of <button class="htag">Nextcloud</button> platform, and use my self-hosted instance everyday.</p>
+
+
+			</div>
+		
+
+			<div class="magictime swap ">
+
+				<button class="htag">Web Conferencing</button> 
+				
+				<button class="htag">Digital Workplace</button> 
+				
+				<button class="htag">Network</button> 
+				
+				<button class="htag">Virtualization</button> <button class="htag">Containers</button> <button class="htag">RDP</button> 
+				
+				<button class="htag">WebRTC</button> <button class="htag">Linux</button>  <button class="htag">Debian</button> 
+					<button class="htag">Java</button>  <button class="htag">UML</button> 
+					<button class="htag">Apache</button>  <button class="htag">Tomcat</button> 
+
+				<button class="htag">PostgreSQL</button>  <button class="htag">MySQL</button>  <button class="htag">MariaDB</button> 
+					
+
+				<button class="htag">Nextcloud</button> 
+				<button class="htag">Remmina</button> 
+
+					
+				<button class="htag">HTML5</button> <button class="htag">PHP</button> 
+				<button class="htag">CSS</button> <button class="htag">Javascript</button> 
+					
+				<button class="htag">Ethical Hacking</button>					
+
+			</div>
+
+
+		</div>
+		
+		<br><br><br>
+
+	</div>
+	
+
+
+		<button class="ab-btn-dark-xlight ab-pos-bottomright-fix ab-margin-bottom-64" onclick="location.href = '#top-page';"
+			style="z-index: 999;margin-right:5px!important" aria-label="To Top"><i class="bi bi-arrow-up ab-large ab-white-font"></i></button>
+		
+		<button class="ab-btn-dark-xlight ab-pos-bottomright-fix ab-margin-16" onclick="location.href = '#bottom-page';"
+			style="z-index: 999;margin-right:5px!important" aria-label="To Bottom"><i class="bi bi-arrow-down ab-large ab-white-font"></i></button>
+		
+		
+		<a id="bottom-page"></a>
+</body>
+</html>
+
+
+
+

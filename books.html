@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Angrybee website books">
+	<meta name="keywords" content="Angrybee website books ">
+	<meta name="author" content="vissol">
+	<link rel="shortcut icon" href="pictures/angrybee-blue.svg">
+  
+
+	<title>Angrybee News</title>
+	
+	
+	<link rel="stylesheet" href="angrybee-dark.css">
+	
+	
+	<style>
+
+
+		@media (max-width:992px){html,body{font-size:14px!important}}
+		@media (max-width:768px){html,body{font-size:12px!important}}
+
+
+		.selected {
+			background-color: var(--blue)!important;
+			cursor:pointer!important;
+		}
+
+		.article{
+			border-left: solid 3px var(--dark-light);
+			cursor: pointer;
+		}
+
+		.article:hover{
+			border-left: solid 3px var(--blue);
+		}
+
+        .htag {
+            background-color: var(--dark-xlight);
+        }
+
+	
+	</style>
+
+<script>
+function filter(){
+	var tag;
+	const filterArray = [];
+	window.event.srcElement.classList.toggle("selected");
+	
+	tag = document.getElementById("htagfilter");
+	var list = tag.getElementsByClassName("htag");
+	for (i = 0; i < list.length; i++) {
+		
+		
+		if(list[i].classList.contains("selected")){
+			filterArray.push(list[i].getAttribute("data-filter"));
+			//alert(list[i].getAttribute("data-filter"));
+		}
+		
+	}
+	
+	//alert(filterArray.length);
+	
+	
+	var articles;
+	articles = document.getElementById("htagfilterresult");
+	var listArticles = articles.getElementsByClassName("article");
+	
+	for(j = 0;j < listArticles.length;j++){
+		var status = true;
+		
+		//alert(listArticles[j].getAttribute("class"));
+		
+		for (k = 0; k < filterArray.length; k++) {
+			//alert(filterArray[k]);
+			if(listArticles[j].classList.contains(filterArray[k])===false)
+			{
+				status = false;
+				break;
+			}
+			//alert(status);
+		}
+		if(status===true){
+			listArticles[j].style.display = "block";
+		} else {
+			listArticles[j].style.display = "none";
+		}
+				
+	}
+
+	
+}
+
+function openarticle(articleUrl){
+	location.href = articleUrl;
+}
+
+
+
+</script>
+
+
+</head>
+<body class="ab-dark-light" style="overflow-y:hidden;scrollbar-color:hsl(207, 90%, 55%) hsl(216,50%,12%);">
+
+	<!-- Back home -->
+	<a id="home-link" href="./index.html"><img src="pictures/back-home.svg" style="z-index: 2;position: fixed;top: 4px;left: 4px;" alt="Back home"/></a>
+	<!-- Title -->
+
+
+	<a id="top-page"></a>
+
+	<div class="ab-dark-light-bg ab-width-100per" >
+
+		<div class="ab-margin-left-80 ab-margin-right-80">
+			<h1>Books</h1>
+			<p class="i ab-gray-medium-font ab-small">Books edited by Angrybee.tech</p>
+	
+			
+		</div>
+		
+		<br><br><br>
+
+	</div>
+	
+		<div id="htagfilterresult" class="ab-margin-left-80">
+
+
+			<div class="ab-container ab-inline-grid ab-margin-top-32">
+				<a href="./books/Book_Linux-Secure_Ubuntu_Installation_20.04.pdf">
+					<h2 class="ab-white-font">Secure Desktop Installation Ubuntu 20.04</h2>
+					<p class="i ab-small ab-dark-xxxxlight-font">September 29, 2021</p>
+					<p class="ab-white-font">Full description of the installation and hardening of a Ubuntu 20.04 Desktop.</p>
+					<img src="./books/Book_Linux-Secure_Ubuntu_Installation_20.04.png">
+
+
+				</a>
+			</div>
+
+
+
+
+			<div class="ab-container ab-inline-grid ab-margin-top-32">
+				<a href="./books/Book_Linux-Secure_Ubuntu_Desktop_Installation_21.04.pdf">
+					<h2 class="ab-white-font">Secure Desktop Installation Ubuntu 21.04</h2>
+					<p class="i ab-small ab-dark-xxxxlight-font">September 24, 2021</p>
+					<p class="ab-white-font">Full description of the installation and hardening of a Ubuntu 21.04 Desktop.</p>
+					<img src="./books/Book_Linux-Secure_Ubuntu_Desktop_Installation_21.04.png">
+
+
+				</a>
+			</div>
+
+
+
+			<div class="ab-container ab-inline-grid ab-margin-top-32">
+				<a href="./books/Book_Linux-Debian_10.9_secure_install.pdf">
+					<h2 class="ab-white-font">Secure Desktop Installation Debian 10.9</h2>
+					<p class="i ab-small ab-dark-xxxxlight-font">September 22, 2021</p>
+					<p class="ab-white-font">Full description of the installation and hardening of a Debian 10.9 Desktop.</p>
+					<img src="./books/Book_Linux-Debian_10.9_secure_install.png">
+
+
+				</a>
+			</div>
+	
+			<div class="ab-container ab-inline-grid ab-margin-top-32">
+				<a href="./books/Book_Java_Garbage_Collector.pdf">
+					<h2 class="ab-white-font">Java Garbage Collector. The complete Guide</h2>
+					<p class="i ab-small ab-dark-xxxxlight-font">April 15, 2021</p>
+					<p class="ab-white-font">Complete guide about Garbage collectors (GC1, ZGC, etc.) and how to optimize Java application performance.</p>
+					<img src="./books/Book_Java_Garbage_Collector.png">
+
+
+				</a>
+			</div>
+
+			<div class="ab-container ab-inline-grid ab-margin-top-32">
+				<a href="./books/Book_Java_Memory_Model.pdf">
+					<h2 class="ab-white-font">Java Memory Model. The complete Guide</h2>
+					<p class="i ab-small ab-dark-xxxxlight-font">March 20, 2021</p>
+					<p class="ab-white-font">Complete guide explaining the Java Memory Model with all the options available to tune your Java application.</p>
+					<img src="./books/Book_Java_Memory_Model.png">
+
+
+				</a>
+			</div>
+
+			<div class="ab-container ab-inline-grid ab-margin-top-32">
+				<a href="./books/Requirements_Development_Guideline.pdf">
+					<h2 class="ab-white-font">Requirements development Guideline.</h2>
+					<p class="i ab-small ab-dark-xxxxlight-font">March 8, 2022</p>
+					<p class="ab-white-font">Complete guide explaining how to write a specification at the right level.</p>
+					<img src="./books/Requirements_Development_Guideline.png">
+
+
+				</a>
+			</div>
+
+			
+
+
+
+            <!--
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Title</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">Month dd, 2022</p>
+                <p>Source: <a href="" target="_blank" class="ab-link">https://...</a></p>
+                <p></p>
+                
+                <button class="htag">#</button> <button class="htag">#</button> 
+            </div>
+            -->
+
+
+
+		</div>
+
+		<button class="ab-btn-dark-xlight ab-pos-bottomright-fix ab-margin-bottom-64" onclick="location.href = '#top-page';"
+			style="z-index: 999;margin-right:5px!important" aria-label="To Top"><i class="bi bi-arrow-up ab-large ab-white-font"></i></button>
+		
+		<button class="ab-btn-dark-xlight ab-pos-bottomright-fix ab-margin-16" onclick="location.href = '#bottom-page';"
+			style="z-index: 999;margin-right:5px!important" aria-label="To Bottom"><i class="bi bi-arrow-down ab-large ab-white-font"></i></button>
+		
+		
+		<a id="bottom-page"></a>
+</body>
+</html>
+
+
+
+

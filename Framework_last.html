@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Angrybee Framework is a full featured and Open Source JavaScript and CSS Web Framework to support Web application development.">
+	<meta name="keywords" content="Angrybee,Framework,css3,html5,animation,javascript animation,ui,ui design,web design,ux">
+	<meta name="author" content="vissol">
+	<link rel="shortcut icon" href="./pictures/angrybee-blue.svg">
+
+  
+
+	<title>Angrybee Web Framework</title>
+
+	<!-- Responsive viewport meta tag -->
+	
+
+
+	<link rel="stylesheet" href="angrybee-dark.css">
+    <link rel="stylesheet" href="angrybee-symbols.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/github-dark.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="magic/dist/magic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="wickedcss/wickedcss.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.min.css">
+
+	
+<style>
+
+
+@media only screen and (max-width: 768px) {
+
+    img {
+        width: 100%;
+    }
+}
+
+.is-active-link::before {
+    background-color: var(--blue);
+}
+
+
+.ab-animate-right-slow-framework{
+	position:relative;
+	animation:animaterightslowframework 1.5s;
+	transition-timing-function: ease-out;
+}
+@keyframes animaterightslowframework{
+	from{right:-300px;} 
+	to{right:-110px;}
+}
+
+
+		.magictime {
+			-webkit-animation-duration: 2s;
+			animation-duration: 2s;
+		}
+
+
+		.ab-btn:hover > .bi {
+			color: var(--red-xxxxlight);
+			
+		}
+
+		@media (max-width: 992px){
+			.bg-angrybee-img {
+				display: none;
+			}
+		}
+		@media (min-width: 993px){
+			.bg-angrybee-img {
+				display: block;
+			}
+		}
+
+
+
+		/* Redefine the background of the code snippets */
+		.hljs {
+			color: #c9d1d9;
+			background: hsl(216, 50%, 08%);
+		}
+
+
+	</style>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js" integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.3.1/anchor.min.js" referrerpolicy="no-referrer"></script>
+	<!--Boostrap bundled with Popper-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js" integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/PreloadJS/1.0.1/preloadjs.min.js" integrity="sha512-fEAYokehnF/e5P+Whrp7YAWBQGqQtimX1DrFBu21J+4WI2wCM/z+kTHiRMCcfYUqHbCcCADC9QivGn7Q75IQig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.2.4/kute.min.js" integrity="sha512-ExzTv2b9+LEDBzzlAfT4rSa2C6ncivquUGYGWCPS4yIPjhg+eVi5cSi5NLGZZfK8p/xA4OqAohgfmJT8uWKgpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js" integrity="sha512-Gk+uNk8NWN235mIkS6B7/424TsDuPDaoAsUekJCKTWLKP6wlaPv+PBGfO7dbvZeibVPGW+mYidz0vL0XaWwz4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js" referrerpolicy="no-referrer"></script>
+	<script src="angrybee.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.min.js"></script>
+    
+
+	<script>
+	
+        
+        
+        //Enable syntax highlight
+		hljs.highlightAll();
+
+
+
+
+        //Toc navigation
+        function nav_to_content(event){
+            var pageToc = document.getElementsByClassName("ab-toc");
+
+            for (i = 0; i < pageToc.length; i++) {
+                pageToc[i].style.fontWeight = "normal";
+            }
+            
+            event.currentTarget.style.fontWeight='bold'
+        }
+
+
+        // Script to open and close sidebar
+        function side_open() {
+            document.getElementById("main_sidebar").classList.add("ab-show");
+            
+
+            document.getElementById("main_overlay").style.display = "block";
+
+
+
+            document.getElementById("menu_for_sidebar").classList.remove("ab-hide-large");
+            document.getElementById("menu_for_sidebar").classList.add("ab-hide");
+            //document.getElementById("menu_for_sidebar").style.display = "none"
+        }
+        
+        function side_close() {
+            document.getElementById("main_sidebar").classList.remove("ab-show");
+            document.getElementById("main_sidebar").classList.add("ab-hide");
+            //document.getElementById("main_overlay").classList.remove("ab-show");
+            //document.getElementById("main_overlay").classList.add("ab-hide");
+            //document.getElementById("main_sidebar").classList.add("ab-hide");
+            //document.getElementById("main_overlay").classList.add("ab-hide");
+
+            //document.getElementById("main_sidebar").style.display = "none";
+            document.getElementById("main_overlay").style.display = "none";
+
+
+
+            document.getElementById("menu_for_sidebar").classList.add("ab-hide-large");
+            document.getElementById("menu_for_sidebar").classList.remove("ab-hide");       
+            //document.getElementById("menu_for_sidebar").style.display = "none";
+        }
+
+	</script>
+
+
+</head>
+
+<body class="ab-dark-light">
+   
+    
+
+
+
+
+    <span id="menu_for_sidebar" onclick="side_open()" class=" ab-float-left ab-white-font ab-xxlarge" title="Open menu" style="position: fixed;top: 0px;left: 5px;cursor:pointer;z-index:999">
+        &#9776;
+    </span>
+
+
+    <nav class="ab-dark-light ab-sidebar ab-animate-left-slow" id="main_sidebar">
+		<span 
+            onclick="side_close()" 
+            class="ab-show-medium ab-float-right ab-white-font ab-xlarge ab-margin-right-10 ab-margin-top-10" 
+            style="cursor: pointer;" title="Close menu">
+                &#10005;
+        </span>
+
+        <img 
+            src="pictures/website-angrybee-global-title.svg" 
+            onclick="location.href = 'articles.html';" 
+            class="magictime perspectiveUpReturn ab-margin-5" 
+            style="cursor:pointer;width:190px;position:fixed;top:0px;z-index:997;"/>
+
+
+
+        <div 
+            class="ab-width-100per ab-margin-left-10 ab-margin-top-32" 
+            style="overflow:hidden;scrollbar-color:hsl(207, 90%, 55%) hsl(216,50%,12%);top:50px;position:absolute;">
+
+            <div>
+
+                <span class=" ab-white-font ab-collapse-item-collapsed ab-margin-left-5" onclick="collapse(event,'id-getting-started-menu')">Getting started</span><br>
+                <div id="id-getting-started-menu" class="ab-collapse-content">
+                    <a class="ab-bar-item " href="#" onclick="showArticle('getting-started');">Introduction</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('dark-mode');">Dark Mode</a>
+                </div>
+                <p></p>
+
+                <span class="ab-white-font ab-collapse-item-collapsed ab-margin-left-5" onclick="collapse(event,'id-layout-menu')">Layout</span><br>
+                <div id="id-layout-menu" class="ab-collapse-content">
+                    <a class="ab-bar-item " href="#" onclick="showArticle('containers');">Containers</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('layouts');">Layouts</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('padding');">Padding</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('margin');">Margin</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('menu-section');">Menu</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('sidebar');">Sidebar</a>
+                </div>
+                <p></p>
+        
+                <span class="ab-white-font ab-collapse-item-collapsed ab-margin-left-5" onclick="collapse(event,'id-style-menu')">Style</span><br>
+                <div id="id-style-menu" class="ab-collapse-content">
+                    <a class="ab-bar-item " href="#" onclick="showArticle('colors');">Colors</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('predefined-size');">Predefined size</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('font-family');">Font family</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('font-size');">Font size</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('borders');">Borders</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('text');">Text</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('code');">Code highlight</a>		
+                    <a class="ab-bar-item " href="#" onclick="showArticle('links');">Links</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('lists');">Lists</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('tables');">Tables</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('images');">Images</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('icons');">Icons</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('symbols');">Symbols</a>
+                </div>
+                <p></p>
+                
+        
+                <span class="ab-white-font ab-collapse-item-collapsed ab-margin-left-5" onclick="collapse(event,'id-components-menu')">Components</span><br>
+                <div id="id-components-menu" class="ab-collapse-content">
+                    <a class="ab-bar-item " href="#" onclick="showArticle('panels');">Panels</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('display');">Display</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('cards');">Cards</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('badges');">Badges</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('forms');">Forms</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('accordion');">Accordion</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('tabs');">Tabs</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('pagination');">Pagination</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('modal');">Modal</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('loaders');">Loaders</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('slideshow');">Slideshow</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('timeline');">Timeline</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('tags');">Tags</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('tooltips');">Tooltips</a>
+                </div>
+                <p></p>
+                
+        
+                <span class="ab-white-font ab-collapse-item-collapsed ab-margin-left-5" onclick="collapse(event,'id-effects-menu')">Effects</span><br>
+                <div id="id-effects-menu" class="ab-collapse-content">
+                    <a class="ab-bar-item " href="#" onclick="showArticle('opacity');">Opacity</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('animations');">Animations</a>
+                </div>
+                <p></p>
+                
+                
+                <span class="ab-white-font ab-collapse-item-collapsed ab-margin-left-5" onclick="collapse(event,'id-multimedias-menu')">Multimedias</span><br>
+                <div id="id-multimedias-menu" class="ab-collapse-content">
+                    <a class="ab-bar-item " href="#" onclick="showArticle('videos');">Videos</a>
+                </div>
+                <p></p>
+                
+        
+                <span class="ab-white-font ab-collapse-item-collapsed ab-margin-left-5" onclick="collapse(event,'id-utilities-menu')">Utilities</span><br>
+                <div id="id-utilities-menu" class="ab-collapse-content">
+                    <a class="ab-bar-item " href="#" onclick="showArticle('filter');">Filter</a>
+                    <a class="ab-bar-item " href="#" onclick="showArticle('sort');">Sort</a>
+                </div>
+        
+                <a class="ab-bar-item " href="#" onclick="showArticle('todo');">Todo List</a>
+    
+
+
+                <!--<div class="js-toc" style="overflow-x:hidden;scrollbar-color:hsl(207, 90%, 55%) hsl(216,50%,12%);"></div>-->
+
+               <!--<div style="position: absolute;">
+                    <p style="left:0px;" class="ab-margin-top-16">
+                        <a id="download-pdf" href="#">
+                            <img src="../pictures/pdf-icon.svg" width="20px"> <span class="ab-yellow-font">Download PDF</span>
+                        </a>
+                    </p>
+            
+                </div>-->
+            </div>
+
+        </div>
+
+
+
+
+
+    </nav>
+
+
+
+
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="ab-overlay ab-animate-fadIn ab-hide-medium" onclick="side_close()" style="cursor:pointer;display: none;" title="close side menu" id="main_overlay"></div>
+
+    <div id="main_content" class="ab-main js-toc-content">
+        
+        <a id="top-page"></a>
+
+
+        <!-- Introduction -->
+        <article id="template" class="ab-animate-fadIn-4 ab-animate-right-slow post-content">
+
+
+
+            <img data-align="center" alt="" class="article-title" title="" src="titles/@Todo.png">
+    
+            <!-- <table class="ab-table-all ab-hoverable">-->
+    
+            
+
+
+             <!-- Introduction -->
+        <article id="getting-started" class="ab-animate-fadIn-4 ab-animate-right-slow" style="display:block;">
+            <br>
+
+
+            <h1>Introduction</h1>
+            <br>
+            <p class="ab-xlarge">Framework developments are in progress... stay tuned!</p>
+            <br>
+            <p>Angrybee Showcase is both, a tutorial and a showcase with a lot of examples to show how to use Angrybee web framework.</p>
+            
+
+            <!--Kick Start panel -->
+            <section class="ab-container ab-dark-xlight-border ab-round-large ab-height-200 ab-width-250 magictime spaceInRight ab-margin-5 ab-padding-5 ab-inline-grid">
+                
+                <h2 class="ab-dark-xlight-border-bottom ab-margin-16">Kick start</h2>
+                
+                <p>Start using Angrybee Framework in few minutes</p>
+                
+                <div class="ab-margin-16 ab-pos-bottomright">
+                    <a class="ab-green-font-hover" href="#" onclick="showContainer('getting-started-details-panel','id-kick-start-panel')">More infos <i class="sy-bracket-right"></i></a>
+                </div>
+            </section>
+
+
+            <!-- CSS Details panel -->
+            <section class="ab-container ab-dark-xlight-border ab-round-large magictime spaceInRight ab-height-200 ab-width-250 ab-padding-5 ab-margin-5 ab-inline-grid">
+                
+                    <h2 class="ab-dark-xlight-border-bottom ab-margin-16">CSS Details</h2>
+               
+
+                <p>Get more information about how we built CSS library.</p>
+                
+                <div class="ab-margin-16 ab-pos-bottomright">
+                    <a class="ab-green-font-hover" href="#" onclick="showContainer('getting-started-details-panel','id-css-details-panel')">More infos <i class="sy-bracket-right"></i></a>
+                </div>
+            </section>
+            
+
+            <!-- Javascript details panel -->
+            <section class="ab-container ab-dark-xlight-border ab-round-large magictime spaceInRight ab-height-200 ab-width-250 ab-padding-5 ab-margin-5 ab-inline-grid">
+                
+                <h2 class="ab-dark-xlight-border-bottom ab-margin-16">Js Details</h2>
+
+                <p>Get more information about how to use Javascript libraries.</p>
+                
+                <div class="ab-margin-16 ab-pos-bottomright">
+                    <a class="ab-green-font-hover" href="#" onclick="showContainer('getting-started-details-panel','id-js-details-panel')">More infos <i class="sy-bracket-right"></i></a>
+                </div>
+            </section>
+
+
+        
+
+
+
+            <!--Kick Start content -->
+            <section id="id-kick-start-panel"
+                class="getting-started-details-panel ab-container ab-margin-16 magictime slideDownReturn ab-width-95per"
+                style="display:none;animation-duration: 1s;">
+
+                <header class="ab-dark-xlight-border-bottom ab-margin-16">
+                    <h1>Kick start</h1>
+                </header>
+
+                <h1>CSS declaration</h1>
+               
+                <p>The Angrybee Web framework is mainly based upon classes starting always by <code>ab-...</code>.</p>
+
+                <p>The Angrybee Web framework is responsive and dark mode.</p> 
+
+                <p>We propose 1 CSS adapted to all screen sizes with adaptative CSS classes for:</p>
+
+<ul>
+    <li>screen &#60; 576px</li>
+    <li>577px &#60; screen &#60; 768px</li>
+    <li>769px &#60; screen &#60; 992px</li>
+    <li>993px &#60; screen &#60; 1200px</li>
+    <li>1201px &#60; screen &#60; 1400px</li>
+    <li>1401px &#62; screen</li>
+</ul>
+
+               <p>You don't need to deal with screen sizes, classes are applied depending on the screen sizes.</p>
+
+                <br>
+
+                <div class="code-block">
+                    
+                    <h2>Angrybee CSS declaration in HTML</h2>
+
+                    <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'angrybee-css-kick-start')"></i><code id="angrybee-css-kick-start" class="language-html">
+&lt;link rel="stylesheet" href="$url/angrybee-dark-pc.css"&gt;
+                    </code>
+                </pre>
+                </div>
+
+                <h1>Javascript declaration</h1>
+                <p>We propose also a set of Javascript libraries, designed by Angrybee but also by other Open Source projects to enhance the power of our framework and 
+                    avoid reinventing the wheel.
+                </p>
+
+                <p>You just have to adapt the <code>$url</code> path to adapt the code sample you can copy/paste.</p>
+
+                <div class="code-block">
+                    
+                    <h2>Javascript files declaration</h2>
+
+
+                    <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'header-angrybee-js-kick-start')"></i>
+                        <code id="header-angrybee-js-kick-start" class="language-html">
+&lt;header&gt;
+    ...
+    &lt;script src="$url/highlight.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/anchor.min.js"&gt;&lt;/script&gt;
+    &lt;!--Boostrap bundled with Popper--&gt;
+    &lt;script src="$url/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/preloadjs.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/aos.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/kute.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/vivus.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/snap.svg-min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/angrybee.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    //Enable syntax highlight
+    hljs.highlightAll();
+
+&lt;/script&gt;		
+&lt;/header&gt;
+&lt;body&gt;
+...
+&lt;script&gt;
+
+    //AnchorJS initialisation for h1, h2 and h3
+    anchors.add('h1, h2, h3');
+
+
+    AOS.init();	
+&lt;/script&gt;
+&lt;/body&gt;
+                        
+                        </code>
+                    </pre>
+                </div>
+
+                <p>You just have to adapt the <code>$url</code> path to adapt the code sample you can copy/paste.</p>
+
+                <br>
+
+            </section>
+
+
+            <!-- CSS Details content -->
+            <section id="id-css-details-panel"
+                class="getting-started-details-panel ab-container ab-margin-16 magictime slideDownReturn ab-width-95per"
+                style="display:none;animation-duration: 1s;">
+
+                <header class="ab-dark-xlight-border-bottom ab-margin-16">
+                    <h1>CSS Details</h1>
+                </header>
+
+                <h1>Default CSS</h1>
+
+
+                <p>Angrybee has built its own CSS classes to propose a consistent library for its Dark Mode.</p>
+
+
+                <div class="ab-flex-wrap">
+                    <div class="ab-container ab-dark-xlight-border ab-round-large ab-height-180 magictime swap ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom ab-margin-left-5">
+                            <p class="ab-large">Angrybee</p>
+                            <p class="ab-dark-xxxxlight-font">Apache 2 License</p>
+                        </header>
+
+                        <p>Angrybee CSS Framework.</p>
+                        <p><code>angrybee-dark-pc.css</code><br> <code>angrybee-dark-mobile.css</code></p>
+                                                
+                    </div>
+
+                    <div class="ab-container ab-dark-xlight-border ab-round-large ab-height-180 magictime swap ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom  ab-margin-left-5">
+                            <p class="ab-large">Angrybee Symbol</p>
+                            <p class="ab-dark-xxxxlight-font">Apache 2 License</p>
+                        </header>
+
+                        <p>Angrybee CSS dedicated to symbols.</p>
+                        <p><code>angrybee-symbols.css</code></p>
+                                                
+                    </div>
+                </div>
+
+
+                <h1>Extra-CSS libraries</h1>
+
+                <p>To extend the Angrybee framework capabilities and avoid reinventing the wheel, we have integrated other interesting CSS libraries .</p>
+
+                <p>Angrybee integrates the following CSS files:</p>
+
+
+                <div class="ab-flex-wrap">
+
+                    <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-width-300 ab-height-230  ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                            <p class="ab-large">Github syntax highlight</p>
+                            <p class="ab-dark-xxxxlight-font">BSD-3-Clause License</p>
+                        </header>
+
+                        <p>CSS for syntax highlights. See <a class="ab-link" target="_blank"
+                                href="https://highlightjs.org">highlightjs</a>. CSS associated to <code>highlight.min.js</code></p>
+                        <p><code>github-dark.min.css</code></p>
+                                                
+                    </div>
+
+                
+                    <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-230 ab-width-300 ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                            <p class="ab-large">Magic</p>
+                            <p class="ab-dark-xxxxlight-font">MIT License</p>
+                        </header>
+
+                        <p>A CSS for animations with special effects. We choose this CSS because of its specificity regarding the special effects 
+                            (see <a class="ab-link" target="_blank" href="https://www.minimamente.com/project/magic/?ref=blogduwebdesign.com">Magic</a>
+                            website and its <a class="ab-link" target="_blank" href="https://github.com/miniMAC/magic">documentation</a>).</p>
+                        <p><code>magic.min.css</code></p>
+                                                
+                    </div>
+
+
+                    <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-230 ab-width-300 ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                            <p class="ab-large">Bootstrap</p>
+                            <p class="ab-dark-xxxxlight-font">MIT License</p>
+                        </header>
+
+                        <p>Bootstrap framework bundled with Popper. See <a class="ab-link" target="_blank"
+                            href="https://getbootstrap.com/">Bootstrap</a>.</p>
+                        <p><code>bootstrap.min.css</code></p>
+                                                
+                    </div>
+
+
+
+                    <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-230 ab-width-300 ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                            <p class="ab-large">Bootstrap Icons</p>
+                            <p class="ab-dark-xxxxlight-font">MIT License</p>
+                        </header>
+
+                        <p>Predefined Bootstrap icons. See <a class="ab-link"
+                            target="_blank" href="https://icons.getbootstrap.com/">Bootstrap icons</a>.</p>
+                        <p><code>bootstrap-icons.css</code></p>
+                                                
+                    </div>
+
+
+                    <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-230 ab-width-300 ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                            <p class="ab-large">Hover.css</p>
+                            <p class="ab-dark-xxxxlight-font">MIT License</p>
+                        </header>
+
+                        <p>CSS for animations dedicated to the "hover" event. See <a class="ab-link" target="_blank" href="http://ianlunn.github.io/Hover/">Hover.css</a>.</p>
+                        
+                        <p><code>hover-min.css</code></p>
+                                                
+                    </div>
+
+                    <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-230 ab-width-300 ab-margin-5 ">
+                        <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                            <p class="ab-large">WickedCSS</p>
+                            <p class="ab-dark-xxxxlight-font">No License</p>
+                        </header>
+
+                        <p>Simple effect CSS animation library, easy to use. See <a class="ab-link" target="_blank" href="http://kristofferandreasen.github.io/wickedCSS/">WickedCSS</a>.</p>
+                        
+                        <p><code>wickedcss.min.css</code></p>
+                                                
+                    </div>
+
+
+
+                </div>    
+
+
+
+                <h1>CSS included by default</h1>
+
+                <p>You don't need to include these CSS files in your code, they are already included in the Angrybee CSS files.</p>
+
+                    <div class="code-block">
+                        
+                        <h2>CSS included by default</h2>
+                        <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos" onclick="copyCode(event,'angrybee-css-import')"></i>
+                        <code id="angrybee-css-import" class="language-css">
+@import url("$url/github-dark.min.css");
+@import url("$url/bootstrap-icons.css");
+@import url("$url/bootstrap.min.css");
+@import url("$url/angrybee-symbols.css");
+@import url("$url/magic.min.css");
+@import url("$url/aos.css");
+@import url("$url/hover-min.css");
+@import url("./wickedcss/wickedcss.min.css");
+                        </code>
+                    </pre>
+                    </div>
+    
+
+                <br>
+
+
+            </section>
+
+
+            <!--Javascript details content -->
+            <section id="id-js-details-panel"
+                class="getting-started-details-panel ab-container ab-round-large ab-margin-16 magictime slideDownReturn ab-width-95per"
+                style="display:none;animation-duration: 1s;">
+
+
+                <header class="ab-dark-xlight-border-bottom ab-margin-16">
+                    <h1>Javascript Details</h1>
+                </header>
+
+
+                <p>Some extra-CSS are delivered with Javascript so it is mandatory to get them. The Angrybee Framework is bundled with all the necessary to run these extra-libraries..</p>
+
+                <p>But you need to call them in your HTML page.</p>
+
+                <p>By default, we don't modify the source code of the CSS and JS projects we include. In some cases we add classes or we override styles.</p>
+
+
+                <h1>Default integrations</h1>
+
+
+                <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-300 ab-width-300 ab-padding-5 ab-margin-5 ab-inline-grid">
+                    <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                        <p class="ab-large">AnchorJS</p>
+                        <p class="ab-dark-xxxlight-font">MIT License</p>
+                    </header>
+
+                    <p>Add automatically anchors to the HTML titles. See <a class="ab-link" target="_blank" href="https://www.bryanbraun.com/anchorjs/">AnchorJS</a>.</p>
+                    <p><code>anchor.min.js</code></p>
+                                            
+                </div>
+
+
+                <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-300 ab-width-300 ab-padding-5 ab-margin-5 ab-inline-grid">
+                    <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                        <p class="ab-large">Bootstrap <span class="ab-round ab-blue ab-padding-5">with CSS</span></p>
+                        <p class="ab-dark-xxxxlight-font">MIT License</p>
+                    </header>
+
+                    <p>World’s most popular front-end open source toolkit designed for responsive mobile-first sites. See <a class="ab-link" target="_blank"
+                        href="https://getbootstrap.com/">Bootstrap</a> and <a class="ab-link"
+                        target="_blank" href="https://icons.getbootstrap.com/">Bootstrap icons</a>.
+                    </p>
+                    <p><code>bootstrap.bundle.min.js</code></p>
+                    
+                </div>
+
+
+                <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-300 ab-width-300 ab-padding-5 ab-margin-5 ab-inline-grid">
+                    <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                        <p class="ab-large"><strong>PRELOAD</strong>JS</p>
+                        <p class="ab-dark-xxxxlight-font">MIT License</p>
+                    </header>
+
+                    <p>A JavaScript library that lets you manage and co-ordinate the loading of assets and data. 
+                        See <a class="ab-link" target="_blank" href="https://www.createjs.com/preloadjs">PRELOADJS</a>.
+                    </p>
+                    <p><code>preloadjs.min.js</code></p>
+                    
+                </div>
+
+
+                <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-300 ab-width-300 ab-padding-5 ab-margin-5 ab-inline-grid">
+                    <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                        <p class="ab-large">AOS <span class="ab-round ab-blue ab-padding-5">with CSS</span></p>
+                        <p class="ab-dark-xxxxlight-font">MIT License</p>
+                    </header>
+
+                    <p>Animate On Scroll library is a simple but powerfull animation library to manage appearence of elements during scrolling. 
+                        See <a class="ab-link" target="_blank" href="https://michalsnik.github.io/aos/">AOS</a>.
+                    </p>
+                    <p><code>aos.js</code></p>
+                    
+                </div>
+
+
+                <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-300 ab-width-300 ab-padding-5 ab-margin-5 ab-inline-grid">
+                    <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                        <p class="ab-large">KUTE.<span class="ab-yellow-font">js</span></p>
+                        <p class="ab-dark-xxxxlight-font">MIT License</p>
+                    </header>
+
+                    <p>Advanced animation library providing a huge number of animations such as SVG transformation, text properties, transformation matrix, etc. 
+                        See <a class="ab-link" target="_blank" href="http://thednp.github.io/kute.js/">KUTE.js</a>.
+                    </p>
+                    <p><code>kute.min.js</code></p>
+                    
+                </div>
+
+                
+                <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-300 ab-width-300 ab-padding-5 ab-margin-5 ab-inline-grid">
+                    <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                        <p class="ab-large">Vivus</p>
+                        <p class="ab-dark-xxxxlight-font">MIT License</p>
+                    </header>
+
+                    <p>Lightweight JavaScript class (with no dependencies) that allows you to animate SVGs, giving them the appearence of being drawn.
+                        See <a class="ab-link" target="_blank" href="https://maxwellito.github.io/vivus/">Vivus</a>.
+                    </p>
+                    <p><code>vivus.min.js</code></p>
+                    
+                </div>
+
+            
+                <div class="ab-container ab-dark-xlight-border ab-round-large magictime swap ab-height-300 ab-width-300 ab-padding-5 ab-margin-5 ab-inline-grid">
+                    <header class="ab-dark-xxlight-border-bottom ab-margin-5">
+                        <p class="ab-large">Snap.svg</p>
+                        <p class="ab-dark-xxxxlight-font">MIT License</p>
+                    </header>
+
+                    <p>Advanced JavaScript to bring life to SVGs.
+                        See <a class="ab-link" target="_blank" href="http://snapsvg.io/">Snap.svg</a>.
+                    </p>
+                    <p><code>snap.svg-min.js</code></p>
+                    
+                </div>
+
+                 
+
+                <h1>Future integrations</h1>
+
+                <p>Future Javascript library integration:</p>
+                    <ul>
+                        <li>Tagify <a class="ab-link" target="_blank"href="https://yaireo.github.io/tagify/">tagify</a></li>
+                        <li>Slick <a class="ab-link" target="_blank" href="https://kenwheeler.github.io/slick/?ref=blogduwebdesign.com">Slick</a></li>
+                        <li>CodeMirror <a class="ab-link" target="_blank" href="https://codemirror.net/index.html">CodeMirror</a></li>
+                        <li>VueJS <a class="ab-link" target="_blank" href="https://vuejs.org/">Vue.js</a></li>
+                        <li>Video player: <a class="ab-link" target="_blank" href="https://videojs.com/">Video.js</a></li>
+                        <li>Graph:<a class="ab-link" target="_blank" href="https://d3js.org/">D3.js</a></li>
+                        <li>WYSIWYG Editor: <a class="ab-link" target="_blank" href="https://quilljs.com/">Quilljs</a></li>
+                        <li>Animation Library: <a class="ab-link" target="_blank" href="https://createjs.com/">TweenJS</a></li>
+                    </ul>
+
+                    <h1>How to use</h1>
+
+
+                <div class="code-block">
+                    
+                    <h2>Full Javascript declaration</h2>
+
+                    <pre><i class="bi bi-clipboard ab-xlarge ab-clip-pos"
+                        onclick="copyCode(event,'header-angrybee-css')"></i>
+                    <code id="header-angrybee-css" class="language-html">
+&lt;header&gt;
+    ...
+    &lt;script src="$url/highlight.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/anchor.min.js"&gt;&lt;/script&gt;
+    &lt;!--Boostrap bundled with Popper--&gt;
+    &lt;script src="$url/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/preloadjs.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/aos.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/kute.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/vivus.min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/snap.svg-min.js"&gt;&lt;/script&gt;
+    &lt;script src="$url/angrybee.js"&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+    //Enable syntax highlight
+    hljs.highlightAll();
+
+    &lt;/script&gt;		
+&lt;/header&gt;
+&lt;body&gt;
+...
+    &lt;script&gt;
+
+        //AnchorJS initialisation for h1, h2 and h3
+        anchors.add('h1, h2, h3');
+
+
+        AOS.init();	
+    &lt;/script&gt;
+&lt;/body&gt;
+                    </code>
+                </pre>
+                </div>
+
+
+            </section>
+
+
+
+        </article>  
+
+
+            <div data-aos="fade-up">
+                <p></p><br><br><br><br><br>
+            </div>
+        
+ 
+
+
+
+
+
+        </article>  
+        
+    </div>
+
+
+
+
+    <button class="ab-btn-dark-xlight ab-pos-bottomright-fix ab-margin-bottom-64 ab-show-medium ab-show-large" onclick="location.href = '#top-page';"
+        style="z-index: 999;margin-right:5px!important"><i class="bi bi-arrow-up ab-large ab-white-font"></i></button>
+
+    <button class="ab-btn-dark-xlight ab-pos-bottomright-fix ab-margin-16 ab-show-medium ab-show-large" onclick="location.href = '#bottom-page';"
+    style="z-index: 999;margin-right:5px!important"><i class="bi bi-arrow-down ab-large ab-white-font"></i></button>
+
+
+    <a id="bottom-page"></a>
+
+	<script>
+
+
+		//AnchorJS initialisation
+		anchors.add('h1, h2, h3');
+
+
+		//Tooltip initialisation everywhere with bootstrap
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+
+
+
+		AOS.init();		
+
+
+        tocbot.init({
+        tocSelector: '.js-toc',
+        contentSelector: '.js-toc-content',
+        isCollapsedClass: 'is-collapsed',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420,
+        orderedList: false,
+        activeLinkClass: 'is-active-link',
+        headingSelector: 'h1, h2, h3, h4',
+        hasInnerContainers: true,
+        });
+
+/*
+        const content = '.post-content';
+            const heading = ['h2', 'h3', 'h4', 'h5'];
+            const selector = '#toc';
+            generatoc.init({ content, heading, selector });
+*/
+
+
+
+	</script>
+</body>
+
+</html>    

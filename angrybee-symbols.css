@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+
+.sy-asterisk:after {
+	content:"\002A";
+}
+.sy-copyright:after {
+	content:"\00A9";
+}
+
+.sy-trademark:after {
+	content:"\00AE";
+}
+
+.sy-trademark-sign:after {
+	content:"\2122";
+}
+
+.sy-trigram:after {
+	content:"\2630";
+}
+
+.sy-sun:after {
+	content:"\2609";
+}
+
+
+.sy-bracket-right:after {
+	content:"\276D";
+}
+
+.sy-bracket-left:after {
+	content:"\276C";
+}
+
+.sy-bracket-right-heavy:after {
+	content:"\2771";
+}
+
+.sy-bracket-left-heavy:after {
+	content:"\2770";
+}
+
+.sy-gear:after{
+	content:"\2699";
+}
+
+.sy-atom:after{
+	content:"\269B";
+}
+
+
+.sy-heart:after{
+	content:"\2764";
+}

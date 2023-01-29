@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="67.865997"
+   height="67.864998"
+   viewBox="0 0 17.956211 17.955946"
+   version="1.1"
+   id="svg1000"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="instagram.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1002"
+     pagecolor="#080e17"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.8351571"
+     inkscape:cx="43.320542"
+     inkscape:cy="91.545296"
+     inkscape:window-width="1450"
+     inkscape:window-height="833"
+     inkscape:window-x="-271"
+     inkscape:window-y="173"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     width="67.866px"
+     units="px"
+     height="67.865px" />
+  <defs
+     id="defs997" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="m 8.9783392,0.19322962 c -2.3865094,0 -2.6844193,0.0109986 -3.621488,0.0527698 C 4.4213028,0.28993439 3.7843788,0.4370662 3.2242814,0.65446911 2.6467609,0.87849451 2.1562704,1.1793469 1.6680027,1.6676546 1.1796998,2.1559248 0.87808078,2.6456753 0.65483255,3.2240113 0.43735279,3.7840465 0.28946845,4.4209298 0.24635154,5.3565139 c -0.0442285,0.9370416 -0.0531216,1.2349558 -0.0531216,3.6215063 0,2.3865018 0.0117021,2.6844638 0.0531216,3.6214998 0.0436435,0.934832 0.19100125,1.572463 0.40848101,2.132499 0.22398524,0.576862 0.52486715,1.068064 1.01317005,1.55637 0.4882676,0.487537 0.9780445,0.789876 1.5562784,1.013134 0.5608351,0.216718 1.1977711,0.365325 2.1325703,0.408517 0.9370685,0.04392 1.2349786,0.05268 3.621488,0.05268 2.3865777,0 2.6844897,-0.01099 3.6216147,-0.05268 0.934777,-0.04393 1.572509,-0.191799 2.132454,-0.408517 0.5769,-0.223981 1.068163,-0.525597 1.556466,-1.013134 0.487531,-0.488306 0.789805,-0.977305 1.013134,-1.55637 0.216674,-0.560036 0.365329,-1.197667 0.408519,-2.132499 0.04366,-0.937036 0.05266,-1.234998 0.05266,-3.6214998 0,-2.3865505 -0.01037,-2.6844647 -0.05266,-3.6215063 C 17.666297,4.4216507 17.518682,3.7832918 17.302008,3.2240113 17.077988,2.6463933 16.776405,2.1559248 16.288874,1.6676546 15.800571,1.1793469 15.311532,0.87776676 14.732408,0.65446911 14.172463,0.4370662 13.534731,0.28918794 12.599954,0.24599892 11.662829,0.20201667 11.364917,0.19322962 8.9783392,0.19322962 Z m 0,11.71299538 c -1.6177304,0 -2.9282136,-1.310381 -2.9282136,-2.9282373 0,-1.617863 1.3104832,-2.9282452 2.9282136,-2.9282452 1.6179638,0 2.9283408,1.3103822 2.9283408,2.9282452 0,1.6178563 -1.310377,2.9282373 -2.9283408,2.9282373 z M 14.722253,4.289107 c 0,0.5819972 -0.472976,1.0541727 -1.054252,1.0541727 -0.582,0 -1.054075,-0.4728996 -1.054075,-1.0541727 0,-0.5812309 0.472788,-1.0534022 1.054075,-1.0534022 0.580562,0 1.054252,0.4721713 1.054252,1.0534022 z"
+       id="path4"
+       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.486003;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/vissol/eclipse-workspace/angrybeewebsite/src/main/website/pictures/website-angrybee-icon-instagram.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       sodipodi:nodetypes="scccccscccccscccccscccccsssssssssss" />
+  </g>
+</svg>

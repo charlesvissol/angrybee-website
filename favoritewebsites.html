@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Angrybee favorite websites">
+	<meta name="keywords" content="Angrybee favorite websites ">
+	<meta name="author" content="vissol">
+	<link rel="shortcut icon" href="pictures/angrybee-blue.svg">
+  
+
+	<title>Angrybee Favorite Websites</title>
+	
+	
+	<link rel="stylesheet" href="angrybee-dark.css">
+	
+	
+	<style>
+
+
+		@media (max-width:992px){html,body{font-size:14px!important}}
+		@media (max-width:768px){html,body{font-size:12px!important}}
+
+
+		.selected {
+			background-color: var(--blue)!important;
+			cursor:pointer!important;
+		}
+
+		.article{
+			border-left: solid 3px var(--dark-light);
+			cursor: pointer;
+		}
+
+		.article:hover{
+			border-left: solid 3px var(--blue);
+		}
+
+        .htag {
+            background-color: var(--dark-xlight);
+        }
+
+	
+	</style>
+
+<script>
+function filter(){
+	var tag;
+	const filterArray = [];
+	window.event.srcElement.classList.toggle("selected");
+	
+	tag = document.getElementById("htagfilter");
+	var list = tag.getElementsByClassName("htag");
+	for (i = 0; i < list.length; i++) {
+		
+		
+		if(list[i].classList.contains("selected")){
+			filterArray.push(list[i].getAttribute("data-filter"));
+			//alert(list[i].getAttribute("data-filter"));
+		}
+		
+	}
+	
+	//alert(filterArray.length);
+	
+	
+	var articles;
+	articles = document.getElementById("htagfilterresult");
+	var listArticles = articles.getElementsByClassName("article");
+	
+	for(j = 0;j < listArticles.length;j++){
+		var status = true;
+		
+		//alert(listArticles[j].getAttribute("class"));
+		
+		for (k = 0; k < filterArray.length; k++) {
+			//alert(filterArray[k]);
+			if(listArticles[j].classList.contains(filterArray[k])===false)
+			{
+				status = false;
+				break;
+			}
+			//alert(status);
+		}
+		if(status===true){
+			listArticles[j].style.display = "block";
+		} else {
+			listArticles[j].style.display = "none";
+		}
+				
+	}
+
+	
+}
+
+function openarticle(articleUrl){
+	location.href = articleUrl;
+}
+
+
+
+</script>
+
+
+</head>
+<body class="ab-dark-light" style="overflow-y:hidden;scrollbar-color:hsl(207, 90%, 55%) hsl(216,50%,12%);">
+
+	<!-- Back home -->
+	<a id="home-link" href="./index.html"><img src="pictures/back-home.svg" style="z-index: 2;position: fixed;top: 4px;left: 4px;" alt="Back home"/></a>
+	<!-- Title -->
+	
+
+	<a id="top-page"></a>
+
+
+
+	<div class="ab-dark-light-bg ab-width-100per" >
+
+		<div class="ab-margin-left-80 ab-margin-right-80">
+			<h1>Filter</h1>
+			<p class="i ab-gray-medium-font ab-small">Click on the tags to filter.</p>
+	
+			<div id="htagfilter">
+		
+				
+				<h3>Main categories</h3>
+				
+                <button class="htag" data-filter="Blog" onclick="filter();">Blog</button>
+
+				<button class="htag" data-filter="Foundation" onclick="filter();">Foundation</button>
+
+                <button class="htag" data-filter="Practical" onclick="filter();">Practical</button>
+
+                <button class="htag" data-filter="Project" onclick="filter();">Project</button>
+
+                <button class="htag" data-filter="News" onclick="filter();">News</button>
+
+				<button class="htag" data-filter="Reference" onclick="filter();">Reference</button>
+                
+                <button class="htag" data-filter="Tutorials" onclick="filter();">Tutorials</button>
+
+
+
+                <button class="htag" data-filter="Video" onclick="filter();">Video</button>
+
+				<h3>Techno</h3>
+				
+
+                <button class="htag" data-filter="Anonymity" onclick="filter();">Anonymity</button>
+
+				<button class="htag" data-filter="Cloud" onclick="filter();">Cloud</button>
+                
+                <button class="htag" data-filter="Coding" onclick="filter();">Coding</button>
+
+				<button class="htag" data-filter="Distros" onclick="filter();">Distros</button>
+
+				<button class="htag" data-filter="Hacking" onclick="filter();">Hacking</button>
+
+				<button class="htag" data-filter="Java" onclick="filter();">Java</button>
+
+				<button class="htag" data-filter="Linux" onclick="filter();">Linux</button>
+
+				<button class="htag" data-filter="Microservices" onclick="filter();">Microservices</button>
+
+                <button class="htag" data-filter="W3C" onclick="filter();">NIST</button>
+
+				<button class="htag" data-filter="Privacy" onclick="filter();">Privacy</button>
+
+                
+
+
+				<br>
+
+				<button class="htag" data-filter="rdp" onclick="filter();">RDP</button>
+				
+                <button class="htag" data-filter="Security" onclick="filter();">Security</button>
+
+				<button class="htag" data-filter="Sysadmin" onclick="filter();">Sysadmin</button>
+
+				<button class="htag" data-filter="UI-design" onclick="filter();">UI Design</button>
+
+				<button class="htag" data-filter="VDI" onclick="filter();">VDI</button>
+
+				<button class="htag" data-filter="VPN" onclick="filter();">VPN</button>
+				
+				<button class="htag" data-filter="Web" onclick="filter();">Web</button>
+
+				
+
+				<button class="htag" data-filter="Web-design" onclick="filter();">Web Design</button>
+
+				<button class="htag" data-filter="wiki" onclick="filter();">Wiki</button>
+
+                <button class="htag" data-filter="W3C" onclick="filter();">W3C</button>
+
+
+				<h3>Solution</h3>
+
+				<button class="htag" data-filter="bookstack" onclick="filter();">BookStack</button>
+
+                <button class="htag" data-filter="cryptomator" onclick="filter();">cryptomator</button>
+				
+                <button class="htag" data-filter="Cuckoo" onclick="filter();">Cuckoo</button>
+
+				<button class="htag" data-filter="Debian" onclick="filter();">Debian</button>
+				
+				<button class="htag" data-filter="FreeRDP" onclick="filter();">FreeRDP</button>
+
+                <button class="htag" data-filter="guacamole" onclick="filter();">Guacamole</button>
+
+                <button class="htag" data-filter="I2P" onclick="filter();">I2P</button>
+
+                <button class="htag" data-filter="Kicksecure" onclick="filter();">Kicksecure</button>
+                
+                <br>
+
+				<button class="htag" data-filter="Lynis" onclick="filter();">Lynis</button>
+
+                
+                <button class="htag" data-filter="open-berkeley" onclick="filter();">open-berkeley</button>
+
+				<button class="htag" data-filter="outline" onclick="filter();">Outline</button>
+
+				<button class="htag" data-filter="ovirt" onclick="filter();">oVirt</button>
+				
+                <button class="htag" data-filter="ProtonVPN" onclick="filter();">ProtonVPN</button>
+
+				<button class="htag" data-filter="revada" onclick="filter();">Ravada</button>
+
+				<button class="htag" data-filter="rustdesk" onclick="filter();">RustDesk</button>
+
+                <button class="htag" data-filter="Security-Onion" onclick="filter();">Security Onion</button>
+
+                
+                <button class="htag" data-filter="SELKS" onclick="filter();">SELKS</button>
+
+				<button class="htag" data-filter="Virtualmin" onclick="filter();">Virtualmin</button>
+				
+				<button class="htag" data-filter="wiki-js" onclick="filter();">Wiki.js</button>
+
+                <button class="htag" data-filter="Whoami" onclick="filter();">Whoami</button>
+                
+                <button class="htag" data-filter="xrdp" onclick="filter();">xRDP</button>
+			</div>
+		</div>
+		
+		<br><br><br>
+
+	</div>
+	
+		<div id="htagfilterresult" class="ab-margin-left-80 ab-margin-right-80">
+
+
+            <a href="https://www.softwareheritage.org/" target="_blank" class="article  Foundation ab-container ab-padding-5" style="display:block;">
+                <h2>Software Heritage</h2>
+                <p class="ab-white-font">Website that collects and preserves software in source code form as a cultural heritage.</p>
+                <button class="htag">Foundation</button>
+            </a>
+
+
+            <a href="https://www.w3.org/community/webview/" target="_blank" class="article  W3C Web ab-container ab-padding-5" style="display:block;">
+                <h2>WebView Community Group</h2>
+                <p class="ab-white-font">Website of the community who is working to avoid Web-based technologies to work outside of Web browsers.</p>
+                <button class="htag">W3C</button> <button class="htag">Web</button>
+            </a>
+            
+
+            <a href="https://csrc.nist.gov/Groups/Computer-Security-Division/Cryptographic-Technology" target="_blank" class="article  NIST Web ab-container ab-padding-5" style="display:block;">
+                <h2>NIST Computer Security Resource Center</h2>
+                <p class="ab-white-font">NIST reference website for computer security: guidelines, recommandations, best practices...</p>
+                <button class="htag">NIST</button> <button class="htag">Security</button>
+            </a>
+
+
+
+            <a href="https://validator.w3.org" target="_blank" class="article  W3C Web ab-container ab-padding-5" style="display:block;">
+                <h2>W3C Validator</h2>
+                <p class="ab-white-font">Reference Website to validate your W3C compliance</p>
+                <button class="htag">W3C</button> <button class="htag">Web</button>
+            </a>
+
+
+            <a href="https://www.journaldev.com" target="_blank" class="article  Java Reference ab-container ab-padding-5" style="display:block;">
+                <h2>JournalDev</h2>
+                <p class="ab-white-font">Website which is a reference site about Java technology </p>
+                <button class="htag">Java</button> <button class="htag">Reference</button>
+            </a>
+
+            <a href="https://github.com/decalage2/awesome-security-hardening" target="_blank" class="article  Linux Security ab-container ab-padding-5" style="display:block;">
+                <h2>Awesome Security hardening</h2>
+                <p class="ab-white-font">Github project collecting security hardening guides, tools and other resources </p>
+                <button class="htag">Linux</button> <button class="htag">Security</button>
+            </a>
+
+            <a href="https://dev-sec.io/" target="_blank" class="article  Linux Security ab-container ab-padding-5" style="display:block;">
+                <h2>DevSec Project</h2>
+                <p class="ab-white-font">Website dedicated to hardening automation for OS, SSH, SSL and applications </p>
+                <button class="htag">Linux</button> <button class="htag">Security</button>
+            </a>
+
+            <a href="https://cisofy.com/lynis/" target="_blank" class="article Project Linux Security Lynis ab-container ab-padding-5" style="display:block;">
+                <h2>Lynis security tool</h2>
+                <p class="ab-white-font">Website dedicated to Lynis security tool for systems like Linux, macOS or Unix-based operating systems. </p>
+                <button class="htag">Project</button> <button class="htag">Linux</button> <button class="htag">Security</button> <button class="htag">Lynis</button>
+            </a>
+
+            <a href="https://linuxsecurityblog.com/" target="_blank" class="article  Linux Hacking Blog ab-container ab-padding-5" style="display:block;">
+                <h2>Linux Security Blog</h2>
+                <p class="ab-white-font">Website dedicated to white hacking for Linux users </p>
+                <button class="htag">Linux</button> <button class="htag">Blog</button> <button class="htag">Hacking</button>
+            </a>
+
+
+            <a href="https://debian-handbook.info/" target="_blank" class="article Debian Linux Sysadmin ab-container ab-padding-5" style="display:block;">
+                <h2>Debian Administrator Handbook</h2>
+                <p class="ab-white-font">Online book "The Debian Administrator's Handbook" by Raphaël Hertzog and Roland Mas</p>
+                <button class="htag">Linux</button> <button class="htag">Sysadmin</button> <button class="htag">Debian</button>
+            </a>
+			
+            <a href="https://distrowatch.com/" target="_blank" class="article  Linux Distros Reference ab-container ab-padding-5" style="display:block;">
+                <h2>Distro Watch</h2>
+                <p class="ab-white-font">Website to agregate information about all Linux distros. Distrowatch is one of the main website to get up-to-date distros information </p>
+                <button class="htag">Linux</button> <button class="htag">Distros</button>  <button class="htag">Reference</button>
+            </a>
+
+            <a href="https://www.linuxfordevices.com" target="_blank" class="article Linux ab-container ab-padding-5" style="display:block;">
+                <h2>Linux For Devices</h2>
+                <p class="ab-white-font">Personal website with a set of high quality articles about Linux </p>
+                <button class="htag">Linux</button>
+            </a>
+
+            <a href="https://www.linux.com/" target="_blank" class="article  Linux ab-container ab-padding-5" style="display:block;">
+                <h2>Linux Dot Com</h2>
+                <p class="ab-white-font">Linux.com is the go-to resource for open source professionals to learn about the latest in Linux and open source technology, careers, best practices, and industry trends </p>
+                <button class="htag">Linux</button>
+            </a>
+
+            <a href="https://lwn.net" target="_blank" class="article  Linux ab-container ab-padding-5" style="display:block;">
+                <h2>LWN.net</h2>
+                <p class="ab-white-font">LWN.net is a reader-supported news site dedicated to producing the best coverage from within the Linux and free software development communities </p>
+                <button class="htag">Linux</button>
+            </a>
+
+            <a href="https://www.virtualmin.com" target="_blank" class="article Linux Sysadmin Virtualmin ab-container ab-padding-5" style="display:block;">
+                <h2>Virtualmin Opensource web hosting control panel</h2>
+                <p class="ab-white-font">Website dedicated to Virtualmin is a powerful and flexible web hosting control panel for Linux and BSD systems  </p>
+                <button class="htag">Linux</button> <button class="htag">Sysadmin</button> <button class="htag">Virtualmin</button>
+            </a>
+			
+
+            <a href="https://linuxize.com" target="_blank" class="article Linux Practical ab-container ab-padding-5" style="display:block;">
+                <h2>Linuxize Dot Com</h2>
+                <p class="ab-white-font">Very interesting Website about Linux tips, tricks and tutorials </p>
+                <button class="htag">Linux</button> <button class="htag">Practical</button>
+            </a>
+			
+            <a href="https://linuxhandbook.com/" target="_blank" class="article Linux Practical ab-container ab-padding-5" style="display:block;">
+                <h2>Linux Handbook</h2>
+                <p class="ab-white-font">Independent portal focusing on Linux Command Line, Server, Self-hosting, DevOps and Cloud Learning </p>
+                <button class="htag">Linux</button> <button class="htag">Practical</button>
+            </a>
+
+            <a href="https://www.linuxfoundation.org/" target="_blank" class="article Linux Foundation ab-container ab-padding-5" style="display:block;">
+                <h2>Linux Foundation</h2>
+                <p class="ab-white-font">Website of the Linux Foundation, a non-profit technology consortium that acts as a merger between Open Source Development Labs 
+					and the Free Standards Group to standardize Linux, support its growth, and promote its commercial adoption. 
+					Additionally, it hosts and promotes the collaborative development of open source software projects </p>
+                <button class="htag">Linux</button> <button class="htag">Foundation</button>
+            </a>
+
+            <a href="https://linuxsecurity.com/" target="_blank" class="article Linux Security Practical ab-container ab-padding-5" style="display:block;">
+                <h2>Linux Security</h2>
+                <p class="ab-white-font">LinuxSecurity.com is the most authoritative resource for security professionals and administrators using open source </p>
+                <button class="htag">Linux</button> <button class="htag">Security</button> <button class="htag">Practical</button>
+            </a>
+			
+            <a href="https://www.linuxbabe.com/" target="_blank" class="article Linux Practical ab-container ab-padding-5" style="display:block;">
+                <h2>Linux Babe</h2>
+                <p class="ab-white-font">Another useful community providing interesting and technical article about several domaines of Linux </p>
+                <button class="htag">Linux</button> <button class="htag">Practical</button> 
+            </a>
+			
+            <a href="https://www.tldp.org/" target="_blank" class="article Linux Foundation ab-container ab-padding-5" style="display:block;">
+                <h2>The Linux Documentation Project</h2>
+                <p class="ab-white-font">Collection of GNU and Linux-related documentation and publishes the collection online </p>
+                <button class="htag">Linux</button> <button class="htag">Foundation</button> 
+            </a>
+			
+            <a href="https://www.tecmint.com/" target="_blank" class="article Linux Practical Blog ab-container ab-padding-5" style="display:block;">
+                <h2>Tecmint #1 Linux BLOG</h2>
+                <p class="ab-white-font">Linux BLOG with full of useful articles! </p>
+                <button class="htag">Linux</button> <button class="htag">Blog</button> <button class="htag">Practical</button> 
+            </a>
+			
+            <a href="https://linuxhint.com/" target="_blank" class="article Linux Practical ab-container ab-padding-5" style="display:block;">
+                <h2>Linuxhint</h2>
+                <p class="ab-white-font">Another Linux and more website publishing practical and technical articles. You can write for them :-) </p>
+                <button class="htag">Linux</button> <button class="htag">Practical</button> 
+            </a>
+			
+            <a href="https://beencrypted.com/" target="_blank" class="article Web Security Privacy ab-container ab-padding-5" style="display:block;">
+                <h2>Be Encrypted</h2>
+                <p class="ab-white-font">Interesting Website about Online privacy, encryption, VPN and Cyber security </p>
+                <button class="htag">Web</button> <button class="htag">Security</button> <button class="htag">Privacy</button>
+            </a>
+
+            <a href="https://geti2p.net/en/" target="_blank" class="article Project Anonymity I2P Privacy ab-container ab-padding-5" style="display:block;">
+                <h2>I2P Anonymous network</h2>
+                <p class="ab-white-font">Website of the I2P project (Invisible Internet Project) </p>
+                <button class="htag">I2P</button> <button class="htag">Project</button> <button class="htag">Privacy</button> <button class="htag">Anonymity</button> 
+            </a>
+
+            <a href="https://fidoalliance.org/" target="_blank" class="article Web Security ab-container ab-padding-5" style="display:block;">
+                <h2>FIDO Alliance</h2>
+                <p class="ab-white-font">Website of the FIDO (Fast Identity Online) Alliance where you can find the main information about FIDO </p>
+                <button class="htag">Web</button> <button class="htag">Security</button> 
+            </a>
+			
+            <a href="https://cloudsecurityalliance.org/" target="_blank" class="article Cloud Web Security ab-container ab-padding-5" style="display:block;">
+                <h2>Cloud Security Alliance</h2>
+                <p class="ab-white-font">All about security in the Cloud. This site contains also training materials for certification </p>
+                <button class="htag">Cloud</button> <button class="htag">Web</button> <button class="htag">Security</button> 
+            </a>
+			
+            <a href="https://spyboy.blog/" target="_blank" class="article Hacking Blog Practical ab-container ab-padding-5" style="display:block;">
+                <h2>Spy Boy</h2>
+                <p class="ab-white-font">Practical BLOG dedicated to the hacking </p>
+                <button class="htag">Hacking</button> <button class="htag">Blog</button> <button class="htag">Practical</button>
+            </a>
+			
+            <a href="https://opensource.com/" target="_blank" class="article Hacking Practical ab-container ab-padding-5" style="display:block;">
+                <h2>Opensource.com</h2>
+                <p class="ab-white-font">Website dedicated to open source, with articles, Cheat sheets, and other resources. You can write for them :-) </p>
+                <button class="htag">Hacking</button> <button class="htag">Practical</button>
+            </a>
+
+
+
+
+
+
+            <a href="https://kernel.org" target="_blank" class="article Foundation Linux ab-container ab-padding-5" style="display:block;">
+                <h2>The Linux Kernel Archives</h2>
+                <p class="ab-white-font">Website of the Linux Kernel Organization (California Public Benefit Corporation established in 2002) to distribute the Linux kernel and other Open Source software. The Linux Kernel Organization is managed by The Linux Foundation </p>
+                <button class="htag">Linux</button> <button class="htag">Foundation</button> 
+            </a>
+
+            <a href="https://docs.kernel.org" target="_blank" class="article Foundation Linux ab-container ab-padding-5" style="display:block;">
+                <h2>The Linux Kernel documentation</h2>
+                <p class="ab-white-font">Extension of "The Linux Kernel Archives" providing the full documentation of Linux Kernel </p>
+                <button class="htag">Linux</button> <button class="htag">Foundation</button>
+            </a>
+			
+            <a href="https://pkgs.org/" target="_blank" class="article Foundation Linux Practical Debian ab-container ab-padding-5" style="display:block;">
+                <h2>Packages for Linux and Unix</h2>
+                <p class="ab-white-font">Main repositories of several distros including the documentation. Debian included and lots of others distros </p>
+                <button class="htag">Linux</button> <button class="htag">Foundation</button> <button class="htag">Practical</button> <button class="htag">Distros</button> <button class="htag">Debian</button>
+            </a>
+			
+            <a href="https://protonvpn.com" target="_blank" class="article Project ProtonVPN Security VPN ab-container ab-padding-5" style="display:block;">
+                <h2>ProtonVPN</h2>
+                <p class="ab-white-font">Swiss company providing a free VPN for Linux, Windows and MacOS </p>
+                <button class="htag">ProtonVPN</button> <button class="htag">Project</button> <button class="htag">Security</button> <button class="htag">VPN</button> <button class="htag">Practical</button>
+            </a>
+
+            <a href="https://microservices.io/" target="_blank" class="article Microservices Foundation ab-container ab-padding-5" style="display:block;">
+                <h2>Microservice Architecture</h2>
+                <p class="ab-white-font">All you need to know about Microservices </p>
+                <button class="htag">Microservices</button> <button class="htag">Foundation</button>
+            </a>
+
+            <a href="https://www.svgrepo.com/" target="_blank" class="article Web-design UI-design Practical ab-container ab-padding-5" style="display:block;">
+                <h2>SVG Repo</h2>
+                <p class="ab-white-font">Repository of 300.000+SVG free vectors and icons to help you build UIs </p>
+                <button class="htag">Web Design</button> <button class="htag">UI Design</button> <button class="htag">Practical</button>
+            </a>
+
+            <a href="https://css-tricks.com/" target="_blank" class="article Web-design Coding ab-container ab-padding-5" style="display:block;">
+                <h2>CSS Trick</h2>
+                <p class="ab-white-font">Very usefull resource to design with CSS </p>
+                <button class="htag">Web Design</button> <button class="htag">Coding</button>
+            </a>
+			
+            <a href="https://www.toptal.com/designers/htmlarrows/" target="_blank" class="article Web-design Coding ab-container ab-padding-5" style="display:block;">
+                <h2>CSS Trick</h2>
+                <p class="ab-white-font">Very usefull resource to design with CSS </p>
+                <button class="htag">Web Design</button> <button class="htag">Coding</button>
+            </a>
+			
+            <a href="https://www.esecurityplanet.com/" target="_blank" class="article Security Reference ab-container ab-padding-5" style="display:block;">
+                <h2>eSecurity Planet</h2>
+                <p class="ab-white-font">Website dedicated to security and property of TechnologyAdvice. Information about Cybersecurity is complete and practical for buyers and Vendors  </p>
+                <button class="htag">Security</button> <button class="htag">Reference</button>
+            </a>
+
+            <a href="https://xrdp.org/" target="_blank" class="article Project rdp xrdp ab-container ab-padding-5" style="display:block;">
+                <h2>XRDP server site</h2>
+                <p class="ab-white-font">Website of the open-source Remote Desktop Protocol server</p>
+                <button class="htag">Project</button> <button class="htag">xRDP</button> <button class="htag">RDP</button>
+            </a>
+
+            <a href="https://github.com/FreeRDP" target="_blank" class="article rdp FreeRDP Project ab-container ab-padding-5" style="display:block;">
+                <h2>FreeRDP Github project</h2>
+                <p class="ab-white-font">Github project for FreeRDP client: FreeRDP, Remmina and Wireshark.</p>
+                <button class="htag">FreeRDP</button> <button class="htag">RDP</button>
+            </a>
+
+            <a href="https://ravada.upc.edu/" target="_blank" class="article Project revada vdi ab-container ab-padding-5" style="display:block;">
+                <h2>Ravada VDI website</h2>
+                <p class="ab-white-font">Ravada is an open-source project that allows users to connect to a virtual desktop. It is a VDI broker.</p>
+                <button class="htag">Project</button> <button class="htag">Ravada</button> <button class="htag">VDI</button>
+            </a>
+
+            <a href="https://rustdesk.com/" target="_blank" class="article Project rustdesk rdp ab-container ab-padding-5" style="display:block;">
+                <h2>RustDesk Remote Desktop Software</h2>
+                <p class="ab-white-font">Interesting remote desktop software, written in Rust. Works out of the box, no configuration required.</p>
+                <button class="htag">Project</button> <button class="htag">RustDesk</button> <button class="htag">RDP</button>
+            </a>
+
+            <a href="https://guacamole.apache.org/" target="_blank" class="article Project guacamole rdp ab-container ab-padding-5" style="display:block;">
+                <h2>Guacamaole website</h2>
+                <p class="ab-white-font">Website of Apache Guacamole, a clientless remote desktop gateway supporting standards like VNC, RDP and SSH.</p>
+                <button class="htag">Project</button> <button class="htag">Guacamole</button> <button class="htag">RDP</button>
+            </a>
+						
+            <a href="https://www.ovirt.org/" target="_blank" class="article Project Project ovirt rdp ab-container ab-padding-5" style="display:block;">
+                <h2>oVirt website</h2>
+                <p class="ab-white-font">Enterprise grade virtualization open-source solution.</p>
+                <button class="htag">Project</button> <button class="htag">oVirt</button> <button class="htag">RDP</button>
+            </a>
+
+            <a href="https://www.bookstackapp.com/" target="_blank" class="article Project bookstack wiki ab-container ab-padding-5" style="display:block;">
+                <h2>BookStack website</h2>
+                <p class="ab-white-font">Simple, self-hosted platform for organising and storing information.</p>
+                <button class="htag">Project</button> <button class="htag">BookStack</button> <button class="htag">Wiki</button>
+            </a>
+			
+            <a href="https://github.com/outline/outline" target="_blank" class="article Project outline wiki ab-container ab-padding-5" style="display:block;">
+                <h2>Outline github website</h2>
+                <p class="ab-white-font">Outline is built on an open, best-in-class, RPC API. Easily integrate the creation and publishing of documents into your teams workflows.</p>
+                <button class="htag">Project</button> <button class="htag">Outline</button> <button class="htag">Wiki</button>
+            </a>
+
+            <a href="https://js.wiki/" target="_blank" class="article Project wiki-js wiki ab-container ab-padding-5" style="display:block;">
+                <h2>Wiki.js website</h2>
+                <p class="ab-white-font">Powerful and extensible Wiki software.</p>
+                <button class="htag">Project</button>  <button class="htag">Outline</button> <button class="htag">Wiki</button>
+            </a>
+			
+            <a href="https://open.berkeley.edu/home" target="_blank" class="article Project open-berkeley wiki ab-container ab-padding-5" style="display:block;">
+                <h2>Open Berkeley</h2>
+                <p class="ab-white-font">Complete web solution packaged for campus websites.</p>
+                <button class="htag">Project</button> <button class="htag">Open Berkeley</button> <button class="htag">Wiki</button>
+            </a>
+			
+            <a href="https://www.toptal.com/designers/htmlarrows/" target="_blank" class="article Web Coding ab-container ab-padding-5" style="display:block;">
+                <h2>Reference for HTML symbols, entities and ASCII Character codes</h2>
+                <p class="ab-white-font">A complete reference to get HTML symbols, entities and ASCII character codes.</p>
+                <button class="htag">Web</button> <button class="htag">Coding</button>
+            </a>
+			
+            <a href="https://www.youtube.com/channel/UC88eard_2sz89an6unmlbeA" target="_blank" class="article Linux Practical Video ab-container ab-padding-5" style="display:block;">
+                <h2>BeginLinux Guru</h2>
+                <p class="ab-white-font">Youtube channel dedicated to Linux.</p>
+                <button class="htag">Linux</button> <button class="htag">Practical</button> <button class="htag">Video</button>
+            </a>
+            
+            <a href="https://packetstormsecurity.com/" target="_blank" class="article Hacking News ab-container ab-padding-5" style="display:block;">
+                <h2>Packet Storm</h2>
+                <p class="ab-white-font">Website dedicated to Security news.</p>
+                <button class="htag">Hacking</button> <button class="htag">News</button> <button class="htag">Video</button>
+            </a>
+
+            <a href="https://thehackernews.com/" target="_blank" class="article Hacking News ab-container ab-padding-5" style="display:block;">
+                <h2>The Hacker News</h2>
+                <p class="ab-white-font">Hacker News provides latest cybersecurity news and in-depth reports on current and future Infosec trends and how they are shaping the cyber world.</p>
+                <button class="htag">Hacking</button> <button class="htag">News</button> <button class="htag">Video</button>
+            </a>
+
+            <a href="https://www.guru99.com/ethical-hacking-tutorials.html" target="_blank" class="article Hacking Tutorials Practical ab-container ab-padding-5" style="display:block;">
+                <h2>Guru 99 Ethical hacking tutorials</h2>
+                <p class="ab-white-font">Set of free tutorials from Guru 99.</p>
+                <button class="htag">Hacking</button> <button class="htag">Tutorials</button> <button class="htag">Practical</button>
+            </a>
+
+            <a href="https://phoenixnap.com/blog/" target="_blank" class="article Blog Practical ab-container ab-padding-5" style="display:block;">
+                <h2>Phoenix NAP Global IT Services BLOG</h2>
+                <p class="ab-white-font">Phoenix NAP Global IT Services BLOG providing interesting and practical documentation.</p>
+                <button class="htag">Blog</button> <button class="htag">Practical</button>
+            </a>
+
+            <a href="https://phoenixnap.com/kb/" target="_blank" class="article Tutorials Practical ab-container ab-padding-5" style="display:block;">
+                <h2>Phoenix NAP Global IT Services Support tutorials</h2>
+                <p class="ab-white-font">Phoenix NAP Global IT Services Suport providing interesting and practical documentation.</p>
+                <button class="htag">Tutorials</button> <button class="htag">Practical</button>
+            </a>
+
+
+            <a href="https://itsfoss.com" target="_blank" class="article Linux Practical Reference ab-container ab-padding-5" style="display:block;">
+                <h2>It's FOSS</h2>
+                <p class="ab-white-font">award-winning web-portal that focuses on Open Source in general and Linux in particular.</p>
+                <button class="htag">Linux</button> <button class="htag">Practical</button> <button class="htag">Reference</button>
+            </a>
+            
+            <a href="https://news.itsfoss.com" target="_blank" class="article Linux Practical Reference ab-container ab-padding-5" style="display:block;">
+                <h2>It's FOSS News</h2>
+                <p class="ab-white-font">News of the award-winning web-portal that focuses on Open Source in general and Linux in particular.</p>
+                <button class="htag">Linux</button> <button class="htag">Practical</button> <button class="htag">Reference</button>
+            </a>
+
+
+            <a href="https://www.golinuxcloud.com/" target="_blank" class="article Linux Practical Tutorials Hacking ab-container ab-padding-5" style="display:block;">
+                <h2>Go Linux Cloud</h2>
+                <p class="ab-white-font">Very interesting website that groups lots of tutorials about Linux and Cloud and other topics (Hacking...).</p>
+                <button class="htag">Linux</button> <button class="htag">Practical</button> <button class="htag">Tutorials</button> <button class="htag">Hacking</button>
+            </a>
+
+           
+
+            <a href="https://linux-audit.com" target="_blank" class="article Linux Security Practical Blog Hacking ab-container ab-padding-5" style="display:block;">
+                <h2>Linux Audit</h2>
+                <p class="ab-white-font">Linux security blog about Auditing, Hardening, and Compliance.</p>
+                <button class="htag">Linux</button> <button class="htag">Security</button> <button class="htag">Blog</button> <button class="htag">Practical</button>
+            </a>
+            
+            <a href="https://www.geeksforgeeks.org" target="_blank" class="article Coding Linux Practical   ab-container ab-padding-5" style="display:block;">
+                <h2>Geeks for Geeks</h2>
+                <p class="ab-white-font">Website dedicated to practical and technical articles (Code, Linux...).</p>
+                <button class="htag">Coding</button> <button class="htag">Linux</button> <button class="htag">Blog</button> <button class="htag">Hacking</button>
+            </a>
+            
+            <a href="https://www.linux.com" target="_blank" class="article Linux Practical News ab-container ab-padding-5" style="display:block;">
+                <h2>Linux Dot Com</h2>
+                <p class="ab-white-font">Linux.com is the go-to resource for open source professionals to learn about the latest in Linux and open source technology, careers, best practices, and industry trends.</p>
+                <button class="htag">Linux</button> <button class="htag">Practical</button> <button class="htag">News</button> 
+            </a>
+
+            <a href="https://docs.kernel.org" target="_blank" class="article Linux Foundation ab-container ab-padding-5" style="display:block;">
+                <h2>Kernel Documentation</h2>
+                <p class="ab-white-font">Full Kernel documentation.</p>
+                <button class="htag">Linux</button> <button class="htag">Foundation</button> 
+            </a>
+
+            <a href="https://www.wiki.kernel.org" target="_blank" class="article Linux Foundation ab-container ab-padding-5" style="display:block;">
+                <h2>Kernel Wiki</h2>
+                <p class="ab-white-font">Website that concentrates Wiki Kernel references.</p>
+                <button class="htag">Linux</button> <button class="htag">Foundation</button> 
+            </a>
+
+            <a href="https://sysctl-explorer.net" target="_blank" class="article Linux Foundation ab-container ab-padding-5" style="display:block;">
+                <h2>Sysctl explorer</h2>
+                <p class="ab-white-font">initiative to facilitate the access of Linux sysctl reference documentation.</p>
+                <button class="htag">Linux</button> <button class="htag">Foundation</button> 
+            </a>
+           
+            
+            <a href="https://itigic.com/" target="_blank" class="article Haking Security Practical ab-container ab-padding-5" style="display:block;">
+                <h2>ITIGIC</h2>
+                <p class="ab-white-font">Technical How-tos, tips and tricks.</p>
+                <button class="htag">Haking</button> <button class="htag">Security</button> <button class="htag">Practical</button> 
+            </a>
+            
+            <a href="https://grsecurity.net/" target="_blank" class="article Linux Security Practical ab-container ab-padding-5" style="display:block;">
+                <h2>grsecurity</h2>
+                <p class="ab-white-font">Grsecurity provides a full suite of synergistic defenses, from security-enhanced compilation and our world-class memory corruption defenses to access control.</p>
+                <button class="htag">Linux</button> <button class="htag">Security</button> <button class="htag">Practical</button> 
+            </a>
+            
+            <a href="https://hardenedlinux.github.io" target="_blank" class="article Linux Security Practical ab-container ab-padding-5" style="display:block;">
+                <h2>Hardened Linux</h2>
+                <p class="ab-white-font">Some resources about Linux hardening.</p>
+                <button class="htag">Linux</button> <button class="htag">Security</button> <button class="htag">Practical</button> 
+            </a>
+            
+            <a href="https://www.pragmaticlinux.com/" target="_blank" class="article Linux Practical Tutorials ab-container ab-padding-5" style="display:block;">
+                <h2>Pragmatic Linux</h2>
+                <p class="ab-white-font">Tutorials for getting things done in Linux.</p>
+                <button class="htag">Linux</button> <button class="htag">Tutorials</button> <button class="htag">Practical</button> 
+            </a>
+
+            <a href="https://linuxsecurity.expert/" target="_blank" class="article Linux Practical Tutorials ab-container ab-padding-5" style="display:block;">
+                <h2>Linux Security Expert</h2>
+                <p class="ab-white-font">Tutorials for getting things done in Linux.</p>
+                <button class="htag">Linux</button> <button class="htag">Tutorials</button> <button class="htag">Practical</button> 
+            </a>
+                              
+            <a href="https://cryptomator.org/" target="_blank" class="article Project Security cryptomator ab-container ab-padding-5" style="display:block;">
+                <h2>Cryptoarmor</h2>
+                <p class="ab-white-font">Cryptomator is a multi-platform transparent client-side encryption of your files in the cloud.</p>
+                <button class="htag">Project</button> <button class="htag">Security</button> <button class="htag">cryptomator</button> 
+            </a>
+            
+            <a href="https://www.fudzilla.com/" target="_blank" class="article News Reference ab-container ab-padding-5" style="display:block;">
+                <h2>fudzilla.com</h2>
+                <p class="ab-white-font">Interesting News website.</p>
+                <button class="htag">News</button> <button class="htag">Reference</button> 
+            </a>
+            
+            <a href="https://www.edureka.co/blog" target="_blank" class="article Blog Practical Reference ab-container ab-padding-5" style="display:block;">
+                <h2>Edureka! BLOG</h2>
+                <p class="ab-white-font">This BLOG is full of very interesting articles, practical and well illustrated.</p>
+                <button class="htag">Blog</button> <button class="htag">Practical</button> <button class="htag">Reference</button> 
+            </a>
+            
+            <a href="https://www.tutorialspoint.com" target="_blank" class="article Tutorials Practical ab-container ab-padding-5" style="display:block;">
+                <h2>Tutorials Point</h2>
+                <p class="ab-white-font">Website dedicated to tutorials. Very interesting!</p>
+                <button class="htag">Tutorials</button> <button class="htag">Practical</button> 
+            </a>
+            
+            <a href="https://9to5linux.com" target="_blank" class="article Tutorials Practical ab-container ab-padding-5" style="display:block;">
+                <h2>9 to 5 linux</h2>
+                <p class="ab-white-font">Website dedicated to Linux news, reviews, tutorials and more they say :-) That's true.</p>
+                <button class="htag">Tutorials</button> <button class="htag">Practical</button> 
+            </a>
+            
+            <a href="https://developpez.com" target="_blank" class="article Tutorials Practical ab-container ab-padding-5" style="display:block;">
+                <h2>Developpez.com</h2>
+                <p class="ab-white-font">French website full of ttutorials.</p>
+                <button class="htag">Tutorials</button> <button class="htag">Practical</button> 
+            </a>
+            
+            <a href="https://www.ip-tracker.org/" target="_blank" class="article Hacking Practical ab-container ab-padding-5" style="display:block;">
+                <h2>IP Tracker</h2>
+                <p class="ab-white-font">Lookup, Trace, Track, Find an IP Location with IP tracking technology and IP tracer tool from IP-Tracker.org.</p>
+                <button class="htag">Hacking</button> <button class="htag">Practical</button> 
+            </a>
+
+            <a href="https://whoamiproject.tech/" target="_blank" class="article Project Linux Whoami Anonymity Privacy ab-container ab-padding-5" style="display:block;">
+                <h2>Whoami Project</h2>
+                <p class="ab-white-font">Whoami provides enhanced privacy, anonymity for Debian and Arch based linux distributions.</p>
+                <button class="htag">Whoami</button> <button class="htag">Project</button> <button class="htag">Linux</button> <button class="htag">Anonymity</button> <button class="htag">Privacy</button> 
+            </a>
+
+            <a href="https://cuckoosandbox.org/" target="_blank" class="article Project Linux Cuckoo Hacking ab-container ab-padding-5" style="display:block;">
+                <h2>Cuckoo Sandbox</h2>
+                <p class="ab-white-font">Cuckoo Sandbox is an advanced, extremely modular, and 100% open source automated malware analysis system.</p>
+                <button class="htag">Cuckoo</button> <button class="htag">Project</button> <button class="htag">Linux</button> <button class="htag">Hacking</button> 
+            </a>
+            
+            <a href="https://www.stamus-networks.com/selks#selks" target="_blank" class="article  SELKS Linux Security Distros ab-container ab-padding-5" style="display:block;">
+                <h2>SELKS Linux Distro</h2>
+                <p class="ab-white-font">SELKS is a free, open-source, and turn-key Suricata network intrusion detection/protection system (IDS/IPS), network security monitoring (NSM) and threat hunting implementation created and maintained by Stamus Networks.</p>
+                <button class="htag">SELKS</button> <button class="htag">Distros</button> <button class="htag">Linux</button> <button class="htag">Security</button> 
+            </a>
+
+            <a href="https://www.kicksecure.com" target="_blank" class="article Kicksecure Project Linux Debian Security Distros ab-container ab-padding-5" style="display:block;">
+                <h2>KickSecure Linux Distro</h2>
+                <p class="ab-white-font">A secure by default operating system with the latest security research in place.</p>
+                <button class="htag">Kicksecure</button> <button class="htag">Project</button> <button class="htag">Distros</button> <button class="htag">Linux</button> <button class="htag">Debian</button> <button class="htag">Security</button> 
+            </a>
+
+            <a href="https://securityonionsolutions.com/software/" target="_blank" class="article Security-Onion Project Linux Debian Security Distros ab-container ab-padding-5" style="display:block;">
+                <h2>Security Onion Linux Distro</h2>
+                <p class="ab-white-font">Free and open Linux distribution for threat hunting, enterprise security monitoring, and log management..</p>
+                <button class="htag">Security Onion</button> <button class="htag">Project</button> <button class="htag">Distros</button> <button class="htag">Linux</button> <button class="htag">Debian</button> <button class="htag">Security</button> 
+            </a>
+
+
+            
+
+
+            <a href="https://linuxconfig.org/" target="_blank" class="article Practical Linux Debian Security ab-container ab-padding-5" style="display:block;">
+                <h2>Linuxconfig.org</h2>
+                <p class="ab-white-font">Website dedicated to sysadmin with plenty of guides for Ubuntu, Debian, Kali Linux, Red Hat, CentOS, etc.</p>
+                <button class="htag">Practical</button> <button class="htag">Linux</button> <button class="htag">Debian</button> <button class="htag">Security</button> 
+            </a>
+
+
+            
+
+
+
+
+<!--
+			<div class="article  Cyber ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/LostInCyberTranslation.html');">
+				<h2>Lost in Cyber translation</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - December 21, 2021</p>
+				<p>Practical and complete explanation of Cyber terms and tools to help you understand Cyber team :-).</p>
+				<button class="htag">Cyber</button>
+			
+			</div>
+
+
+
+			<div class="article  Linux Samba ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Linux-Mount_Samba_share_folder.html');">
+				<h2>Share folder using Samba in Linux</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - December 12, 2021</p>
+				<p>Practical tutorial to show how to mount a samba shared folder from Samba server.</p>
+				<button class="htag">Linux</button> <button class="htag">Samba</button>
+			
+			</div>
+
+
+			<div class="article  Java Library ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/jackson_intro.html');">
+				<h2>Jackson Java Library</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - November 08, 2021</p>
+				<p>A Short introduction of the Jackson library usage.</p>
+				<button class="htag">Java</button> <button class="htag">Library</button>
+			
+			</div>
+
+			<div class="article  Linux Virtualization ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Virtualbox_on_debian10.html');">
+				<h2>Virtualbox on Debian 10.x. Installation</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - November 08, 2021</p>
+				<p>Full description, step-by-step, to proceed to the installation of Virtualbox on Debian 10.x.</p>
+				<button class="htag">Linux</button> <button class="htag">Virtualization</button>
+			
+			</div>
+
+
+			<div class="article  Scrum ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Virtualbox_on_debian10.html');">
+				<h2>Scrum methodology. Quick overview in 10 mins</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - October 30, 2021</p>
+				<p>Short introduction of Scrum methodology to understand main principles.</p>
+				<button class="htag">Scrum</button>
+			
+			</div>
+
+
+
+			<div class="article  Design ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Intro_to_design_thinking.html');">
+				<h2>Design thinking. An introduction...</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - October 25, 2021</p>
+				<p>Short presentation of the Design Thinking methodology.</p>
+				<button class="htag">Design</button>
+			
+			</div>
+
+
+			<div class="article Cyber Openssl ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Digital_Certificate.html');">
+				<h2>Digital Certificate, all you need to know</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - October 19, 2021</p>
+				<p>Tutorial explaining in details the digital certificate process and architecture and how to technically deal with.</p>
+				<button class="htag">Cyber</button> <button class="htag">Openssl</button>
+			
+			</div>
+
+
+			<div class="article Linux Python ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Nextcloud_snap_install.html');">
+				<h2>Python 3.8 on Debian 10.x. Installation</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - July 13, 2021</p>
+				<p>Practical step-by-step installation of Python 3.8 and PyCharm on Debian.</p>
+				<button class="htag">Linux</button> <button class="htag">Python</button>
+			
+			</div>
+
+
+
+			<div class="article Linux Snap Nextcloud ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Nextcloud_snap_install.html');">
+				<h2>Nextcloud Snap installation</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - July 03, 2021</p>
+				<p>Practical Snap installation of Nextcloud.</p>
+				<button class="htag">Linux</button> <button class="htag">Snap</button> <button class="htag">Nextcloud</button>
+			
+			</div>
+
+
+			<div class="article Linux Nextcloud ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Nextcloud_install.html');">
+				<h2>Nextcloud and SpreedMe. Complete installation</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - July 03, 2021</p>
+				<p>Practical installation of Nextcloud and spreedMe, step-by-step.</p>
+				<button class="htag">Linux</button> <button class="htag">Nextcloud</button>
+			
+			</div>
+
+
+
+			<div class="article Linux RDP ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Debian_server_RDP.html');">
+				<h2>Debian Server RDP in practice</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - June 06, 2021</p>
+				<p>Practical RDP installation and configuration in Linux.</p>
+				<button class="htag">Linux</button> <button class="htag">RDP</button>
+			
+			</div>
+
+
+			<div class="article VDI Virtualization ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/vdi_intro.html');">
+				<h2>Virtual Desktop Infrastructure. An introduction</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - May 13, 2021</p>
+				<p>High level introduction about the VDI technology to understand the main concepts and technos.</p>
+				<button class="htag">VDI</button> <button class="htag">Virtualization</button>
+			
+			</div>
+
+
+
+
+
+			<div class="article Java Regex ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Intro_to_regular_expressions.html');">
+				<h2>Regular Expressions, an introduction...</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - May 13, 2021</p>
+				<p>Tutorial explaining the basic syntax of regular expressions and a short example in Java.</p>
+				<button class="htag">Java</button> <button class="htag">Regex</button>
+			
+			</div>
+
+
+			<div class="article Java JVM ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Java_Memory_Model.html');">
+				<h2>Java Memory Model. The complete guide</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - March 20, 2021</p>
+				<p>Complete Guide explaining the Java Memory Model with all the options available to tune your Java application.</p>
+				<button class="htag">Java</button> <button class="htag">JVM</button>
+			
+			</div>
+-->
+
+		</div>
+
+
+
+		<button class="ab-btn-dark-xlight ab-pos-bottomright-fix ab-margin-bottom-64" onclick="location.href = '#top-page';"
+			style="z-index: 999;margin-right:5px!important" aria-label="To Top"><i class="bi bi-arrow-up ab-large ab-white-font"></i></button>
+		
+		<button class="ab-btn-dark-xlight ab-pos-bottomright-fix ab-margin-16" onclick="location.href = '#bottom-page';"
+			style="z-index: 999;margin-right:5px!important" aria-label="To Bottom"><i class="bi bi-arrow-down ab-large ab-white-font"></i></button>
+		
+		
+		<a id="bottom-page"></a>
+
+
+</body>
+</html>
+
+
+
+

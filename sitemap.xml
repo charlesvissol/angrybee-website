@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://angrybee.tech/</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/favoritewebsites.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/notfound.html</loc>
+  <lastmod>2022-04-28T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://angrybee.tech/articles.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/news.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/books.html</loc>
+  <lastmod>2022-04-30T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/me.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/index.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/Cryptosystems.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/debian_auto_updates.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/Debian_server_RDP.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/Digital_Certificate.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/docsify.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/Intro_to_design_thinking.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/Intro_to_regular_expressions.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/jackson_intro.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/Java_Garbage_Collector.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/Java_Memory_Model.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/Linux-Mount_Samba_share_folder.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/load-balancing-apache.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/LostInCyberTranslation.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/Nextcloud_install.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/Nextcloud_snap_install.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/python3.8_on_debian10.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/Scrum_in_10_minutes.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/scrum_pdt_backlog_mgt.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/vdi_intro.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/Virtualbox_on_debian10.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/webrtc.html</loc>
+  <lastmod>2022-04-25T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/containerized_firefox.html</loc>
+  <lastmod>2022-04-30T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/auditd_quick.html</loc>
+  <lastmod>2022-05-08T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://angrybee.tech/articles/Anonymity_on_the_internet_with_Debian.html</loc>
+  <lastmod>2022-05-09T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://angrybee.tech/articles/tor_browser_for_linux.html</loc>
+  <lastmod>2022-05-26T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://angrybee.tech/articles/aide_for_debian.html</loc>
+  <lastmod>2022-05-30T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://angrybee.tech/articles/bash_shortcuts.html</loc>
+  <lastmod>2022-06-15T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://angrybee.tech/articles/debian_optimize.html</loc>
+  <lastmod>2022-06-29T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</url>
+  <loc>https://angrybee.tech/books/Book_Java_Garbage_Collector.pdf</loc>
+  <lastmod>2022-05-02T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+</url>
+  <loc>https://angrybee.tech/books/Book_Java_Memory_Model.pdf</loc>
+  <lastmod>2022-05-02T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+</url>
+  <loc>https://angrybee.tech/books/Book_Linux-Secure_Ubuntu_Desktop_Installation_21.04.pdf</loc>
+  <lastmod>2022-05-02T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+</url>
+  <loc>https://angrybee.tech/books/Book_Linux-Secure_Ubuntu_Installation_20.04.pdf</loc>
+  <lastmod>2022-05-02T12:56:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+
+
+</urlset>

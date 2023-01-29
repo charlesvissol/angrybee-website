@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Angrybee website articles">
+	<meta name="keywords" content="Angrybee website articles ">
+	<meta name="author" content="vissol">
+	<link rel="shortcut icon" href="pictures/angrybee-blue.svg">
+  
+
+	<title>Angrybee Articles</title>
+	
+	
+	<link rel="stylesheet" href="angrybee-dark.css">
+	
+	
+	<style>
+
+
+		@media (max-width:992px){html,body{font-size:14px!important}}
+		@media (max-width:768px){html,body{font-size:12px!important}}
+
+
+		.selected {
+			background-color: var(--blue)!important;
+			cursor:pointer!important;
+		}
+
+		.article{
+			border-left: solid 3px var(--dark-light);
+			cursor: pointer;
+		}
+
+		.article:hover{
+			border-left: solid 3px var(--blue);
+		}
+
+        .htag {
+            background-color: var(--dark-xlight);
+        }
+
+	
+	</style>
+
+<script>
+function filter(){
+	var tag;
+	const filterArray = [];
+	window.event.srcElement.classList.toggle("selected");
+	
+	tag = document.getElementById("htagfilter");
+	var list = tag.getElementsByClassName("htag");
+	for (i = 0; i < list.length; i++) {
+		
+		
+		if(list[i].classList.contains("selected")){
+			filterArray.push(list[i].getAttribute("data-filter"));
+			//alert(list[i].getAttribute("data-filter"));
+		}
+		
+	}
+	
+	//alert(filterArray.length);
+	
+	
+	var articles;
+	articles = document.getElementById("htagfilterresult");
+	var listArticles = articles.getElementsByClassName("article");
+	
+	for(j = 0;j < listArticles.length;j++){
+		var status = true;
+		
+		//alert(listArticles[j].getAttribute("class"));
+		
+		for (k = 0; k < filterArray.length; k++) {
+			//alert(filterArray[k]);
+			if(listArticles[j].classList.contains(filterArray[k])===false)
+			{
+				status = false;
+				break;
+			}
+			//alert(status);
+		}
+		if(status===true){
+			listArticles[j].style.display = "block";
+		} else {
+			listArticles[j].style.display = "none";
+		}
+				
+	}
+
+	
+}
+
+function openarticle(articleUrl){
+	location.href = articleUrl;
+}
+
+
+
+</script>
+
+
+</head>
+<body class="ab-dark-light" style="overflow-y:hidden;scrollbar-color:hsl(207, 90%, 55%) hsl(216,50%,12%);">
+
+	<!-- Back home -->
+	<a id="home-link" href="./index.html"><img src="pictures/back-home.svg" style="z-index: 2;position: fixed;top: 4px;left: 4px;" alt="Back home"/></a>
+	<!-- Title -->
+
+
+	<a id="top-page"></a>
+
+	<div class="ab-dark-light-bg ab-width-100per" >
+
+		<div class="ab-margin-left-80 ab-margin-right-80">
+			<h1>Filter</h1>
+			<p class="i ab-gray-medium-font ab-small">Click on the tags to filter.</p>
+	
+			<div id="htagfilter">
+		
+
+				<h3>Main topics</h3>
+
+
+				<button class="htag" data-filter="Admin" onclick="filter();">Administration</button>			
+
+				<button class="htag" data-filter="Code" onclick="filter();">Coding</button>
+
+				<button class="htag" data-filter="Meth" onclick="filter();">Methodology</button>
+
+				<button class="htag" data-filter="Secu" onclick="filter();">Security</button>
+
+				
+				<h3>Detailed filters</h3>
+
+
+				<button class="htag" data-filter="Apache" onclick="filter();">Apache</button>
+
+				<button class="htag" data-filter="Jackson" onclick="filter();">Jackson</button>
+
+				<button class="htag" data-filter="Nextcloud" onclick="filter();">Nextcloud</button>
+
+				<button class="htag" data-filter="Openssl" onclick="filter();">Openssl</button>
+
+				<button class="htag" data-filter="Python" onclick="filter();">Python</button>
+				
+				<button class="htag" data-filter="VDI" onclick="filter();">VDI</button>
+
+				<button class="htag" data-filter="Regex" onclick="filter();">Regex</button>
+				
+				<button class="htag" data-filter="WebRTC" onclick="filter();">WebRTC</button>
+
+			
+
+			</div>
+		</div>
+		
+		<br><br><br>
+
+	</div>
+	
+		<div id="htagfilterresult" class="ab-margin-left-80">
+
+
+
+			<div class="article Meth ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/scrum_pdt_backlog_mgt.html');">
+				<h2>Scrum Product Backlog, Creation and Management</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - April 06, 2022</p>
+				<p>This article explains in details the process to build and manage a Product Backlog.</p>
+				<button class="htag">Methodology</button> 
+			
+			</div>
+
+			<div class="article Secu ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Cryptosystems.html');">
+				<h2>Cryptosystems introduction</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - March 22, 2022</p>
+				<p>This article explains shortly what are symmetric and asymmetric cryptosystems.</p>
+				<button class="htag">Security</button> 
+			
+			</div>
+
+			<div class="article Admin Apache ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/load-balancing-apache.html');">
+				<h2>Load balancing Practical introduction</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - March 13, 2022</p>
+				<p>This article explains shortly and practically how to configure Apache for load balancing.</p>
+				<button class="htag">Administration</button> <button class="htag">Apache</button>
+			
+			</div>
+
+
+			<div class="article Code WebRTC ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/webrtc.html');">
+				<h2>WebRTC explained</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - March 10, 2022</p>
+				<p>This article introduces you the basics of webRTC.</p>
+				<button class="htag">Coding</button> <button class="htag">WebRTC</button> 
+			
+			</div>
+
+			<div class="article  Secu ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/LostInCyberTranslation.html');">
+				<h2>Lost in Cyber translation</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - December 21, 2021</p>
+				<p>Practical and complete explanation of Cyber terms and tools to help you understand Cyber team :-).</p>
+				<button class="htag">Security</button>
+			
+			</div>
+
+			<div class="article  Code Jackson Library ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/jackson_intro.html');">
+				<h2>Jackson Java Library</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - November 08, 2021</p>
+				<p>A Short introduction of the Jackson library usage.</p>
+				<button class="htag">Coding</button> <button class="htag">Jackson</button>
+			
+			</div>
+
+			<div class="article Meth ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Scrum_in_10_minutes.html');">
+				<h2>Scrum methodology. Quick overview in 10 mins</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - October 30, 2021</p>
+				<p>Short introduction of Scrum methodology to understand main principles.</p>
+				<button class="htag">Methodology</button>
+			
+			</div>
+
+			<div class="article  Meth ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Intro_to_design_thinking.html');">
+				<h2>Design thinking. An introduction...</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - October 25, 2021</p>
+				<p>Short presentation of the Design Thinking methodology.</p>
+				<button class="htag">Methodology</button>
+			
+			</div>
+
+			<div class="article Secu Openssl ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Digital_Certificate.html');">
+				<h2>Digital Certificate, all you need to know</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - October 19, 2021</p>
+				<p>Tutorial explaining in details the digital certificate process and architecture and how to technically deal with.</p>
+				<button class="htag">Security</button> <button class="htag">Openssl</button>
+			
+			</div>
+
+
+			<div class="article Code Python ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/python3.8_on_debian10.html');">
+				<h2>Python 3.8 on Debian 10.x. Installation</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - July 13, 2021</p>
+				<p>Practical step-by-step installation of Python 3.8 and PyCharm on Debian.</p>
+				<button class="htag">Coding</button> <button class="htag">Python</button>
+			
+			</div>
+
+			<div class="article Admin Nextcloud ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Nextcloud_install.html');">
+				<h2>Nextcloud and SpreedMe. Complete installation</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - July 03, 2021</p>
+				<p>Practical installation of Nextcloud and spreedMe, step-by-step.</p>
+				<button class="htag">Administration</button> <button class="htag">Nextcloud</button>
+			
+			</div>
+
+			<div class="article Admin VDI ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/vdi_intro.html');">
+				<h2>Virtual Desktop Infrastructure. An introduction</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - May 13, 2021</p>
+				<p>High level introduction about the VDI technology to understand the main concepts and technos.</p>
+				<button class="htag">Administration</button> <button class="htag">VDI</button>
+			
+			</div>
+
+			<div class="article Code Regex ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/Intro_to_regular_expressions.html');">
+				<h2>Regular Expressions, an introduction...</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - May 13, 2021</p>
+				<p>Tutorial explaining the basic syntax of regular expressions and a short example in Java.</p>
+				<button class="htag">Coding</button> <button class="htag">Regex</button>
+			
+			</div>
+
+			<div class="article Code ab-container ab-padding-16" style="display:block;"
+				onclick="openarticle('./articles/docsify.html');">
+				<h2>Document with Docsify, introduction</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">@Charles Vissol - October 03, 2020</p>
+				<p>This article introduces you the basics to create &amp; generate a documentation using docsify.</p>
+				<button class="htag">Coding</button>
+			
+			</div>
+
+
+
+		</div>
+
+		<button class="ab-btn-dark-xlight ab-pos-bottomright-fix ab-margin-bottom-64" onclick="location.href = '#top-page';"
+			style="z-index: 999;margin-right:5px!important" aria-label="To Top"><i class="bi bi-arrow-up ab-large ab-white-font"></i></button>
+		
+		<button class="ab-btn-dark-xlight ab-pos-bottomright-fix ab-margin-16" onclick="location.href = '#bottom-page';"
+			style="z-index: 999;margin-right:5px!important" aria-label="To Bottom"><i class="bi bi-arrow-down ab-large ab-white-font"></i></button>
+		
+		
+		<a id="bottom-page"></a>
+</body>
+</html>
+
+
+
+

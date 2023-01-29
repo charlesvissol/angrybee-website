@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Angrybee website news">
+	<meta name="keywords" content="Angrybee website news ">
+	<meta name="author" content="vissol">
+	<link rel="shortcut icon" href="pictures/angrybee-blue.svg">
+  
+
+	<title>Angrybee News</title>
+	
+	
+	<link rel="stylesheet" href="angrybee-dark.css">
+	
+	
+	<style>
+
+
+		@media (max-width:992px){html,body{font-size:14px!important}}
+		@media (max-width:768px){html,body{font-size:12px!important} .news-picture{width: 100%;}}
+
+
+		.selected {
+			background-color: var(--blue)!important;
+			cursor:pointer!important;
+		}
+
+		.article{
+			border-left: solid 3px var(--dark-light);
+			cursor: pointer;
+		}
+
+		.article:hover{
+			border-left: solid 3px var(--blue);
+		}
+
+        .htag {
+            background-color: var(--dark-xlight);
+        }
+
+
+
+		/* Slideshow container */
+		.slideshow-container {
+		max-width: 1000px;
+		position: relative;
+		margin: auto;
+		}
+
+		/* Hide the images by default */
+		.slide-mySlides {
+			display: none;
+		}
+
+		/* Next & previous buttons */
+		.slide-prev, .slide-next {
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			width: auto;
+			margin-top: -22px;
+			padding: 16px;
+			color: white;
+			font-weight: bold;
+			font-size: 18px;
+			transition: 0.6s ease;
+			border-radius: 0 3px 3px 0;
+			user-select: none;
+		}
+
+		/* Position the "next button" to the right */
+		.slide-next {
+			right: 0;
+			border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.slide-prev:hover, .slide-next:hover {
+			background-color: rgba(0,0,0,0.8);
+		}
+
+		/* Caption text */
+		.slide-text {
+		color: #150f0f;
+		font-size: 15px;
+		padding: 8px 12px;
+		position: absolute;
+		bottom: 8px;
+		width: 100%;
+		text-align: center;
+		}
+
+		/* Number text (1/3 etc) */
+		.slide-numbertext {
+		color: #161010;
+		font-size: 12px;
+		padding: 8px 12px;
+		position: absolute;
+		top: 0;
+		}
+
+		/* The dots/bullets/indicators */
+		.slide-dot {
+		cursor: pointer;
+		height: 15px;
+		width: 15px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+		}
+
+		.slide-active, .slide-dot:hover {
+		background-color: #717171;
+		}
+
+		/* Fading animation */
+		.slide-fade {
+		animation-name: fade;
+		animation-duration: 1.5s;
+		}
+
+		@keyframes slide-fade {
+		from {opacity: .4}
+		to {opacity: 1}
+		}
+
+
+
+
+	
+	</style>
+
+<script>
+
+
+
+		function filter(){
+			var tag;
+			const filterArray = [];
+			window.event.srcElement.classList.toggle("selected");
+			
+			tag = document.getElementById("htagfilter");
+			var list = tag.getElementsByClassName("htag");
+			for (i = 0; i < list.length; i++) {
+				
+				
+				if(list[i].classList.contains("selected")){
+					filterArray.push(list[i].getAttribute("data-filter"));
+					//alert(list[i].getAttribute("data-filter"));
+				}
+				
+			}
+			
+			//alert(filterArray.length);
+			
+			
+			var articles;
+			articles = document.getElementById("htagfilterresult");
+			var listArticles = articles.getElementsByClassName("article");
+			
+			for(j = 0;j < listArticles.length;j++){
+				var status = true;
+				
+				//alert(listArticles[j].getAttribute("class"));
+				
+				for (k = 0; k < filterArray.length; k++) {
+					//alert(filterArray[k]);
+					if(listArticles[j].classList.contains(filterArray[k])===false)
+					{
+						status = false;
+						break;
+					}
+					//alert(status);
+				}
+				if(status===true){
+					listArticles[j].style.display = "block";
+				} else {
+					listArticles[j].style.display = "none";
+				}
+						
+			}
+
+			
+		}
+
+		function openarticle(articleUrl){
+			location.href = articleUrl;
+		}
+
+
+
+
+		
+
+
+
+
+
+
+
+</script>
+
+
+</head>
+<body class="ab-dark-light" style="overflow-y:hidden;scrollbar-color:hsl(207, 90%, 55%) hsl(216,50%,12%);">
+
+	<!-- Back home -->
+	<a id="home-link" href="./index.html"><img src="pictures/back-home.svg" style="z-index: 2;position: fixed;top: 4px;left: 4px;" alt="Back home"/></a>
+	<!-- Title -->
+
+
+	<a id="top-page"></a>
+
+	<div class="ab-dark-light-bg ab-width-100per" >
+
+		<div class="ab-margin-left-80 ab-margin-right-80">
+			<h1>News</h1>
+			<p class="i ab-gray-medium-font ab-small">Latest tech news.</p>
+	
+			
+		</div>
+		
+		<br><br><br>
+
+	</div>
+	
+		<div id="htagfilterresult" class="ab-margin-left-80">
+
+
+
+			<div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Search Engine for Pentester</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">January 25, 2023</p>
+                <p>Source: <a href="https://twitter.com/hackinarticles/status/1614703471458136064?s=20&t=GE51_v1JsD3KW4oONXVtwA" target="_blank" class="ab-link">https://twitter.com/hackinarticles/status/1614703471458136064?s=20&t=GE51_v1JsD3KW4oONXVtwA</a></p>
+
+				<p>Here we have a list of interesting Search Engines for Pentesters.</p>
+
+				<p><img class="news-picture" src="news/SearchEngineForPentesters.jpeg"> </p>
+				
+				<button class="htag">Security</button> 
+            </div>
+
+			<div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Updated Debian 11: 11.6 released</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">December 17, 2022</p>
+                <p>Source: <a href="https://www.debian.org/News/2022/20221217" target="_blank" class="ab-link">https://www.debian.org/News/2022/20221217</a></p>
+
+				<p class="i">The Debian project is pleased to announce the sixth update of its stable distribution Debian 11 (codename "bullseye"). This point release mainly adds corrections for security issues, along with a few adjustments for serious problems.</p>
+
+				<p class="i">Please note that the point release does not constitute a new version of Debian 11 but only updates some of the packages included. There is no need to throw away old "bullseye" media.</p>
+				
+				<button class="htag">Debian</button> 
+            </div>
+
+
+			<div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>French government do about-turn about sovereign cloud (French Article!)</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">September 14, 2022</p>
+                <p>Source: <a href="https://cloud-computing.developpez.com/actu/336516/Cloud-souverain-la-surprenante-volte-face-de-l-Etat-francais-en-faveur-de-son-ecosysteme-cloud-les-Ministres-ont-annonce-la-creation-d-un-Comite-Strategique-Sectoriel/" target="_blank" class="ab-link">https://cloud-computing.developpez.com/actu/336516/Cloud-souverain-la-surprenante-volte-face-de-l-Etat-francais-en-faveur-de-son-ecosysteme-cloud-les-Ministres-ont-annonce-la-creation-d-un-Comite-Strategique-Sectoriel/</a></p>
+
+				<p class="i">Le virage stratégique annoncé par Bruno Le Maire et Jean-Noël Barrot est majeur et spectaculaire. En mai 2021, Bruno Le Maire et le secrétaire d’Etat au Numérique de l’époque, Cédric O, n’avaient pas de mot pour le secteur français du cloud, si ce n’est pour le dénigrer. Cédric O a même affirmé que l’offre des Gafam” les meilleurs services cloud » et assumé le discours selon lequel les Français ne sont pas « pas au niveau » et « ne proposent pas toutes les briques cloud indispensables à la transformation digitale des entreprises et de l’Etat ».</p>
+
+				<p class="i">Dix-huit mois plus tard, son successeur, Jean-Noël Barrot, dit exactement le contraire. ” Les acteurs français du cloud et de la data maîtrisent toutes les briques technologiques indispensables pour proposer des solutions souveraines à tous les acteurs stratégiques “, il dit. Le nouveau ministre du Numérique appelle même l’État à « compter sur eux » verser « gagner la bataille de la souveraineté numérique face aux champions américains – Amazon, Microsoft, Google – dont il dresse un portrait peu flatteur. Selon lui, la force des Américains était d’offrir "solutions globale", répondant à tous les besoins des clients sur une seule plateforme, ce qui leur a permis d’obtenir un ” domination économique qui conduit à la dépendance technologique », avec son lot de « risques extraterritoriaux pour la sécurité de nos données ».</p>
+				
+				<p class="i">De son côté, le même Bruno Le Maire qui affirmait que les offres américaines peuvent être souveraines si elles sont vendues par des joint-ventures de droit français (Bleu pour Microsoft avec Orange et Capgemini, S3ns pour Google avec Thales), déclare : « Je suis opposé au principe d’extraterritorialité américaine. Je ne vois pas au nom de quoi ils pourraient saisir des données essentielles pour notre souveraineté et notre indépendance. Personne, même nos alliés, ne peut avoir le droit de saisir nos données ».</p>
+				
+				<p class="i">Cependant, de plus en plus d’experts juridiques préviennent que les offres Cloud de confiance avec les Gafam seront soumises à la loi FISA extraterritoriale et que les Américains pourraient également considérer qu’elles relèvent du Cloud Act, nécessitant de créer une véritable barrière juridique à la fois coûteuse et incertaine. que le label SecNumCloud est censé valider.</p>
+				
+				<p class="i">Le cloud act pour Clarifying Lawful Overseas Use of Data Act est une loi américaine de 2018 clarifiant l’utilisation légale des données à l’étranger et permet aux autorités américaines de disposer des outils juridiques adéquats pour obliger les entreprises aux États-Unis de fournir les données stockées sur leurs serveurs, y compris ceux situés à l’étranger, en cas de mandat ou d’assignation en justice.</p>
+				
+				<button class="htag">Cloud</button> <button class="htag">Security</button> 
+            </div>
+
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Linux malware on a rise in H1 2022</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">September 14, 2022</p>
+                <p>Source: <a href="https://atlasvpn.com/blog/linux-malware-on-a-rise-reaching-all-time-high-in-h1-2022" target="_blank" class="ab-link">https://atlasvpn.com/blog/linux-malware-on-a-rise-reaching-all-time-high-in-h1-2022</a></p>
+
+				<p class="i">"Until recently, cybercriminals have largely ignored Linux compared to other more popular operating systems. However, the new data shows that cyber attack trends are shifting."</p>
+				<p class="i">"According to the data presented by the Atlas VPN team, the number of new Linux malware reached record highs in the first half of 2022, as nearly 1.7 million samples were discovered."</p>
+				<p class="i">"Although Linux was the only operating system that saw growth in new malware samples in the first half of this year, Windows had the most significant number of new malware applications overall."</p>
+
+				<button class="htag">Linux</button> <button class="htag">Security</button> 
+            </div>
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Debian 11.5 released!</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">September 10, 2022</p>
+                <p>Source: <a href="https://www.debian.org/News/2022/2022091002" target="_blank" class="ab-link">https://www.debian.org/News/2022/2022091002</a></p>
+
+				<p>Debian 11.5 has been released with important bugfixing and security updates. Some packages have been removed.</p>
+
+				<button class="htag">Debian</button> 
+            </div>
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Cloud servers are now the most common methods of entry for cyberattacks</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">September 7, 2022</p>
+                <p>Source: <a href="hhttps://atlasvpn.com/blog/cloud-servers-are-now-the-most-common-method-of-entry-for-cyberattacks-at-41" target="_blank" class="ab-link">https://atlasvpn.com/blog/cloud-servers-are-now-the-most-common-method-of-entry-for-cyberattacks-at-41</a></p>
+
+				<p>According to the data presented by the Atlas VPN team, cloud servers are now the number one way in for cyberattacks, with 41% of companies reporting it as the first point of entry — a 10% increase from the year before. Cloud servers have replaced corporate-owned servers, the leading attack vector in 2021.</p>
+				<p><img class="news-picture" src="news/cyberattacks_2022.png"> </p>
+
+				<button class="htag">Security</button> 
+            </div>
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Debian replaces Google by DuckDuckGo in Chromium</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">August 29, 2022</p>
+                <p>Source: <a href="https://www.mail-archive.com/debian-devel-changes@lists.debian.org/msg760508.html" target="_blank" class="ab-link">https://www.mail-archive.com/debian-devel-changes@lists.debian.org/msg760508.html</a></p>
+
+				<p>Chromium version 104 integrates now DuckDuckGo by default.</p>
+
+				<button class="htag">Debian</button> 
+            </div>
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Linus Torvalds announces Linux 6.0 Release Candidate</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">August 16, 2022</p>
+                <p>Source: <a href="https://lore.kernel.org/lkml/CAHk-=wgRFjPHV-Y_eKP9wQMLFDgG+dEUHiv5wC17OQHsG5z7BA@mail.gmail.com/T/#u" target="_blank" class="ab-link">https://lore.kernel.org/lkml/CAHk-=wgRFjPHV-Y_eKP9wQMLFDgG+dEUHiv5wC17OQHsG5z7BA@mail.gmail.com/T/#u</a></p>
+
+				<p>The new 6.0 version will replace the current last version 5.19 and enhance support for GPU, network and sound. This new version will be stabilized in the next 2 months.</p>
+				<p>Rust will be integrated in the 6.x version and will be probably adopted to replace the C language for kernel development.</p>
+
+				<button class="htag">Linux</button> 
+            </div>
+
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Debian turns 29</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">August 16, 2022</p>
+                <p>Source: <a href="https://bits.debian.org/2022/08/debian-turns-29.html" target="_blank" class="ab-link">https://bits.debian.org/2022/08/debian-turns-29.html</a></p>
+
+				<p>Debian has reached its 29th anniversary. Let's celebrate de DebianDay!</p>
+
+				<button class="htag">Debian</button> 
+            </div>
+
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Debian 9 LTS reaching EOL!</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">July 6, 2022</p>
+                <p>Source: <a href="https://lists.debian.org/debian-lts-announce/2022/07/msg00002.html" target="_blank" class="ab-link">https://lists.debian.org/debian-lts-announce/2022/07/msg00002.html</a></p>
+
+				<p>The Debian Long Term Support (LTS) Team hereby announces that Debian 9 stretch support has reached its end-of-life (EOL) on July 1, 2022, 
+					five years after its initial release on June 17, 2017.</p>
+				<p>Debian will not provide further security updates for Debian 9. A subset of stretch packages will be supported by external parties.
+					Detailed information can be found at [Extended LTS].</p>
+				<p>The LTS Team will prepare the transition to Debian 10 buster, which is the
+					current oldstable release. The LTS team will take over support from the
+					Security Team during August, while the final point update for buster will
+					be released during that month.</p>
+
+				<button class="htag">Debian</button> <button class="htag">EOL</button>
+            </div>
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Quantum teleportation...not only a Science-Fiction!</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">May 26, 2022</p>
+                <p>Source: <a href="https://www.fudzilla.com/news/54914-boffins-use-teleportation-to-build-quantum-network" target="_blank" class="ab-link">https://www.fudzilla.com/news/54914-boffins-use-teleportation-to-build-quantum-network</a></p>
+
+				<p>Delft physicist Ronald Hanson said that his team at Delft University of Technology in the Netherlands have made the first steps towards a 
+					quantum internet by using quantum teleportation to send data across three physical locations.</p>
+				<p>Quantum teleportation is a transfer of information between locations without actually moving the physical matter that holds it. No one can intercept it.</p>
+				<p>Their works have been published in the science journal Nature: They built very small networks in their lab to reproduce a quantum internet.</p>
+
+				<button class="htag">HPC</button> <button class="htag">Teleportation</button>
+            </div>
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>HPC will be virtualized</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">May 26, 2022</p>
+                <p>Source: <a href="https://www.fudzilla.com/news/54894-hpc-will-be-virtualised" target="_blank" class="ab-link">https://www.fudzilla.com/news/54894-hpc-will-be-virtualised</a></p>
+
+				<p>High Performance Computing (HPC) will be virtualized.</p>
+				<p>During the past five years, VMWare team has working on ways to virtualise machine-learning workloads running on accelerators because they don't fit with 
+					graphics memory of a single chip.</p>
+				<p>VMware team used Nvidia's NVLink interconnect to pool 160GB of GPU memory from the Dell PowerEdge system's four 40GB Nvidia A100 SXM GPUs. Like this, they 
+					were able to achieve performance comparable to bare metal.
+				</p>
+				<p>They expect most HPC workloads will be virtualised to sort out those pesky performance bottlenecks that leave systems underused.</p>
+                <button class="htag">HPC</button> <button class="htag">Virtualization</button>
+            </div>
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>DuckDuckGo not so private...</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">May 26, 2022</p>
+                <p>Source: <a href="https://www.fudzilla.com/news/54907-duckduckgo-is-not-very-private" target="_blank" class="ab-link">https://www.fudzilla.com/news/54907-duckduckgo-is-not-very-private</a></p>
+
+				<p>DuckDuckGo is considered as protecting from monitoring from big tech.</p>
+				<p>However, according Review Geek, DuckDuckGo signed a confidential search agreement with Microsoft which means that it doesn't protect against 
+					Microsoft trackers (Bing, LinkedIn...) on third-party websites.
+				</p>
+
+                <button class="htag">Security</button> <button class="htag">DuckDuckGo</button>
+            </div>
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Amazon Web Services (AWS) joined Q-NEXT</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">May 21, 2022</p>
+                <p>Source: <a href="https://www.anl.gov/article/amazon-web-services-joins-qnext-quantum-center" target="_blank" class="ab-link">https://www.anl.gov/article/amazon-web-services-joins-qnext-quantum-center</a></p>
+
+				<p>Amazon Web Services (AWS) has become a member of Q-NEXT, a quantum research center that is developing the science and technology for controlling and distributing quantum information.</p>
+				<p>AWS will contribute fundamental research to the Q-NEXT community to advance the use of quantum technologies.
+				</p>
+				<p>More about <a href="https://q-next.org/" target="_blank" class="ab-link">Q-NEXT</a></p>
+
+                <button class="htag">Quantum</button> <button class="htag">AWS</button>
+            </div>
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>NIS2 directive on its way...</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">May 20, 2022</p>
+                <p>Source: <a href="https://thehackernews.com/2022/05/europe-agrees-to-adopt-new-nis2.html" target="_blank" class="ab-link">https://thehackernews.com/2022/05/europe-agrees-to-adopt-new-nis2.html</a></p>
+
+                <p>The European Parliament announced a "provisional agreement" aimed at improving cybersecurity and resilience of both public and private sector entities in the European Union.</p>
+				<p>The NIS2 (short for network and information systems) directive is expected to replace the NIS (2016)</p>
+				<p>NIS2 requires companies in energy, transport, financial markets, health, and digital infrastructure sectors to adhere to risk management measures and reporting obligations.</p>
+				<p>Among the provisions in the new legislation are flagging cybersecurity incidents to authorities within 24 hours, patching software vulnerabilities, and readying risk management measures to secure networks, failing which can incur monetary penalties.</p>
+				<p>The draft version of NIS2 explicitly spells out that the use of E2EE "should be reconciled with the Member States' powers to ensure the protection of their essential security interests and public security,</p>
+				<p>That said, the directive will not apply to organizations in verticals such as defense, national security, public security, law enforcement, judiciary, parliaments, and central banks.</p>
+                <button class="htag">Security</button> <button class="htag">Europe</button>
+            </div>
+
+
+
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>2022 SaaS Security Survey Report </h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">May 19, 2022</p>
+                <p>Source: <a href="https://www.adaptive-shield.com/2022-saas-security-survey-report" target="_blank" class="ab-link">https://www.adaptive-shield.com/2022-saas-security-survey-report</a></p>
+                <p>Report in collaboration with CSA that examines the SaaS security over 340 CSA members.</p>
+                <p>SaaS misconfigured-related incidents are as high as 63%.</p>
+				<p>SaaS misconfiguration is caused by:</p>
+				<ul>
+					<li>35%: security settings shared with too many departments</li>
+					<li>34%: lack of traceability when settings change</li>
+					<li>22%: lack of SaaS security knowledge</li>
+					<li>...</li>
+				</ul>
+				<p>Investments in Business-Critical SaaS applications (81%) are outspacing investments in SaaS security tools (73%) and staffs (55%).</p>
+				<p>Manual detection and remediation of SaaS misconfigurations keeps organizations exposed (26%; 1 week, 10%: 6 months, 15%; 1 month...).</p>
+
+				<p>The report states also that 2rd party application access is a top concern and using SSPM (SaaS Security Posture Management) reduces timeline to detect and remediate SaaS misconfigurations.</p>
+
+
+				
+
+				<div id="s1" class="slideshow-container">
+
+					<!-- Full-width images with number and caption text -->
+					<div class=" slide-mySlides slide-fade">
+					  <div class="slide-numbertext">1 / 6</div>
+					  <img src="news/saas_report_2022/s1.png" style="width:100%">
+					  <div class="slide-text"></div>
+					</div>
+				  
+					<div class=" slide-mySlides slide-fade">
+					  <div class="slide-numbertext">2 / 6</div>
+					  <img src="news/saas_report_2022/s2.png" style="width:100%">
+					  <div class="slide-text"></div>
+					</div>
+				  
+					<div class=" slide-mySlides slide-fade">
+					  <div class="slide-numbertext">3 / 6</div>
+					  <img src="news/saas_report_2022/s3.png" style="width:100%">
+					  <div class="slide-text"></div>
+					</div>
+
+					<div class=" slide-mySlides slide-fade">
+						<div class="slide-numbertext">4 / 6</div>
+						<img src="news/saas_report_2022/s4.png" style="width:100%">
+						<div class="slide-text"></div>
+					  </div>
+					  
+					  <div class=" slide-mySlides slide-fade">
+						<div class="slide-numbertext">5 / 6</div>
+						<img src="news/saas_report_2022/s5.png" style="width:100%">
+						<div class="slide-text"></div>
+					  </div>
+
+					  <div class=" slide-mySlides slide-fade">
+						<div class="slide-numbertext">6 / 6</div>
+						<img src="news/saas_report_2022/s6.png" style="width:100%">
+						<div class="slide-text"></div>
+					  </div>
+
+
+					<!-- Next and previous buttons -->
+					<a class="slide-prev" onclick="plusSlides(-1,'s1')">&#10094;</a>
+					<a class="slide-next" onclick="plusSlides(1,'s1')">&#10095;</a>
+				  </div>
+				  <br>
+				  
+				  <!-- The dots/circles -->
+				  <div id="s1dots" style="text-align:center">
+					<span class="slide-dot " onclick="currentSlide(1,'s1')"></span>
+					<span class="slide-dot " onclick="currentSlide(2,'s1')"></span>
+					<span class="slide-dot " onclick="currentSlide(3,'s1')"></span>
+					<span class="slide-dot " onclick="currentSlide(4,'s1')"></span>
+					<span class="slide-dot " onclick="currentSlide(5,'s1')"></span>
+					<span class="slide-dot " onclick="currentSlide(6,'s1')"></span>
+				  </div>
+
+
+
+
+
+
+
+                <button class="htag">SaaS</button> <button class="htag">Security</button>
+            </div>
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Javascript containers ?</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">May 18, 2022</p>
+                <p>Source: <a href="https://tinyclouds.org/javascript_containers" target="_blank" class="ab-link">https://tinyclouds.org/javascript_containers</a></p>
+                <p>Ryan Dahl, creator of <code>Node.js</code> and <code>Deno</code> has announced beginning of May, that web services should be executed in Javascript containers rather than Linux containers.</p>
+                <p>Ryan Dahl considers that they can isolate container execution at the same level of security than Linux containers, despite its higher level of abstraction.</p>
+				<p>Ryan Dahl thinks that Javascript is an universal language to build Javascript containers in the next 2 years.</p>
+				<p>In this abstraction, Javascript replaces the Linux Shell by the Javascript sandbox itself invoking Wasm (Web Assembly).</p>
+				<p>Ryan precises that the future of scripting language is the browser Javascript. The foundamental mistake of Node.js was diverging from the browser...</p>
+
+		
+                <button class="htag">Javascript</button> <button class="htag">Container</button>
+            </div>
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Microsoft loves Linux :-)</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">May 18, 2022</p>
+                <p>Source: <a href="https://github.com/microsoft/CBL-Mariner" target="_blank" class="ab-link">https://github.com/microsoft/CBL-Mariner</a></p>
+                <p>Microsoft has released the 2.0 version of CBL-Mariner, a Linux distribution used only for internal purposes but available on 
+					<a href="https://github.com/microsoft/CBL-Mariner" class="ab-link" target="_blank">Github</a> in open source.</p>
+                <p>Since 2000, Microsoft has completely change his mind regarding Linux. Microsoft works internally a lot for internal usage: CBL-Delridge, Azure Sphere, secured microcontrollers for IoTs, SONiC (Software for Open Networking in the Cloud), network switches...</p>
+
+		
+                <button class="htag">Microsoft</button> <button class="htag">Linux</button>
+            </div>
+
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Synopsys 2022 Open Source Security and Risk Report </h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">May 12, 2022</p>
+                <p>Source: <a href="https://www.synopsys.com/content/dam/synopsys/sig-assets/reports/rep-ossra-2022.pdf" target="_blank" class="ab-link">https://www.synopsys.com/content/dam/synopsys/sig-assets/reports/rep-ossra-2022.pdf</a></p>
+                <p>2022 Synopsys report states about Open Source:</p>
+				<ul>
+					<li>Vulnerability &amp; security</li>
+					<li>Licensing</li>
+					<li>Maintenance</li>
+				</ul>
+				<p>In 2022 report analyzed codebase has been done over 2400 commercial codebases (17 industriy sectors).</p>
+				<p>In those codebases, 97% contain open source code and 78% of the code is open source (100% for Computer Hardware and Semiconductors; Cybersecurity...).</p>
+                <p>Main highlight are:</p>
+				<ul>
+					<li>For vulnerability &amp; security: only 49% of codebases contain high-risk vulnerability (60% in 2021)</li>
+					<li>For licensing: 53% of codebases contain license conflicts (65% in 2020)</li>
+					<li>For Maintenance: 88% of codebases contain components that have no development activity in the last 2 years</li>
+				</ul>
+
+				<p>Main conclusion of the report is that 2022 is encouraging regarding 2021 report (log4j vulnerability...)</p>
+				<p>The fact is that 97% of commercial software contains open source even some CEOs judge open source as "Snake oil".</p>
+				<p>Identifying open source in codebase is essential to measure clearly vulnerabilities. Means establishing a clear Software Bill of Material of any codebase.</p>
+				
+				<div id="s2" class="slideshow-container">
+
+					<!-- Full-width images with number and caption text -->
+					<div class="slide-mySlides slide-fade">
+					  <div class="slide-numbertext">1 / 4</div>
+					  <img src="news/os-report.png" style="width:100%">
+					  <div class="slide-text"></div>
+					</div>
+				  
+					<div class="slide-mySlides  slide-fade">
+					  <div class="slide-numbertext">2 / 4</div>
+					  <img src="news/os-security.png" style="width:100%">
+					  <div class="slide-text"></div>
+					</div>
+				  
+					<div class="slide-mySlides  slide-fade">
+					  <div class="slide-numbertext">3 / 4</div>
+					  <img src="news/os-licensing.png" style="width:100%">
+					  <div class="slide-text"></div>
+					</div>
+
+					<div class="slide-mySlides  slide-fade">
+						<div class="slide-numbertext">4 / 4</div>
+						<img src="news/os-maintenance.png" style="width:100%">
+						<div class="slide-text"></div>
+					  </div>
+					  
+
+
+
+					<!-- Next and previous buttons -->
+					<a class="slide-prev" onclick="plusSlides(-1,'s2')">&#10094;</a>
+					<a class="slide-next" onclick="plusSlides(1,'s2')">&#10095;</a>
+				  </div>
+				  <br>
+				  
+				  <!-- The dots/circles -->
+				  <div id="s2dots" style="text-align:center">
+					<span class="slide-dot" onclick="currentSlide(1,'s2')"></span>
+					<span class="slide-dot" onclick="currentSlide(2,'s2')"></span>
+					<span class="slide-dot" onclick="currentSlide(3,'s2')"></span>
+					<span class="slide-dot" onclick="currentSlide(4,'s2')"></span>
+				  </div>
+
+
+
+
+
+
+
+				<p></p>
+                <button class="htag">Open Source</button> <button class="htag">Report</button> <button class="htag">Synopsis</button>
+            </div>
+
+
+
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>New Proton experience with Tor</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">May 10, 2022</p>
+                <p>Source: <a href="https://protonmail.com/blog/updated-tor-site/" target="_blank" class="ab-link">https://protonmail.com/blog/updated-tor-site/</a></p>
+                <p>Proton offers services such as VPN and Mail for free and with no logs policy.</p>
+                <p>Proton has launch a first version of the ProtonMail onion site and becomes a Green Onion Member (Tor project) !</p>
+
+
+				<img src="https://protonmail.com/blog/wp-content/uploads/2022/04/tor-x-proton-mockup-1024x694.png" width="500px"/>
+				<p></p>
+                <button class="htag">ProtonMail</button> <button class="htag">Privacy</button> <button class="htag">Onion</button>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Nextcloud Hub 24 is here!</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">May 10, 2022</p>
+                <p>Source: <a href="https://nextcloud.com/blog/nextcloud-hub-24-is-here/" target="_blank" class="ab-link">https://nextcloud.com/blog/nextcloud-hub-24-is-here/</a></p>
+                <p>The last version of the collaborative platform is available after 4000 commits since the 23 version..</p>
+                <p>It comes with a lot of improvements such as:</p>
+
+				<ul>
+					<li>user migration</li>
+					<li>smart file locking</li>
+					<li>4x lower database load</li>
+					<li>Reactions and media tab in Talk</li>
+					<li>Reply to calls and messages in Desktop client</li>
+					<li>Undo sent and schedule emails</li>
+					<li>Nextcloud Text</li>
+					<li>Nextcloud Collective</li>
+				</ul>
+
+				<p>All Nextcloud clients have received minor improvements.</p>
+
+				<p>Minor updates for Nextcloud 23 are 22 are out. Nextcloud 21 is no longer being maintained.</p>
+
+				<p>Remember that Nextcloud is marked as the <a href="https://nextcloud-crm-odoo.odoo.com/r/2EN/m/34179" target="_blank" class="ab-link">key solution for digital collaboration</a> by the Swedish government and Nextcloud has also 
+				success stories with <a href="https://nextcloud-crm-odoo.odoo.com/r/hCe/m/34179" target="_blank" class="ab-link">the city of Geneva</a>, 
+				<a href="https://nextcloud-crm-odoo.odoo.com/r/TX0/m/34179" target="_blank" class="ab-link">the local bank of Munich</a> and lots others clients.</p>
+
+
+                <button class="htag">Nextcloud</button> <button class="htag">Release</button> 
+            </div>
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Apple, Google, and Microsoft combine efforts toward passwordless logins</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">May 7, 2022</p>
+                <p>Source: <a href="https://www.techspot.com/news/94480-apple-google-microsoft-combine-efforts-toward-passwordless-logins.html" target="_blank" class="ab-link">https://www.techspot.com/news/94480-apple-google-microsoft-combine-efforts-toward-passwordless-logins.html</a></p>
+                <p>Microsoft, Apple and Google announced last week to strengthen their cooperation towards passwordless logins between their platforms.</p>
+                <p>We know that Microsoft and Google support the FIDO Alliance from 2019. Apple joined also the Alliance.</p>
+				<p>The new plan will let users with Microsoft, Android, or Apple devices use FIDO passkeys to log in to websites and apps across operating systems and browsers without passwords.</p>
+
+                <button class="htag">Passwordless</button> <button class="htag">FIDO</button> 
+            </div>
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Tor browser high severity vulnerabilities</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">May 5, 2022</p>
+                
+                <p>Tor browser has fixed several high severity vulnerabilities in the <span class="text-bold">new version v11.0.11</span>. It is recommended to update Tor browser.</p>
+                <p>The vulnerabilities fixed on this latest release include 5 with high severity and 1 with moderate severity. They come from firefox .
+				</p>
+				
+			 	<br>
+				 <p>More information in the official website: <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-17/" target="_blank" class="ab-link">https://www.mozilla.org/en-US/security/advisories/mfsa2022-17/</a></p>
+
+                <button class="htag">Tor</button> <button class="htag">Security</button>  <button class="htag">Vulnerability</button>
+            </div>
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Gartner 2022 top technology trends</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">May 4, 2022</p>
+                <p>Source: <a href="https://www.gartner.com/en/information-technology" target="_blank" class="ab-link">https://www.gartner.com/en/information-technology</a></p>
+                <p>Gartner has released a guide to describe 2022 top technology trends.</p>
+                <p>There is 12 trends that will drive digital business and innovation over the next 3 to 5 years: Data Fabric, Cybersecurity Mesh, Privacy-Enhancing Computation, 
+					Cloud-Native Platforms, Composable Applications, Decision Intelligence, Hyperautomation, AI Engineering, Distributed Enterprise, Total Experience, Automatic Systems, Generative AI.
+				</p>
+				<p>See the Gartner short video présentation:</p>
+				
+               <div style="width: 585px;">
+					<script type="text/javascript" async="" src="https://play.vidyard.com/embed/v4.js"></script>
+					<div class="vidyard-player-container" uuid="82THCK81oT5tdqh1YRmPiB" style="margin: auto; width: 100%; height: auto; overflow: hidden; display: block;"><div class="vidyard-div-82THCK81oT5tdqh1YRmPiB" role="region" aria-label="Vidyard media player" style="position: relative; padding-bottom: 56.25%; height: 0px; overflow: hidden; max-width: 100%; background-color: transparent;"><div class="vidyard-inner-container-82THCK81oT5tdqh1YRmPiB" style="position: absolute;height: 100%; width: 100%; " data-pl="false"> <iframe allow="autoplay; fullscreen; picture-in-picture; camera; microphone; display-capture" allowfullscreen="" allowtransparency="true" referrerpolicy="no-referrer-when-downgrade" class="vidyard-iframe-82THCK81oT5tdqh1YRmPiB" scrolling="no" src="https://play.vidyard.com/82THCK81oT5tdqh1YRmPiB?disable_popouts=1&amp;v=4.3.3&amp;type=inline" title="Gartner Top Strategic Technology Trends for 2022" style="opacity: 1; background-color: transparent; position: absolute; top: 0px; left: 0px;" width="100%" height="100%" frameborder="0"></iframe><img class="vidyard-player-embed inserted" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-uuid="82THCK81oT5tdqh1YRmPiB" data-v="4" data-type="inline" data-rendered="true" style="display: none;"></div> </div></div>
+			 	</div>
+			 	<br>
+				 <p>More information in the Gartner eBook: <a href="https://emtemp.gcom.cloud/ngw/globalassets/en/publications/documents/2022-gartner-top-strategic-technology-trends-ebook.pdf" target="_blank" class="ab-link">Here</a></p>
+
+                <button class="htag">Gartner</button> <button class="htag">Trends</button>  <button class="htag">Technology</button>
+            </div>
+
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>NIST Draft publication release for Cybersecurity Guidance for 5G networks</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">May 2, 2022</p>
+                <p>Source: <a href="https://www.nccoe.nist.gov/sites/default/files/2022-04/nist-5G-sp1800-33b-preliminary-draft.pdf" target="_blank" class="ab-link">https://www.nccoe.nist.gov/sites/default/files/2022-04/nist-5G-sp1800-33b-preliminary-draft.pdf</a></p>
+                <p>5G technology offers new services but also new Cybersecurity challenges.</p>
+                <p>The NIST published a draft: "5G Cybersecurity Volume B: Approach, Architecture and Security characteristics".</p>
+				<p>The publication provides:</p>
+				<ul>
+					<li>a description of the cybersecurity capabilities for 5G</li>
+					<li>a risk analysis</li>
+				</ul>
+
+                <button class="htag">NIST</button> <button class="htag">5G</button>  <button class="htag">Cybersecurity</button>
+            </div>
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>First public working draft of WebAssembly 2.0 has been published!</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">April 28, 2022</p>
+                <p>Source: <a href="https://www.w3.org/blog/news/archives/9509" target="_blank" class="ab-link">https://www.w3.org/blog/news/archives/9509</a></p>
+                <p>In some usages (3D, Games, Cryptographic calculations...) Javascript is not performant enough due to its JIT mechanism. WebAssembly (wasm) aims to handle this category of usages and more by transferring source-to-source compiler to native code.</p>
+                <p>This produces web application to be native-like performant. But do not confuse: WebAssembly goal is not to replace Javascript but to work side-by-side to enlarge web usages.</p>
+				<p>Practically, it will allow C and C++ developers to write C, C++ code and to compile them in wasm without converting first their code in Javascript. More languages support are planned...</p>
+				<p>WebAssembly is already supported by major browsers such as Firefox, Chrome, Safari or Edge.</p>
+				<p>Interested? Read the Core specification at <a href="https://www.w3.org/TR/2022/WD-wasm-core-2-20220419/" target="_blank" class="ab-link">https://www.w3.org/TR/2022/WD-wasm-core-2-20220419/</a></p>
+
+                <button class="htag">W3C</button> <button class="htag">WebAssembly</button> 
+            </div>
+
+
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>OVHCloud announces the acquisition of ForePaaS</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">April 28, 2022</p>
+                <p>Source: <a href="https://siecledigital.fr/2022/04/25/ovhcloud-annonce-lacquisition-de-forepaas/" target="_blank" class="ab-link">(FR) https://siecledigital.fr/2022/04/25/ovhcloud-annonce-lacquisition-de-forepaas/</a></p>
+                <p>The French company OVH aims to enrich its offer thanks to the services offered by the French start-up ForePaaS (start-up providing Platform As a Service for data analytics and artificial intelligence projects).</p>
+                <p class="i">"Enterprise patch management is the process of identifying, prioritizing, acquiring, installing, and verifying the installation of patches, updates, and upgrades throughout an organization. Patching is more important than ever because of the increasing reliance on technology, but there is often a divide between business/mission owners and security/technology management about the value of patching. This publication frames patching as a critical component of preventive maintenance for computing technologies – a cost of doing business, and a necessary part of what organizations need to do in order to achieve their missions. This publication also discusses common factors that affect enterprise patch management and recommends creating an enterprise strategy to simplify and operationalize patching while also improving reduction of risk. Preventive maintenance through enterprise patch management helps prevent compromises, data breaches, operational disruptions, and other adverse events." 
+                </p>
+
+                <button class="htag">OVHCloud</button> <button class="htag">PaaS</button> 
+            </div>
+
+
+
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>End-to-end Quality of service for 5G/6G Networks</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">April 28, 2022</p>
+                <p>Source: <a href="https://arxiv.org/pdf/2201.13300.pdf" target="_blank" class="ab-link">https://arxiv.org/pdf/2201.13300.pdf</a></p>
+                <p>Publication of the NIST (National Institute of Standards and Technology), February 19, 2022.</p>
+                <p>5G/6G Networks are different from 4G because they provide variable services (Internet of Things, vehicle-to-vehicle) communications, remote drone operation...) with different requirements for data amounts and flow rates. 
+					Some of these applications are very sensitive to data delays.
+                </p>
+				<p>Due to the fact that 5G/6G Network's subordonate networks are autonomous, delivering Quality-of-Service is a real challenge but NIST researchers found a framework to do it.</p>
+				<p>5G/6G Natworks are composed by autonomously managed networks:
+					<ul>
+						<li>Access networks: wireless networks to connect user systems</li>
+						<li>Core networks: coordinate some parts of the access network and connect to the Internet</li>
+					</ul>
+				</p>
+				<p>NIST Researchers developed a framework involving an algorithm that allows the networks to negotiate local, needed data amounts. 
+					This algorithm also enables these subordinate networks to exchange their estimates regarding overall, global constraint functions.</p>
+				<p>NIST Researchers has demontrated using numerical studies their framework.</p>
+
+                <button class="htag">NIST</button> <button class="htag">Publication</button> <button class="htag">QoS</button> <button class="htag">5G</button> 
+            </div>
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Guide to Enterprise Patch Management Planning: Preventive Maintenance for Technology</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">April 28, 2022</p>
+                <p>Source: <a href="https://www.nist.gov/publications/guide-enterprise-patch-management-planning-preventive-maintenance-technology" target="_blank" class="ab-link">https://www.nist.gov/publications/guide-enterprise-patch-management-planning-preventive-maintenance-technology</a></p>
+                <p>Publication of the NIST (National Institute of Standards and Technology), April 6, 2022.</p>
+                <p class="i">"Enterprise patch management is the process of identifying, prioritizing, acquiring, installing, and verifying the installation of patches, updates, and upgrades throughout an organization. Patching is more important than ever because of the increasing reliance on technology, but there is often a divide between business/mission owners and security/technology management about the value of patching. This publication frames patching as a critical component of preventive maintenance for computing technologies – a cost of doing business, and a necessary part of what organizations need to do in order to achieve their missions. This publication also discusses common factors that affect enterprise patch management and recommends creating an enterprise strategy to simplify and operationalize patching while also improving reduction of risk. Preventive maintenance through enterprise patch management helps prevent compromises, data breaches, operational disruptions, and other adverse events." 
+                </p>
+
+                <button class="htag">NIST</button> <button class="htag">Publication</button> <button class="htag">Patch Management</button> 
+            </div>
+
+
+
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Java Cryptographic Vulnerability</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">April 23, 2022</p>
+                <p>Source: <a href="https://thehackernews.com/2022/04/researcher-releases-poc-for-recent-java.html" target="_blank" class="ab-link">https://thehackernews.com/2022/04/researcher-releases-poc-for-recent-java.html</a></p>
+                <p>A proof-of-concept (PoC) code demonstrating a newly disclosed digital signature bypass vulnerability in Java has been shared online.</p>
+                <p>Impact on the following versions
+                    <ul>
+                        <li>Oracle Java SE: 7u331, 8u321, 11.0.14, 17.0.2, 18</li>
+                        <li>Oracle GraalVM Enterprise Edition: 20.3.5, 21.3.1, 22.0.0.2</li>
+                    </ul>
+                </p>
+                <p>The issue resides in Java's implementation of the Elliptic Curve Digital Signature Algorithm.</p>
+
+                <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21449" target="_blank" class="ab-link">https://nvd.nist.gov/vuln/detail/CVE-2022-21449</a></p>
+               
+
+                <button class="htag">Java</button> <button class="htag">Vulnerability</button> 
+            </div>
+
+
+
+
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Atlassian critical patches on Jira!</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">April 23, 2022</p>
+                <p>Source: <a href="https://thehackernews.com/2022/04/atlassian-drops-patches-for-critical.html" target="_blank" class="ab-link">https://thehackernews.com/2022/04/atlassian-drops-patches-for-critical.html</a></p>
+                <p class="i">
+                    Atlassian has published a security advisory warning of a critical vulnerability in its Jira software that could be abused by a remote, unauthenticated attacker to circumvent authentication protections.                    
+                </p>
+                <p>Tracked as <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0540" class="ab-link" target="_blank">CVE-2022-0540</a>.</p>
+                
+                <button class="htag">Atlassian</button> <button class="htag">Vulnerability</button> 
+            </div>
+
+
+
+			<div class="article ab-container ab-padding-16" style="display:block;">
+				<h2>Quantum computing: a Cryptography killer ?</h2>
+				<p class="i ab-small ab-dark-xxxxlight-font">April 24, 2022</p>
+                <p>Source: <a href="https://csrc.nist.gov/Projects/post-quantum-cryptography" class="ab-link" target="_blank">https://csrc.nist.gov/Projects/post-quantum-cryptography</a></p>
+				<p>Extract:</p>
+                <p class="i">
+                    "In recent years, there has been a substantial amount of research on quantum computers – machines that exploit quantum 
+                    mechanical phenomena to solve mathematical problems that are difficult or intractable for conventional computers. 
+                    If large-scale quantum computers are ever built, they will be able to break many of the public-key cryptosystems currently in use. 
+                    This would seriously compromise the confidentiality and integrity of digital communications on the Internet and elsewhere.  
+                    The goal of post-quantum cryptography (also called quantum-resistant cryptography) is to develop cryptographic systems that are 
+                    secure against both quantum and classical computers, and can interoperate with existing communications protocols and networks." </p>
+
+                <p class="i">
+                    "The question of when a large-scale quantum computer will be built is a complicated one. 
+                    While in the past it was less clear that large quantum computers are a physical possibility, 
+                    many scientists now believe it to be merely a significant engineering challenge. Some engineers 
+                    even predict that within the next twenty or so years sufficiently large quantum computers will be 
+                    built to break essentially all public key schemes currently in use. Historically, it has taken almost two decades 
+                    to deploy our modern public key cryptography infrastructure.  Therefore, regardless of whether we can estimate the 
+                    exact time of the arrival of the quantum computing era, we must begin now to prepare our information security systems 
+                    to be able to resist quantum computing."
+                </p>
+
+				<div class="ab-halign-center-75per ">
+				<table class="ab-table-all ab-hoverable">
+					<thead>
+						<td>Cryptographic Algorithm</td>
+						<td>Type</td>
+						<td>Purpose</td>
+						<td>Impact from large-scale quantum computer</td>
+					</thead>
+					<tr>
+						<td>AES</td>
+						<td>Symmetric key</td>
+						<td>Encryption</td>
+						<td>Larger key sizes needed</td>
+					</tr>
+					<tr>
+						<td>SHA-2, SHA-3</td>
+						<td>----------</td>
+						<td>Hash functions</td>
+						<td>Larger output needed</td>
+					</tr>
+					<tr>
+						<td>RSA</td>
+						<td>Public key</td>
+						<td>Signatures, key establishement</td>
+						<td class="ab-red-font">No longer secure</td>
+
+					</tr>
+					<tr>
+						<td>ECDSA, ECDH (Elliptic Curve Cryptography)</td>
+						<td>Public key</td>
+						<td>Signatures, key exchange</td>
+						<td class="ab-red-font">No longer secure</td>
+					</tr>
+					<tr>
+						<td>DSA (Finite Field Cryptography)</td>
+						<td>Public key</td>
+						<td>Signatures, key exchange</td>
+						<td class="ab-red-font">No longer secure</td>
+					</tr>
+				</table>
+			</div>
+				<br>
+				<p>See report: <a href="https://nvlpubs.nist.gov/nistpubs/ir/2016/NIST.IR.8105.pdf" class="ab-link" target="_blank">https://nvlpubs.nist.gov/nistpubs/ir/2016/NIST.IR.8105.pdf</a></p>
+
+				 
+<div class="video-embed-field">
+	<div class="video-embed-field-provider-nist-kaltura video-embed-field-responsive-video">
+		<iframe allow="autoplay *; fullscreen *; encrypted-media *" allowfullscreen="allowfullscreen" src="https://www.kaltura.com/p/684682/sp/68468200/embedIframeJs/uiconf_id/31013851/partner_id/684682?iframeembed=true&amp;entry_id=1_6apq14jf?iframeembed=true&amp;entry_id=1_6apq14jf&amp;flashvars%5BautoPlay%5D=1" width="854" height="480" frameborder="0"></iframe>
+	</div>
+	
+</div>
+
+
+<br>
+
+				<button class="htag">Cybersecurity</button> <button class="htag">Quantum</button> 
+			
+			</div>
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Welcome Ubuntu 22.04 LTS</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">April 21, 2022</p>
+
+                <p>Ubuntu 22.04 codename Jammy Jellyfish is now published!</p>
+                <p>This is a long-term support release integrated new component Gnome 42 and the support for a range of Raspberry Pi devices.</p>
+                <p>In the same time, major derivatives such as Kubuntu, Lubuntu, Xubuntu, ubuntu studio, Ubuntu Mate... have been relased in 22.04.</p>
+                <p>Kubuntu includes Plasma 5.24.</p>
+                
+                <button class="htag">Ubuntu</button> <button class="htag">LTS</button> 
+            </div>
+
+
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Bullseye now in Turnkey Linux</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">April 13, 2022</p>
+
+                <p>Good news ! Jeremy Davis announced the release of <a href="" target="_blank">Turnkey</a> Linux 17.0, a stable version based on Debian 11 (Codename Bullseye). </p>
+                
+                <p>See the release announcement: <a href="https://www.turnkeylinux.org/blog/v17.0-stable-core-and-tkldev" class="ab-link">https://www.turnkeylinux.org/blog/v17.0-stable-core-and-tkldev</a></p>
+
+
+                <button class="htag">Turnkey</button> <button class="htag">Bullseye</button> <button class="htag">Debian</button> 
+            </div>
+
+
+
+
+            <!--
+            <div class="article ab-container ab-padding-16" style="display:block;">
+                <h2>Title</h2>
+                <p class="i ab-small ab-dark-xxxxlight-font">Month dd, 2022</p>
+                <p>Source: <a href="" target="_blank" class="ab-link">https://...</a></p>
+                <p></p>
+                
+                <button class="htag">#</button> <button class="htag">#</button> 
+            </div>
+            -->
+
+
+
+		</div>
+
+		<button class="ab-btn-dark-xlight ab-pos-bottomright-fix ab-margin-bottom-64" onclick="location.href = '#top-page';"
+			style="z-index: 999;margin-right:5px!important" aria-label="To Top"><i class="bi bi-arrow-up ab-large ab-white-font"></i></button>
+		
+		<button class="ab-btn-dark-xlight ab-pos-bottomright-fix ab-margin-16" onclick="location.href = '#bottom-page';"
+			style="z-index: 999;margin-right:5px!important" aria-label="To Bottom"><i class="bi bi-arrow-down ab-large ab-white-font"></i></button>
+		
+		
+		<a id="bottom-page"></a>
+
+
+<script>
+			let slideIndex = 1;
+
+showSlides(slideIndex,"s1");
+showSlides(slideIndex,"s2");
+
+
+// Next/previous controls
+function plusSlides(n,id) {
+showSlides(slideIndex += n,id);
+}
+
+
+// Thumbnail image controls
+function currentSlide(n,id) {
+showSlides(slideIndex = n,id);
+}
+
+
+
+
+
+function showSlides(n,id) {
+	let i;
+	let slides = document.getElementById(id).querySelectorAll(".slide-mySlides"); 
+	let dots = document.getElementById(id+"dots").querySelectorAll(".slide-dot");
+	//let slides = document.getElementsByClassName("slide-mySlides");
+	//let dots = document.getElementsByClassName("slide-dot");
+	if (n > slides.length) { slideIndex = 1 }
+	if (n < 1) { slideIndex = slides.length }
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	}
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" slide-active", "");
+	}
+	
+	
+
+		slides[slideIndex - 1].style.display = "block";
+		dots[slideIndex - 1].className += " slide-active";
+
+
+	
+} 
+
+
+
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
